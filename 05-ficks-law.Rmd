@@ -1,0 +1,224 @@
+# Lecture 5 · Fick's Law from Random Walk
+
+## Fick's Laws from Random Walk
+
+**Fick's 1st Law**: If you have any concentration gradient, you are going to have a **flux**. It shows how the concentration is **connected with some position**. **Spacial**
+- **Steady State** Problems
+- Flux $\propto$ Concentration Gradient
+- $\vec{J}(x) = -D\frac{\partial \rho(x)}{\partial x} \vec{x} $
+    - $ D = \frac{1}{2} \Gamma L^2 $
+    - $ \Gamma $ is the frequency in which things are diffusing
+- $\vec{J}(x) = -D \nabla \rho \rightarrow$ when generalized for **any dimension**
+
+**Ficks's 2nd Law**: It is related to the rate of change in concentration. **Temporal**
+- **Time Dependent** Problems
+- $ \frac{\partial \rho(x)}{\partial t} = D \frac{\partial^2 \rho}{\partial x^2} $
+
+## Linear Transport (1D)
+
+**Mass Accumulation = Mass In - Mass Out**
+- $ \Delta x = L $
+
+## Rephrase with Random Walk
+
+- $\Gamma = $ # of **hops per unit time** $\rightarrow$ constant
+- $n_i = $ # of **particles in box i** (non-interacting)
+    - if we remove the non-interacting restriction, we include the chemical potential (activity)
+- All particles must hop every $\frac{1}{\Gamma}$
+    - $\frac{1}{2} \rightarrow $ to the **left**
+    - $\frac{1}{2} \rightarrow $ to the **right**
+    
+## Diffusion Equation
+
+Let's look at **Bin $i$**:
+- $\frac{dn_i}{dt} = \Gamma (\frac{1}{2} n_{i+1} + \frac{1}{2} n_{i-1} - n_i) $
+    - $\frac{1}{2} n_{n+1} + \frac{1}{2} n_{i-1} \rightarrow$ **mass in** every $\Gamma$
+    - $- n_i \rightarrow$ **mass out** every $\Gamma$
+    
+Let's try to write in a **Continuous Expression**:
+- $\frac{dn_i}{dt} = \frac{1}{2} \Gamma[(n_{i+1} - n_i) - (n_i - n_{i-1})] $
+- Center of $i^{th}$ bin:
+    - $ (i - \frac{1}{2})L$
+    - $ n_i \rightarrow n$ at the position $ x = (i - \frac{1}{2})L$
+- $\frac{dn_i}{dt} = \frac{1}{2} \Gamma L[\frac{(n_{i+1} - n_i)}{L} - \frac{(n_i - n_{i-1})}{L}] $
+    - $\frac{(n_{i+1} - n_i)}{L} = \frac{dn(x)}{dx} |_{x=iL} $
+    - $\frac{(n_i - n_{i-1})}{L} = \frac{dn(x)}{dx} |_{x=(i-1)L} $
+    
+Then:
+- $\frac{dn_i}{dt} = \frac{1}{2} \Gamma L^2 \frac{(\frac{dn(x)}{dx} |_{x=iL} - \frac{dn(x)}{dx} |_{x=(i-1)L})}{L}  $
+
+So, in a very general form (invoking the **definition of derivative**):
+- $\frac{dn_i}{dt} (x= (i-\frac{1}{2})L) = \frac{1}{2} \Gamma L^2 \frac{d^2n(x)}{dx^2}|_{x=(i-\frac{1}{2})L}  $
+
+$ \Rightarrow \frac{dn_i}{dt} = \frac{1}{2} \Gamma L^2 \frac{d^2n(x)}{dx^2}  $
+
+The **number of particles** at every bin:
+- $ n = \rho A L $
+
+Therefore:
+- $ \frac{d\rho(x)}{dt} = \frac{1}{2} \Gamma L^2 \frac{d^2\rho(x)}{dx^2}  $
+- $ \frac{\partial \rho(x)}{\partial t} = D \frac{\partial^2 \rho(x)}{\partial x^2} \Rightarrow$ **Fick's 2nd Law**
+    - $ D = \frac{1}{2} \Gamma L^2 $ from **Random Walk**
+    
+For some problems, we'll write:
+- $\frac{\partial^2 \rho(x)}{\partial x^2} = \frac{1}{D} \frac{\partial \rho}{\partial t}$
+- $- \frac{\partial}{\partial x} (-D \frac{\partial \rho(x)}{\partial x}) = \frac{\partial \rho}{\partial t}$
+
+## Diffusion Equation in terms of Flux
+
+**# of particles that is flowing = Q = # of particles per unit time crossing the cross-sectional interface**
+
+- $Q_{i \rightarrow i+1} = \frac{1}{2} n_i - \frac{1}{2} n_{i+1} = -\frac{\Gamma L}{2} (\frac{n_{i+1}-n_i}{L})$
+- $Q(x=iL) = -\frac{\Gamma L}{2} \frac{dn(x)}{dx}|_{x=iL} \Rightarrow Q(x) = -\frac{\Gamma L}{2} \frac{dn(x)}{dx}$
+
+$J \equiv Flux =$ # of particles crossing per unit area $\rightarrow J = \frac{Q}{A}$
+- $ n = \rho A L $
+- $AJ(x) = -\frac{\Gamma L^2}{2} A \frac{d\rho (x)}{dx} \Rightarrow J(x) = -\frac{\Gamma L^2}{2} \frac{d\rho (x)}{dx}$
+- $\vec{J}(x) = -D \frac{d\rho (x)}{dx} \hat{x} \Rightarrow$ **Fick's 1st Law**
+- $\vec{J}(x) = -D\nabla \rho$
+
+Mass Flow (**Sign Convention**)
+- $\rho_{high} \rightarrow \rho_{low}$
+    - Which is opposite to direction of composition, that's why the **negative(-) sign**
+    
+General Analysis (**Transport Equations**)
+- **Flow** of Something $\propto$ **Gradient** of the same thing (with a proportionality constant)
+    - Over a concentration range (spacial independent)
+- $Q_{heat} = \kappa \nabla T \rightarrow$ **Fourier Equation 1822**
+- $J_{charge} = \frac{1}{R} \nabla V \rightarrow$ **Ohm's Law**
+
+**Velocity** $\propto$ **Driving Force**
+- $\frac{\partial \rho}{\partial x} \propto \frac{\partial U}{\partial x}$
+- $J = -L (\mu, x, t, ...)\frac{\partial \mu}{\partial x}$
+- $D = D(\rho,x,t,...)$
+- They are all following a **kind of a Random Walk**
+
+**2D** & **3D**
+- $\vec{J} = -D\nabla \rho$
+- $\nabla^2 \rho = \frac{1}{D} \frac{\partial \rho}{\partial t}$
+    - $\rho(x,t)$
+    
+**Diffusion Length**: travelling $x$ over $t$ (remember it is **just a Random Walk**)
+- $\langle x^2 \rangle = \Gamma t L^2 $
+    - In this way we **don't have to** solve any differential equation
+    
+**Conceptual Questions**:
+- $D = D(x)$ for **inhomogeneous systems**
+- $D = D(x,y,z) \rightarrow$ **direction dependent** for anisotropic systems (it is **not going to be the same** along x, y and z.)
+
+### Steady-State Diffusion Through a Membrane
+
+- $ \rho_1$ and $\rho_2$ are held **constant**
+- $\Delta x = x_2 - x_1 \equiv $ width of the membrane
+- $\Delta \rho = \rho_2 - \rho_1$
+- $J = -D \frac{d\rho}{dx}$
+     - $\frac{d\rho}{dx} = $ **constant** $= - \frac{J}{D}$
+     - **Concentration Profile** $\rightarrow$ **Linear**
+
+**Another example**: Consider $H^+$ **ion removal from fine cell** (how fuel cells are design):
+- BCC metal **Vanadium** (V)
+    - It has very very high **hidrogen diffusion**
+- V-membrane of thickness $10 \mu m$
+- Submerged in Fuel Cell with $H^+$ concentration $ = 10^{-4} \frac{g}{cm^3}$
+- $D_{H^+}(in V) = 6\times 10^{-5} \frac{cm^2}{s}$ at $T = 20^o C$
+
+We'll assume **steady state**:
+- $J =$ constant $=-D\frac{\Delta C}{\Delta x}$
+
+Then:
+- $ J = -(6\times10^{-5}\frac{cm^2}{s})(0 -10^{-4} \frac{g}{cm^3})(\frac{1}{10^{-3}cm}) = 6\times10^{-6}\frac{g}{cm^2s} $
+
+The **mass** of $H^+$ that can be removed will be:
+- $M_{H^+} =JAt$
+    - $A =$ cross-section **area**
+
+## Transient Systems
+
+### One Class of Problems
+
+Let's say we are interested on **doping Gold with Silver**
+- **Physically**: 1D **Random Walkers** that are slowly diffusing into the gold
+    - RW along $\pm y$ cancel on average for all Ag atoms
+
+If i know the probability of where the Silver atoms are by Random Walk, that should be the concentration (invoking the Random Walk):
+- $P(x) = \rho (x) = \frac{a}{\sqrt{2\pi \langle x^2 \rangle}} e^{-\frac{x^2}{2\langle x^2 \rangle}}$
+    - This is the **concentration profile proposed**
+    - $a =$ **constant**
+
+To show **it is true**, we plug into:
+- $D\frac{\partial^2 \rho}{\partial x^2} = \frac{\partial \rho}{\partial t}$
+
+Total Mass (general):
+- $\int_{-\infty}^{\infty} \rho(x) dx = M_{total} = b \rho_o = a\int_{-\infty}^{\infty} \frac{dx}{\sqrt{4\pi Dt}} e^{-\frac{x^2}{4Dt}}$
+- $\rho(x,t) = \frac{b\rho_o}{\sqrt{4\pi Dt}}e^{-\frac{x^2}{4Dt}}$
+
+Now we apply the boundary conditions to make it more exact (generic $\rightarrow$ specific):
+- The **order** of the derivative says **how many** boundary conditions are required
+- $\frac{\partial \rho}{\partial t} \rightarrow 1BC \Rightarrow \rho(x,t)$
+    - $x \rightarrow$ all
+    - $t \rightarrow$ specific
+- $\frac{\partial^2\rho}{\partial x^2} \rightarrow 2BC \Rightarrow \rho(x,t)$
+    - $x \rightarrow$ specific
+    - $t \rightarrow$ all
+    
+Usually (for boundary conditions):
+- for **time** BC: $\rho(x,0) = 0$ which is not the case for the problem above.
+    - $\int_{-\infty}^{\infty} \rho(x,t) dx|_{t=0} = M_{total} $
+- for **spacial** BC: $\frac{\partial^2 \rho}{\partial x^2}$
+    - We look at the concentration profile $\rho(x,t)$, at:
+        - $x = 0$
+        - $x \pm \infty$
+        - Or we **look at the surface**
+        
+Another BC:
+- $J(0,t) = -D\frac{\partial \rho}{\partial x}|_{x=0} = 0$
+
+### Solution Approach
+
+1. **Propose a solution**: $\rho(x,t)$
+2. This is indeed a **general solution** by pluggin into the equation
+3. Find out **appropriate boundary** conditions and applying them to the equation to make a **specific solution**
+
+Remember:
+- $f$ and $g$ are **generic solutions** $\rightarrow$ $f+g$ (**linear combination**) is also a solution
+
+### Another Class of Problems
+
+How a material **diffuse into another** and end up equilibrated.
+- The classic example is **metal A diffusing into metal B**
+- **Coating** is another example
+
+### Semi Infinite Slab
+
+Assumptions
+- Left side has **infinite number of thin films**
+- Each thin film creates a **Gaussian Concentration Profile** $\rho$
+
+For each film:
+- $\rho^*(x,t) = \frac{\rho_o \Delta x}{\sqrt{4\pi Dt}} e^{\frac{-(x+m \Delta x)^2}{4Dt}}$
+- $m$ is the number of thin films ($0, 1, 2, 3, ...$)
+- $\Delta x$ is a **constant**
+
+So, **final concentration**:
+- Let's define: $\rho (x,t) = \sum_0^{\infty} \rho^*(x,t) = \frac{\rho_o}{\sqrt{4\pi Dt}} \sum_{m=0}^{\infty}[ e^{\frac{-(x+m \Delta x)^2}{4Dt}} \cdot \Delta x] $
+
+Variable Manipulation:
+- $u = m \Delta x \Rightarrow u = u(m) \Rightarrow \Delta u = u_2 - u_1 = (m_2-m_1)\Delta x = \Delta x$
+- $\rho (x,t) = \frac{\rho_o}{\sqrt{4\pi Dt}} \sum_{u=0}^{\infty}[ e^{\frac{-(x+u)^2}{4Dt}} \cdot \Delta u] $
+- $\rho (x,t) = \frac{\rho_o}{\sqrt{4\pi Dt}} \int_0^{\infty}[ e^{\frac{-(x+u)^2}{4Dt}} \cdot du] $
+- Let's define: $v = \frac{x+u}{\sqrt{4Dt}} \Rightarrow du = \sqrt{4Dt} dv$
+- $\rho (x,t) = \frac{\rho_o}{\sqrt{4\pi Dt}} \int_{x\div \sqrt{4Dt}}^{\infty}[e^{-v^2} \sqrt{4Dt} \cdot dv] \rightarrow ErrorFunction$
+
+Then, we can write as **error functions**
+- $\frac{2}{\sqrt \pi} \int_0^{\infty} e^{-v^2} dv = erf(\infty)$
+- $\rho (x,t) = \frac{\rho_o}{2}[ erf(\infty) - erf(\frac{x}{\sqrt{4Dt}}) ]$
+- $\rho (x,t) = \frac{\rho_o}{2}[ 1 - erf(\frac{x}{\sqrt{4Dt}}) ]$
+
+**Solution to Fick's Second Law** (BCs)
+- $\rho = \rho_o$ for $x<0$ at $t=0$
+- $\rho = 0$ for $x>0$ at $t=0$
+
+Also
+- $\rho = \rho_o$ for $x=-\infty$
+- $\rho = 0$ for $x=\infty$
+- $\rho(0,t) = \frac{\rho_o}{2}$ **at all time**

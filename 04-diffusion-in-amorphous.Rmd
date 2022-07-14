@@ -1,0 +1,236 @@
+# Lecture 4 · Diffusion in Liquids, Amorphous Solids and Polymers
+
+## Summary
+
+- In **liquid** $\rightarrow$ particle will undergo **random walk**.
+- **Polymer in liquid** $\rightarrow$ **random walk** tells us the **size of the polymer**.
+- We can apply **random walk** to **vacancy diffusion**.
+    - Substitutional Diffusion
+    - Self-Diffusion
+        - The **vacancy diffusion** is proportioal to the **atom diffusion**
+    - Interstitial Diffusion
+
+How can we apply random walk to diffusion in Amorphous Solid?
+
+Let's remember for **Liquid**.
+- Newtonian Fluid $\rightarrow$ Simple Fluid $\rightarrow \eta$ is constant.
+    - Particles undergo **Brownian motion** $\rightarrow$ exchange of **Kinetic Energy** between **particles*** (solute) and **solvent**.
+    - '+' Collisions that randomized motion (direction)
+    - $\langle \vec{v} \rangle = \frac{3k_BT}{m} $ in **3D**
+    - $\langle x^2 \rangle = \frac{k_BT}{6 \pi \eta R} t $ for a spherical particle (solute)
+        - $ D \equiv \frac{k_BT}{6 \pi \eta R} \equiv $ **Diffusion Constant**
+        - $ \eta $ is the **viscosity** that provides the **drag** that is slowing things down and is essencial for the particles to fluctuate, to maintain the fluctuation.
+
+**Viscosity** is a thermally activated property.
+
+Let's define: $Q \equiv $ **activation energy for fluid to flow**.
+- $\eta = e^{\frac{+Q}{k_BT}}$
+- $\eta \uparrow \Rightarrow Q \uparrow $
+
+What **Insight** we can get on **Diffusion** for Amorphous Solids?
+- K.E. $\Rightarrow D \propto T$ (linearly)
+- $\eta \Rightarrow D \propto e^{\frac{-Q}{k_BT}} $ (this is a concern, a kind of contradiction that we would ingnore in certain cases)
+
+**Overall**
+- $D \rightarrow$ thermally activated process.
+- $D \rightarrow$ **Brownian Diffusion**.
+
+## Non-Newtonian Liquid
+
+## Free Volume Model
+
+Particles **do not have free range** of motion.
+
+## Diffusion Characteristics in Non-Newtonian Fluids
+
+**FINAL EXAM**: we will have a similar one: we should be able to write **what the diffusion equation should look like**.
+
+- Solvent molecules are constrained to some average position created by their neighboring atoms (feature is analogous to close-pack but it is not a close-pack system)
+- Solvent molecules **are not close-packed**
+    - There is free volume $V_{free} \rightarrow \frac{1}{\rho_{liquid}} $ and $ \frac{1}{\rho_{close-pack}} $
+    - Locally fluctuate
+    - It can move if there is a open path for diffusion (if a path opens up)
+    - It can move the entire distance in a large Jump (how long the leap path the solvent presents)
+    - Atoms may jump one to many steps
+    - It has many different step sizes
+
+## Velocity
+
+**Atoms move along a free path**, they need to find a free path. Once it finds the free path:
+- $\vec{v} \equiv $ velocity in a gas till it his the **dead-end** ("wall")
+
+So if there is motion in an amorphous solid, it is going to be like **Random Walk with some constraints**:
+- Step size
+- Direction
+- Frequency
+- Randomly distributed (probability of finding a free path)
+
+## D
+
+$D = C R \langle v \rangle P(motion)$
+- C: constant
+- R: step size (it will be a fraction or multiple of a radius) $\propto R$ radius of the particle
+- P: probability of finding a free path
+
+Let's say:
+- $V_p \equiv $ particle volume
+- $\langle V_f \rangle \equiv $ **average free volume per particle**
+
+The particle volume needs to fit the free volume.
+
+Then: $P = e^{-\frac{V_p}{\langle V_f \rangle}}$
+
+$D = C R \langle v \rangle e^{-\frac{V_p}{\langle V_f \rangle}}$
+
+We will **impose that particles with different sizes all move with the same velocity** $\langle v \rangle$
+- Larger $R$ have **larger kinetic energy** $\rightarrow$ **Larger Jumps**
+    - That's why **larger particles present larger diffusion in amorphous solid**
+    
+**KEY CONCEPT: in amorphous system diffusion is not thermally activated $\rightarrow$ does not depend on temperature**
+- At any time, particles have large enough $\langle v \rangle$ (kinetic energy).
+    - If finds a path $\rightarrow$ particle moves.
+    
+**Notice**: Hidden T-dep:
+- $\langle v \rangle \propto \sqrt{T}$ from K.E.
+- $\langle V_f \rangle \propto \sqrt{T}$
+
+Therefore: **at high temperture the thermal activation takes over**
+
+**THIS APPROACH CANNOT BE APPLIED TO SIMPLE NEWTONIAN FLUIDS**
+
+## Diffusion in Amorphous Solids
+
+Amorphous Liquids $\rightarrow$ **cooling** $\rightarrow$ **Amorphous Solids**
+- Supports **shear stress**
+- $T_g$ (depends on cooling rate)
+- **No long-range order**
+- **Meta-stable** with respect to crystals
+
+## WHAT HAPPENS TO FREE VOLUME
+
+During cooling $\rightarrow$ **geometric amorphous structure in an amorphous liquid gets embedded into the amorphous solid** (we are making)
+
+If annealed or slowly cooled:
+- Liquid part of the free volume anneals out
+    - Diffusion is going to go down $D \downarrow$
+    
+In amorphous solids, the "vacancies" are built into the free volume.
+
+## Diffusion in Amorphous Solids: SELF-DIFFUSION
+
+This mechanism is a **very active area of research**.
+
+If $\langle V_f \rangle$ is insufficient $\rightarrow$ discrete & long jumps should not happen — **however** experimental data shows that this is not the case.
+
+## Experimental Observations
+
+**Amorphous solids undergo diffusion even in the absence of any vacancy in the system**
+
+- No (amorphous equivalent) vacancy to enable diffusion.
+- If $T$ changes suddenly $\rightarrow D$ changes instantaneously & it is faster than defect concentration change.
+- **Diffusion is not pressure dependent!** (in an amorphous solid)
+- Diffusion happens by collective motion (cooperative motion)
+    - **Collective motion** $\equiv$ Force chains
+- Diffusion is **thermally activated** $\rightarrow D = e^{-\frac{Q}{K_BT}}$
+
+Amorphous solid $\rightarrow$ **superdiffusive**
+- $\langle r^2 \rangle \propto t^1$ (diffusive)
+- $\langle r^2 \rangle \propto t^m$ (**superdiffusive**)
+    - where $m > 1$
+    
+Although $\Gamma$ **is a constant in Random Walk**, here it is **time dependend** (amorphous solid)
+- $\Gamma = \Gamma (t)$
+
+How to incorporate time dependence in any function?
+- $\Gamma = \Gamma_o t^{\alpha} \rightarrow$ **$\Gamma$ has a Power Law Dependence on Time**
+
+We now have 2 equations:
+- $\langle r^2 \rangle \propto t^m (m>1) \rightarrow$ **MSD**
+- $\Gamma = \Gamma_o t^{\alpha}$
+    - $\Rightarrow \langle r^2 \rangle \propto t^{\alpha +1}$
+    - $m = \alpha +1 \Rightarrow \alpha = m -1$
+    
+Then:
+- $\Gamma = \Gamma_o t^{m-1}$
+
+## Interstitial Diffusion in Amorphous Solids
+
+- **Each interstitial site can only have one interstitial impurity**
+    - $\equiv$ Fermi Dirac Particle
+    
+It should be **thermally activated** diffusion $\rightarrow$ **Random Walk**
+- $D \propto e^{\frac{-Q(c)}{K_BT}}$
+    - $Q \equiv$ **activation energy** $\rightarrow$ concentration dependent
+    - $c \equiv$ **fraction of interstitial sites occupied** $\equiv$ interstitial concentration
+    
+Then:
+- $D = D_o \frac{(1-c)^2}{c} e^{\frac{-Q(c)}{K_BT}}$
+    - $a \equiv$ **atomic radius** is built into $D_o$
+    
+Physically:
+- At early stage $\rightarrow$ **atoms populate largest & lowest energy interstitial sites** $\rightarrow$ stable $\rightarrow$ cannot diffuse out.
+- At a later time $\rightarrow$ interstitial impurities can only go to smaller interstitial sites with higher energy states (which need smaller $Q$ to put interstitial atoms in vacant sites) $\rightarrow$ interstitial atoms can diffuse out.
+
+## Polymers (different class of amorphous solid)
+
+Reminder:
+- **Random Walk** $\rightarrow$ **Polymer Conformation**
+    - $a \equiv$ **monomer length**
+    - $N \equiv$ **degree of polymerization**
+    - $\sqrt{\langle r^2 \rangle} = \sqrt{N}a \equiv$   **size of the polymer**
+
+## Polymer Diffusion in Solvents
+
+**If we take the polymer and put it in a solvent, then the polymer is now the impurity.**
+
+If polymer **likes the solvent** $\rightarrow$ **Good Solvent**
+- **Self Avoiding Random Walk** (SARW) $\rightarrow$ **Flory Theory**
+- It does not want to overlap with itself
+- $\sqrt{\langle r^2 \rangle} = N^{\frac{3}{5}}a$
+    
+If polymer **does not** like the solvent: $\rightarrow$ **Poor/Theta Solvent**
+- $\sqrt{\langle r^2 \rangle} = \sqrt{N}a$
+
+$D = c \frac{K_BT}{6\pi \eta \sqrt{\langle r^2 \rangle}}$
+- $c \equiv$ geometric factor
+- Use **appropriate MSD equation depending on the different solvent types**
+
+## Polymer Self-Diffusion in a Melt (NO SOLVENT)
+
+Very similar to the physical picture we had before.
+- Apply simple picture of diffusion in an amorphous solid
+- The polymer is a long interconnected molecule $\rightarrow$ **entangled** with other long interconnected molecules.
+    - Polymer motion **requires larger** $Q$ (**however** the temperature range is limited)
+    - $D$ will be **very small** but $\neq 0$
+
+Then:
+- Free volume small
+    - Entire polymer cannot move as a single unit
+    - it diffuses along its length
+    - Polymer will move **within a tube** $\rightarrow$ it **reptates**
+    - This motion is called **reptation**
+    - **Still a Random Walk** $\rightarrow$ **polymer diffusing in a 1D tube**
+    
+**IMPORTANT**: it **does not matter the dimensionality** of the material, it will diffuse along a **1D tube**
+- The **tube length** $\langle L \rangle$ of this imaginary tube will be the length of the polymer
+    - $\langle L \rangle = Na$
+    
+**MSD** of the polymer within the tube:
+- $= \langle L^2 \rangle = N^2a^2 = \Gamma a^2 t $
+    - $t = \frac{N^2}{\Gamma}$
+
+The **right way to think about it** is not the diffusion of the head or of the tail of the polymer $\rightarrow$ it is **how the center of mass is diffusing**
+
+**RMSD** travel by the tube:
+- $\sqrt{\langle x^2 \rangle} = \sqrt{N}a$
+    - $\langle x^2 \rangle = 2dDt$
+        - $d \equiv$ **dimensionality**
+    - $D = \frac{Na^2}{2dt} =\frac{Na^2}{2d} \frac{\Gamma}{N^2} = \frac{\Gamma a^2}{2dN} $
+    - $D = \frac{\Gamma a^2}{6N} \rightarrow$ **in 3D**
+
+Given that:
+- $\Gamma = \frac{\Gamma_o}{N}$
+
+We have that:
+- $D = \frac{\Gamma_o a^2}{6N^2}$
+    - **Self-diffusivity is strongly affected by degree of polymerization** $N$

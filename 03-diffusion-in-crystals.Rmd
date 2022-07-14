@@ -1,0 +1,165 @@
+# Lecture 3 · Random Walk and Diffusion in Crystals
+
+## Diffusion in Crystals · **Mechanisms**
+
+How to extend the Random Walk to Crystals?
+
+We have only considered **Free Motion** — but typically Motions are not really Free in a Crystal... **We have to make adjustments**.
+
+FCC (111) Plane.
+
+Direct exchange between atoms.
+
+
+The physical mechanism for diffusion to happen has to be that one of the atoms pushing one another out of the way
+- $\rightarrow$ Crystal will distort
+- $\rightarrow$ **Energy is required**
+- $\rightarrow$ At the end Crystal goes back to original shape
+
+#### Exchange 2 Atoms
+
+It costs energy $\rightarrow$ but **it can get the energy back**
+- $E_i \rightarrow Q(ActivationEnergy) \rightarrow E_f$
+    - $ActivationEnergy \equiv Directional$ (**ice melting**)
+    - **Activation Energy is always gonna be directional** (different along different directions)
+    - $ActivationEnergy \equiv Direction Dependent$
+
+Probability of activated process occurring:
+- $P(x) \propto e^\frac{-Q_x}{k_BT}$
+
+Every atom or molecule is undergoing this vibration, this fluctuation in the system. When they are exchanging position it is a **Random Event** $\rightarrow$ It is connected with the # of attempts available.
+- $SuccessRate = P(x) \times AttemptRate$
+- $SuccessRate = P(x) \times DebyeFrequency$
+- $SuccessRate = P(x) \times VibrationalFrequency$
+- $\Gamma(x) = \nu P(x) $
+    - This is for **1D**
+    - $DebyeFrequency = \nu \approx 10^{-13}s^{-1}$
+    
+How can I generalize for **3D**?
+- To account for **different materials** in **differnet crystaline structures** $\rightarrow$ We need to insert the **Coordination Number · Z**
+- $\Gamma(x) = \nu P(x) $
+- For **3D** $\rightarrow$ correct $\nu$ or $\Gamma (x)$ by **Coordination Number Z**
+
+**Thermal Energy** tells you about **how many vacancies you have**.
+
+**Consider Cu @ $1200^oC \,\, (0.9 T_m)$**
+- $ k_B = 8.6\times 10^{-5} \, \frac{eV}{Katm} $
+- $ \nu = 10^{-13}s^{-1} $
+- $ Q \approx 8 \, eV/atom $
+- **Therefore** $ \Gamma(x) = \nu e^\frac{-Q}{k_BT} \approx 2 \times 10^{-21}s^{-1} $
+
+**Problem 1**: here we have a problem, because the **age of the universe** $ \sim 10^{17} s$, so we need to take a look at **what really happens**:
+
+**Consider Vacancy**
+
+- $ k_B = 8.6\times 10^{-5} \, \frac{eV}{Katm} $
+- $ \nu = 10^{-13}s^{-1} $
+- $ Q \approx 1 \, eV/atom $
+- **Therefore** $ \Gamma(x) = \nu e^\frac{-Q}{k_BT} \approx 6 \times 10^{8}s^{-1} $
+
+**Problem 2:** but vacancy can **exchange position** with neighbors with **equal probability** $\rightarrow$ In crystal is **not how atoms move**, it is **how the vacancies move**.
+- Atoms **get stuck** in their motion.
+- **Vacancies** have no limitation $\rightarrow$ They can move freely.
+
+Therefore $\rightarrow$ **Vacancy Motion** $\equiv$ **Ideal Random Walk**.
+- **Not** Random Walk of atoms, but Random Walk of **Vacancies**.
+- Random Walk **Step** will be related to the **Lattice**. 
+
+**Counterintuitive** $\rightarrow$ When we think about diffusion we think about atoms, but **it can only happen by vacancy diffusion**.
+
+This is **self-diffusion** $\rightarrow$ mediated **by vacancies**.
+
+## Impurities
+
+- **Substitutional Impurities**
+    - The **self-diffusion** can easily be applied to **Substitutional Impurities**
+- **Interstitial Impurities**
+
+
+Notice: Atoms only move when **next to a vacancy**.
+- $\Gamma(x) = \nu P(x) $
+    - We need to corret this experssion in term of the vacancies.
+    - There for, **for atoms**: $\rightarrow \Gamma(x) = \Gamma_v(x) P_v $
+        - $\Gamma_v$ includes **Z**.
+        - $P_v$ is the probability that a given site (or lattice point) is a vacancy.
+        
+## Measuring diffusion in Crystals
+
+Everytime a **vacancy moves** $\rightarrow$ **an atom moves**.
+
+**Atom Diffusion Rate $\equiv$ Vacancy Diffusion Rate.**
+
+However, **we can't see vancancies** and **can't tell atoms apart**. So, what is the solution?
+1. One solution is to **introduce substitutional impurities**.
+2. Another would be to **use isotopes**.
+    - **Limitation**:
+        - Interactions between substitutional impurities (or isotopes) and crystal atoms are often different than crystal atom - crystal atom.
+    - **Complication**:
+        - **Random Walk may not be independent** of each other or history $\rightarrow$ **Correlation**, which can be small or very large.
+
+- **Tracers**:
+    - Substitutional Impurities
+    - Isotopes
+
+We need **3 distinguishable species** in a way that we can see them participating in diffusion.
+
+If we are doing this kind of measurement we have to account for these effects.
+- If the tracers only exchange position with vacancy (only the tracers atoms exchange position with the vancancies):
+    - $P_v$ **reduced** relative to average.
+    - Reduce $\Gamma$ by the extent of the **correlation factor** $f$:
+        - $0 \leq f \leq 1 $
+        - $0 \rightarrow$ **fully correlated**
+        - $1 \rightarrow $ **uncorrelated**
+
+How to get **correlation factor** $f$ in a 3D crystal? (here we are trying to correct for the case there is any correlation in the motion)
+- For **coordination number $Z$** $\rightarrow$ at each **time step** $\frac{1}{Z}$ vacancy jumps will be back to **original configuration**.
+    - If $n$ **number of jumps** $\rightarrow \frac{n}{Z}$ jump back to original configuration.
+    - This means **each event erases 2 time steps**:
+        - 1 **forward**
+        - 1 **backward**
+        - $n_{eff} \approx n - 2\frac{n}{Z}$ [to 1st order]
+        
+        Then:
+        - $\Gamma = \frac{n}{t} \Rightarrow \Gamma_{eff} = [1 - \frac{2}{Z}]\frac{n}{t} = [1 - \frac{2}{Z}]\Gamma $
+        - $D_{eff} = \frac{\Gamma_{eff}a^2}{6} = [1 - \frac{2}{Z}]\frac{\Gamma a^2}{6} = fD_{uncorrelated} $
+            - $\Gamma_{eff} = f\, \Gamma$
+            - $f = [1 - \frac{2}{Z}]$
+            - $\frac{\Gamma a^2}{6} = D_{uncorrelated} $
+            
+This is how we tippicaly understand **self-diffusion**.
+
+## Interstitial Solute Diffusion
+
+The intesrstitial atoms are going to be **significantly smaller** than the crystal atoms.
+
+**Interstitial Sites**
+- BCC
+    - 18 **Octahedral**
+    - 24 **Tetrahedral**
+- FCC
+    - 13 **Octahedral**
+    - 8 **Tetrahedral**
+
+
+For a **2D Rectangular Lattice**:
+- Assume dilute interstitial concentration.
+    - Interstitial atoms can **freely move** (equal probability of moving) to other interstitial sites.
+    Then:
+    - $P_v = 1 \rightarrow$ completely **uncorrelated**.
+    - Normal **Random Walk**
+Therefore, **Interstitial Diffusion** is completly **Random Walk**
+- $\langle x^2 \rangle = \Gamma t a^2$
+- $D_i = \frac{\Gamma a^2}{2d} $
+    - Where $d$ is the **dimensionality**
+    
+What could we say about the **Activation Energy** of interstitial impurities?
+- $ Q \sim 0.7 \,eV$ (which is less then $1.0 \,eV$, which is the activation energy for the vacancies)
+
+## Remarks on Interstitial Solute Diffusion
+
+- From the **view of interstitial atom** the whole crytal is empty space in which it can freely move.
+- **Interstitial Diffusion** is going to be the **faster**:
+    - **Jump Sites** are always available.
+    - It doesn't have to overcome all constraints of bonding $\rightarrow$ It has a lower **Activation Energy** $ \sim 0.7 \, eV$
+
+

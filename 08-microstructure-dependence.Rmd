@@ -1,0 +1,96 @@
+# Lecture 8 · Microstructure Dependence of Diffusion
+
+Impact of **non uniformity** on diffusion.
+- Process dictated by **diffusion at the microstructure**:
+    - Introducing a **dislocation** will change the diffusion...
+    - **Creep**...
+    - We may have **precipitation**...
+    - **Recrystallization**...
+    - **Sintering**...
+    - **Defect migration**, dislocation migration, GB migration
+    
+Only matters if (and when the **activation energy is small enough**):
+- Volume fraction of microstructure is big (but this should be really small, so we don't have to worry to much about it)
+- **Associated diffsion constatnts are big** (this is to worry about)
+
+$Q_{dislocation} \approx 0.6 Q_{bulk}$ for **undissociated edge dislocation**
+
+For Al: $Q_{bulk} = 1.4 \frac{eV}{atom}$
+- $T = 1000K \Rightarrow D_{dislocation} = 675 D_{bulk}$
+- $T = 500K \Rightarrow D_{dislocation} = 450,000 D_{bulk}$
+- $D_{dislocation} \uparrow$ as $T \downarrow$
+
+**Diffusivity in the bulk decreases much faster with temperature**.
+
+## Overall Diffusivity · D
+
+- $D_{dislocation} >> D_{bulk}$
+    - Is this enough to compensate the tiny volume that GB and dislocations occupy in the material???
+- $D_{dislocation} \uparrow$ as $T \downarrow$
+
+Let's check that $D_{dislocation}$ is large enough to compensate for $V_{dislocation} << V_{bulk}$
+
+**Rule of Mixture**
+- We can extend to **Rule of Mixture of Phases**
+- $\langle D \rangle = f_1D_1 + f_2D_2 + f_3D_3 + ...$
+- I can mixture different phases **knowing volume fractions and diffusivities**
+
+## Edge Dislocation
+
+Assume that a edge dislocation is represented by a cilinder.
+- height = $h$
+- diameter = $\delta$
+- volume = $\frac{\pi \delta^2 h}{4}$
+- $f_{disl} =$ Total dislocation **volume** per unit volume $= \frac{N_{disl}}{h^3}\cdot \frac{\pi \delta^2 h}{4}$
+- $\rho_{disl} =$ Total dislocation **line length** per unit volume $= \frac{N_{disl}h}{h^3}$
+
+Then:
+- $f_{disl} =$ Total dislocation **volume** per unit volume $= \frac{\rho_{disl}\pi \delta^2}{4} $
+
+And:
+- $f_{bulk} \equiv$ total bulk volume per unit volume $= 1 -f_{disl} \approx 1$
+
+Finally:
+- $\langle D \rangle = D_{bulk} + \frac{\rho_{disl}\pi \delta^2}{4} \cdot D_{disl}$
+- $\frac{\langle D \rangle}{D_{bulk}} = 1 +\frac{\rho_{disl}\pi \delta^2}{4} \cdot \frac{D_{disl}}{D_{bulk}}$
+
+## Revisit
+
+For Al at $T= 500K$:
+- $\rho_{disl} = 10^{16}m^{-2}$
+- $\delta = 2r_o = 6\times 10^{-10}m$
+- $\frac{D_{disl}}{D_{bulk}} = 450,000$
+
+Then:
+- $\frac{\langle D \rangle}{D_{bulk}} = 1 + 1272 = 1273$
+
+So, **eventhough the volume fraction of edge dislocation is really small**, **diffusivity is so large that all diffusion is coming from the diffusion at the edge dislocation**.
+
+For materials that have microstructure, **nearly all diffusion takes place at the microstructure** instead of at the bulk.
+
+## Extend to Grain Boundary
+
+The simple picture for a Grain Boundary (low angle GB) is a **series of dislocations**
+
+As dislocations **GB's should have excess free volume for solute to diffuse**
+- $Q_{GB} \downarrow$ but in reality $Q_{GB} \approx Q_{disl}$
+
+Let's assume **spherical GB**
+- $f_{GB} = \frac{Volume_{GB}}{Volume_{Unit}}$
+
+Assuming **spherical grains**
+- $f_{GB} = \frac{Volume_{GB}}{Volume_{Unit}} = \frac{Area_{GB}\cdot Width_{GB}}{Volume_{unit}} = \frac{4\pi r^2 \delta}{\frac{4\pi r^3}{3}}$
+    - $Width_{GB} = \delta$
+
+Then:
+- $f_{GB} = \frac{3\delta}{r}$
+
+$\langle D \rangle = D_{bulk} + \frac{3\delta}{r} D_{GB}$
+
+**FINAL EXAM** is going to have one problem related to this parte for sure.
+
+## GB Network
+
+**Downstream Limited**: two fluxes **converging into one**
+
+**Upstream Limited**: one flux **diverging into two**

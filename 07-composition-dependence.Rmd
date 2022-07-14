@@ -1,0 +1,213 @@
+# Lecture 7 · Composition Dependence of Diffusion
+
+**FINAL EXAM** $\rightarrow$ there will be 2 or 3 problems from these lecture, where all the concepts and solutions seen so far are called into more complex and overarching problems.
+
+**So far** $\rightarrow c_{solute} = 1 - c_{solvent} \rightarrow$ solute diffusion $=$ solvent diffusion
+- **MIRROR SYMMETRY** $\rightarrow D_{solvent} = D_{solute}$
+- Which turns out to **rarely be true**
+
+## If Solute Diffusion $\neq$ Solvent Diffusion
+
+### Finite Au-Ag Block
+
+**Ag** on the left and **Au** on the right
+- If $D_{Ag} > D_{Au} \rightarrow$ the block should move relative to Lab Frame (to the right)
+
+So far, diffusion is driven by **concentration gradient**, which is true for:
+- Dilute solutions
+- Ideal solid solutions
+
+And **Fick's Laws** incorporate this assumption.
+
+If **not true**, then **chemical potential** should drive diffusion.
+
+## Kirkendall-Smigelskas Experiment
+
+Only applies to **Substitutional Diffusion**
+
+**Marker**: we should be able to mark the **interface** so that we would be able to see any movement. The marker will undergo simple diffusion and will depend on the materials involved in the system.
+
+### Lab Frame
+
+The block will move, but markers do not move
+
+### Sample Frame
+
+The sample stays same size, **markers move opposite to larger flux**
+
+## The K-S Experiment
+
+**Brass**
+- 70 Cu
+- 30 Zn
+
+The Brass is wrapped around with Mo wire, then coated with Cu $\rightarrow$ look at the copper diffusing into Brass.
+- $2h$ is the width of the Brass
+- $h-h_o \propto \sqrt{t}$
+    - **Diffusion Zone** will move with respect to the end of the diffusion couple
+    - Interface moves **parabolically with time**
+    - Diffusion controlled process
+    - **Substitutional Diffusion**
+
+But conservation of mass (**or conservation of sites**):
+- $D_{Cu} = D_{Zn}$
+- $J_{Cu} = -J_{Zn}$
+
+**Reality**
+- Zn crosses interface but **Cu does not replace all former Zn sites**
+- It means **vacancies will be generated**
+- The **vacancies will diffuse**
+
+### Mechanism Behind K-S Effect
+
+When $D_{Zn} > D_{Cu}$ and assuming $ D \neq D(c)$
+- $J_{Zn} = J_{Cu} + J_{V}$
+- $J_{Zn} + J_{Cu} + J_{V} = 0$
+    - $D_{Zn}$ Diffusivity of Zn in Cooper
+    - $D_{Cu}$ Diffusivity of Cu in Zinc
+    
+Then:
+- $J_{V} = D_{Zn}\frac{dc_{Zn}}{dx} + D_{Cu}\frac{dc_{Cu}}{dx}$
+
+But:
+- $c_{Zn} = 1 - c_{Cu} \Rightarrow dc_{Zn} = -dc_{Cu}$
+
+So:
+- $J_{V} = (D_{Cu} - D_{Zn}) \frac{dc_{Cu}}{dx}$
+- $\frac{\partial C_V}{\partial t} = -\nabla J_V = -(D_{Cu} - D_{Zn}) \frac{\partial^2 c_{Cu}}{dx^2}$
+- $c(x,t) = \frac{c_o}{2}[1-erf(\frac{x}{\sqrt{4Dt}})]$
+
+### Concentration
+
+### Shape
+
+**Error Function** is the integral of a **Gaussian** $\rightarrow$ The **derivative of Error Function** gets back to the **Gaussian**
+
+## $\frac{\partial c_V}{\partial t}$
+
+$\frac{\partial c}{\partial t} \propto \frac{\partial^2 c}{\partial x^2} \propto -\frac{\partial J}{\partial x}$
+
+To **maintain the flux balance**
+- **Left side** $\rightarrow$ vacancy accumulation $\rightarrow$ **annihilate vacancies**
+- **Right side** $\rightarrow$ vacancy shortage $\rightarrow$ **creat vacancies**
+
+### Schematically
+
+- **Left side** $\rightarrow$ A
+- **Right side** $\rightarrow$ B
+
+Take $\frac{D_A}{D_B} = \infty \Rightarrow$ **A diffuses**
+
+To **maintain the flux balance**
+- **Left side** $\rightarrow$ vacancy accumulation $\rightarrow$ **annihilate vacancies**
+- **Right side** $\rightarrow$ vacancy shortage $\rightarrow$ **creat vacancies**
+- The whole thing is a **Thermally Activated Process**
+    - $N_V = N_V(T,P,...)$
+    - Eventually create **dislocations, grain boundaries, free surfaces ...**
+        - Free energy (**entropy contibution**)
+
+Note: **generation and annihilation are reverse of one another**
+
+## Reconcile K-S Effect with Void Formation
+
+If I can **creat voids**, neither the sample nor the markers will move.
+
+### Lab Frame
+
+- **Sample grows** to the right
+- **Markers stay** at their positions
+
+### Sample Frame
+
+- **Markers** do not move with respect to left side — **but**:
+- **Markers** move farther away from the right side
+
+## Darken Suggestion
+
+**Darken** has gone further than what others have done — he included velocity in a way to correct Fick's Law when solute and solvent don't have the same diffusivity.
+
+**Consider A-B**
+- If Ideal: atomic sites are conserved & ideal solution
+    - $D_A \neq D_A(c)$
+    - $D_B \neq D_B(c)$
+    
+## Marker Motion Speed
+
+$v_{marker} \propto v_A$ & $v_B$
+
+How do I get velocity from what I can measure?
+- $[J] \equiv \frac{atoms}{m^2 s}$
+- $[v] = \frac{m}{s}$
+
+We can get velocity from flux by $\frac{atoms}{volume} = \frac{1}{\Omega}$
+- $v_{marker} = - [J_A \Omega + J_B \Omega]$
+- $v_{marker} = -\Omega [-D_A\frac{dc_A}{dx} -D_B\frac{dc_B}{dx}]$
+- $v_{marker} = \Omega [-D_A\frac{dc_A}{dx} +D_B\frac{dc_B}{dx}]$
+
+## Darken Proposal: Use Chemical Diffusion Coefficient $\tilde D$ for Diffusion Couple Problems
+
+- $c = \frac{X}{\Omega}$
+    - $X =$ atom fraction $= \frac{atom}{\sum atoms}$
+    - $dc = \frac{dX}{\Omega}$
+    
+Therefore:
+- $v_{marker} = [D_A \frac{dX_A}{dx} + D_B \frac{dX_B}{dx}]$
+    - $X_A = 1 - X_B \Rightarrow dX_A = - dX_B$
+- $v_{marker} = (D_A-D_B)\frac{dX_A}{dx} = (D_B-D_A)\frac{dX_B}{dx} $
+
+**Change Fick's Equation** by incorporating both diffusion coefficient via $v_{marker}$
+- **Fick's**
+    - $-D_1 \frac{\partial c_1}{\partial x}$
+    - $\frac{\partial c_1}{\partial x} = \frac{\partial}{\partial x}(D_1\frac{\partial c_1}{\partial x})$
+- **Darken**
+    - $-(D_1 \frac{\partial c_1}{\partial x}-c_1v)$
+    - $\frac{\partial c_1}{\partial x} = \frac{\partial}{\partial x}[D_1\frac{\partial c_1}{\partial x} -c_1v]$
+    
+It is possible to get a **concentration profile** (HOMEWORK):
+- $\frac{\partial X_A}{\partial t} = \frac{\partial}{\partial x}[(X_AD_B + X_BD_A) \frac{\partial X_A}{\partial x}]$
+
+**FINAL EXAM**: we will have to do this to get to the problem.
+
+**Ideal Solution**
+- $\tilde D = (X_AD_B + X_BD_A)$
+
+**Non Ideal Solution**
+- $\tilde D = (X_AD_B + X_BD_A)\frac{dlna_A}{dlnX_A}$
+
+Rewriting the **Fick's Second Law**- $\frac{\partial X_A}{\partial t} = \frac{\partial}{\partial x}(\tilde D \frac{\partial X_A}{\partial x})$
+
+## Ideal Solutions
+
+**FINAL EXAM**: how does the net diffusivity change if different kind of interactions are incorporated?
+
+Consider **A-B Diffusion Couple**
+- A-A bonds
+- B-B bonds
+- A-B bonds
+
+**The bonds are "equal", no neighbor preference**
+- A-A = B-B = A-B
+- $\tilde D = (X_AD_B + X_BD_A)$ **The Rule of Mixtures**
+    - $D_A \neq D_A(X_A)$
+    - $D_B \neq D_B(X_B)$
+    - $\tilde D$ is **concentration dependent**
+    
+## Effect of Strong A-B
+
+Consider **A-B Diffusion Couple**
+- A-A bonds = B-B bonds
+- A-B bonds **are stronger**
+
+Then
+- $X_B \rightarrow 0 \Rightarrow$ B atoms are surrounded by A atoms $\Rightarrow \tilde D \approx D_B$ 
+- $X_B \rightarrow 1 \Rightarrow$ A atoms are surrounded by B atoms $\Rightarrow \tilde D \approx D_A$ 
+
+When $X_B = 0.5$ the former constant diffusivity is going to bend down $\downarrow$ (**A-B bonds are stronger**)
+- **Concentration dependence** of diffusion
+- $\tilde D = (X_AD_B + X_BD_A)\frac{dlna_A}{dlnX_A}$
+
+## Physical Insight from Bolzmann-Matano Analysis
+
+Concentration profile changes from **symmetric** to **asymmetric**. It is as if the interface has changed so that the symmetry axix is no longer at $x=0$.
+
+The **displaced interface** is called the **Matano Interface** (Matano Plane).

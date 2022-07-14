@@ -1,0 +1,82 @@
+--- 
+title: "Notes from a Class on Diffusion in Materials"
+author: "Thiago Oliveira"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: book.bib
+url: "https://ollliveira.github.io/diffmse"
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a booknote from a class in diffusion in materials.
+link-citations: yes
+github-repo: ollliveira/diffmse
+---
+
+# Diffusion in Materials · Notes from Class {-}
+
+Notes from Prof. Mohammad Islam Lectures
+
+## Syllabus  {-}
+
+The exams is not suppose to find out what we don't know.
+- 85% to 90% is going to be concepts we are deeply familiar with,
+- 10% to 15% is going to separate the B+ form A- and A,
+- 30% of the questions $\rightarrow$ conceptual questions,
+- 70% of the questions $\rightarrow$ mathematical questions (derivation/manipulation).
+
+This is a **Graduate Course** which means that we have to go **beyond what is given in the class**.
+
+## Notes for Exam  {-}
+
+$ k_{B}T = 4\,pNnm = 4\times10^{-21} Nm $
+
+$ t^* = \frac{0.2 \times 10^{-9}m}{\sqrt {4 \times 10^{-21}Nm}} \, \frac{18 \times 10^{-3}\frac{kg}{mole}}{6 \times 10^{23}\frac{molecule}{mole}} = 5 \times 10^{-13} \sim 10^{-12} \, s $
+
+## Overall Structure of the Class  {-}
+
+Why do we brush our teeth for 2 minutes?
+That is a P&G research that showed that 2 minutes is the time necessary for **Fluorite** to diffuse into the tooth.
+The reason is because it is how long it takes for **F** to diffuse about half of thickness of our first layer of the tooth.
+
+
+**This will be on the Exam... Figure that out!**
+
+### Basic Concepts  {-}
+
+Think about different phases of materials:
+- solid
+- liquid
+- gas/vapor
+
+Jelly is solid, made of a protein network.
+We we talk about diffusion, length scale matter.
+
+Visco-elastic fluid — honey?
+
+Start with underlying concepts: **liquid**
+Diffusion concept is dependent on the:
+- **Fluctuation** of atoms, molecules, etc...
+
+Then extend that to other classes of materials:
+- Polymers in solution
+- Polymers in other polymers (solvent is other polymers)
+- Diffusion of vacancies in a crystal
+- Diffusion of impurities in crystal
+- Diffusion in amorphous solids
+
+All this different kinds of concepts that come from **Fluctuations** are called **Random Walk** —> **RW**.
+We are going to use this concept to extend and adjust for generallize, and adjustments we have to make to apply it for different kinds of materials.
+
+**RW** —> Ficks' Law —> Logic Extension from the **Random Walk**, it depends on the **Random Walk** concepts.
+Here is where most of the students start their Diffusion classes.
+
+Finally look at classic materials problems:
+- Composition dependence
+- Microstructure evolves (the dependence on diffusion for this evolution), primarilly under load
+- The connect that with mechanical properties
+
+If we have time:
+- Nucleation & Growth
+- How to experimentally measure diffusion (how we now measure diffusion)
+

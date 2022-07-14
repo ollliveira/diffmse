@@ -1,0 +1,303 @@
+# Lecture 2 · Random Walk
+
+The **Fluctuation** can be understood as the change in the motion using **Langevin Equation**:
+
+$ m\frac{d\vec{v}}{dt} = -b\vec{v} + \vec{f}(t) + External Forces $
+
+In 3D, at a reasonably longer time, the object should have a **diffusive motion**:
+
+$ \langle r^2(t) - r^2(0) \rangle = \frac{6\,k_{B}T}{b}t \\ $
+OR
+
+$ \langle r^2(t) \rangle = 6D \, t \\ $
+- **MSD** Fluctuation: $ \langle r^2(t) \rangle $
+- Dissipation: $ D = \frac{k_{B}T}{b} $
+
+So that this whole thing is called **Fluctuation** — **Dissipation** Theorem. They observed that this happens in every system we can look at, and it is also called the **Causality Relationship**.
+
+There are concepts very useful for looking at:
+- Coating
+- Thin film formation
+- Thin film stability
+- Etc
+
+Now we are going to take the concept of **Fluctuation** and take the next step... let's suppose now we have metals:
+- Phase Segregation
+- Microstructure Evolution
+- Etc
+
+### At Equilibrium
+
+If we take Silver (Ag) and Copper (Au) and let them reach equilibrium, what should I get at the very end?
+
+They are not very miscible! They will segregate at the end. Silver is denser and therefore will go to the bottom and and cooper will be at the top.
+
+The thickness of the layer of each one will be given by density and **The Lever Rule** —> Phase Separation.
+
+**After Quenching** we don't get that from any other way than diffusion.
+
+## Domain Size · Average Distance
+
+Thermo Prediction < — DIFFUSION — > How phase segregation is happening
+
+Thermo:
+- Classical Thermodynamics (Partial Diferential Equations)
+    - Continuous Diffusion
+- Molecular Thermodynamics + Statistical Mechanincs (particles)
+    - Single Particle Motion —> Average over a large # of particles: $ \langle \, \rangle_{t} , \langle \, \rangle_{N} , etc $
+    
+### 1 Atom in a 1D Crystal
+
+Let's look for:
+- Domain size
+- Average Separation
+
+Say Free Energy $ E(0) $
+
+It starts at origin $ x = 0 $ , and it moves to $ x = x $.
+Then, what is the energy at $ x = x, E(x) $?
+If it can diffuse at any position:
+- All positions have **idendical free energy** (entropy + enthalpy)
+    - The states are **indistinguishable**
+    - All states are **degenerate** of one another
+    - Then all positions have **equal probability** for having the Atom
+- All states are **equally sampled** at equilibrium
+    - This is derived dirrectly from the assumptions of the problem
+    
+If those are true, why the Atom moves at all? It explores different positions because he wants to **maximize entropy**.
+
+Occupancy Probability vs Position
+
+$ t = 0, P(x=0) =1 and P(x \neq 0) = 0  $
+$ t \rightarrow \infty, P(x) \rightarrow 0 \\ $
+
+What does it happen in between? In a finite time? The kinetics of the problem?
+
+**Diffusion is only important if I care about the evolution of the system!**
+
+### Random Walk (RW)
+
+**The physical concept behind the Random Walk is the Langevin Equation**
+
+Allow particles to move around among all the equally probable states, via **1D Random Walk (RW)**:
+- Particle moves $ +1 \, or -1 $ at every time step
+- $ \langle x \rangle_{t \rightarrow \infty} = 0 $, equal probability to move $ +1 \, or -1 $
+
+Remember how to do for a **random step**, maybe for exam...
+
+**Average Distance Travelled:**
+- If I give enough time, it is always going to come back to where it started: $ \langle x \rangle_{t \rightarrow \infty} = 0 $
+- Particles can make **large displacements (excursions)**, $ max(x) $
+    - Average displacement from origin $ \neq 0 $
+    - $ avg |x| \Rightarrow \langle |x| \rangle  > 0 $
+    
+**All Possible RW Paths of n Steps:**
+
+Paths:
+- $ n = 2 \Rightarrow ++, --, +-, -+ \Rightarrow $ 4 paths
+- $ n = 3 \rightarrow +++, ++-, +-+, -++, +--, -+-, --+, --- \Rightarrow $ 8 paths
+
+The pattern is $ N = 2^n $, where:
+- N is the # of **distinct paths**
+- n is the # of **distinct step options** (# of objects in each configuration)
+
+**How many n-step paths with displacement of length x?**
+
+If the **Net Distance** $= +x$ after n-steps of $+1$ or $-1$:
+- $+1$ & $-1$ are the **step sizes**
+- We need to have a number $x$ of extra $+1$
+- It means $(n-x)$ steps equally divided between $+1$ and $-1$ steps
+    - $ +1 \Rightarrow \frac{n-x}{2} $
+    - $ -1 \Rightarrow \frac{n-x}{2} $
+    
+$ n_{+1} = x + \frac{n-x}{2} = \frac{n}{2} + \frac{x}{2} \\ $
+
+$ n_{-1} = \frac{n-x}{2} = \frac{n}{2} - \frac{x}{2} \\ $
+
+**How many paths have $n_{+1}$ and $n_{-1}$ regardless of order?**
+- $n_{+1} \rightarrow$ number of steps with step size $+1$
+- $n_{-1} \rightarrow$ number of steps with step size $-1$
+- Total is still $= n$
+
+For that we use the **Binomial Formula**:
+
+$\frac{n!}{n_{+1}!n_{-1}!}$
+
+$\frac{n!}{(\frac{n}{2}+\frac{x}{2})!(\frac{n}{2}-\frac{x}{2})!}$
+
+If $n=2$, what are the paths with a **displacement equal to zero** ($x=0$)?
+- $n_{+1} = n_{-1} = 1 $
+- $\frac{n!}{n_{+1}!n_{-1}!} = \frac{2!}{1!1!} = 2 \Rightarrow +-, -+ \, \checkmark $
+
+**Probability of an n-step path of length x:**
+
+$ P(x) = \frac{n!}{(\frac{n}{2}+\frac{x}{2})!(\frac{n}{2}-\frac{x}{2})!} \, / \, 2^n \\ $
+
+Which is the **paths of length x** divided by the **total number of paths**. There is no science in this, this is pure math.
+
+For the homework, we will have to derive that is equal to the **Gaussian Distribution or Normal Distribution**:
+
+$ P(x) = \frac{n!}{(\frac{n}{2}+\frac{x}{2})!(\frac{n}{2}-\frac{x}{2})!} \, / \, 2^n = \frac{2}{\sqrt{2\pi n}} e^{\frac{-x^2}{2n}} \\ $
+
+We can also write:
+
+$ P(x) = \frac{2}{\sqrt{2\pi \langle x^2 \rangle}} e^{\frac{-(x - \langle x \rangle)^{2}}{2 \langle x^2 \rangle}} \\ $
+- $\langle x \rangle = 0 \rightarrow$ **Mean Displacement**
+- $\langle x^2 \rangle = n \rightarrow$ **Variance · Mean Square Displacement · MSD**
+- $\sqrt{\langle x^2 \rangle} = \sqrt{n} \rightarrow$ **Root MSD · RMSD · Expectation Value**
+
+We can now say something about **distribution of positions after n steps**:
+- $x = 0 \rightarrow$ is still the **most probable**
+- $|x| \neq 0 \rightarrow$ is also **much more probable**, mainly when we go to a **finite time**
+
+For a given $\langle x \rangle$ & $\langle x^2 \rangle \rightarrow$ we will have a **Gaussian Distribution** $\rightarrow$ Maximum Entropy $\rightarrow$ It can also have what is called a **Local Equilibrium**.
+
+For a **Normal/Gaussian Distribution**:
+- After **n steps** we expect to find the particle at an absolute distance from origin:
+    - $\sqrt{\langle x^2 \rangle} = \sqrt{n} \rightarrow$ **RMS Distance from Origin** $\rightarrow$ **Expectation Value from Origin (regardless of sign)**
+    
+The particle **does not stay** where it starts!
+- The states are **degenerate** $\rightarrow$ it will not stay at the origin.
+
+Why does this happen?
+**ENTROPY** is driving Fluctuation!
+
+#### Extending the Step Size
+
+What if **step size** is not $+1$ or $-1$ but $\rightarrow +a$ or $-a$?
+
+If we do a dimension analysis:
+- $ \langle x^2 \rangle \equiv (Length)^2 $
+- $ n \equiv $ **Number Of Steps**
+
+It seems not to be dimensionally consistent — however, we can easily **make it to be consistent** by writting the follwoing:
+- $ \langle x^2 \rangle = n \cdot a^2 $
+
+If we want to write in time (**easy to measure**):
+
+- **Number of Steps** $ = \frac{NumberSteps}{time}time $
+- $ \frac{NumberSteps}{time} = Frequency = \Gamma $
+- $ n = \Gamma t $
+
+Then:
+- $ \langle x^2 \rangle = \Gamma a^2 t $
+
+#### What happens if we move to 2D and 3D?
+
+How do we **add** different quantities in probability? $\Rightarrow$ We **multiply**!
+
+We consider that events are **independent in each dimension**.
+
+- $ P(x_1, ..., x_n) = P(x) = \frac{n!}{(\frac{n}{2}+\frac{x}{2})!(\frac{n}{2}-\frac{x}{2})!} \, / \, 2^n = \frac{2}{\sqrt{2\pi n}} e^{\frac{-x^2}{2n}}  $ for **d = 1**
+- $ P_d(x_1, ..., x_d) = \frac{c}{(2 \pi n)^{\frac{d}{2}}}e^{-\frac{x_1^2 + x_2^2 + ... + x_d^2}{2n}} \rightarrow $ for **dimensionality = d**
+    - $n$ is the **number os steps**
+
+Notice, if we define the vector $\vec{r}$ as:
+
+$ \vec{r} = (x_1, x_2, ..., x_n) $
+
+$ |\vec{r}| = \sqrt{r^2} \equiv $ **Distance from Origin** $ = (x_1, x_2, ..., x_n)^\frac{1}{2} $
+
+Then:
+
+- $ P_d(r) = \frac{c}{(2 \pi n)^{\frac{d}{2}}}e^{-\frac{r^2}{2n}} $
+- $ \langle r \rangle = 0 \rightarrow $ **Most Probable Position** $\equiv$ **Mean Position/Displacement**
+- $ \langle r^2 \rangle = n \rightarrow $ **MSD** $ = na^2 = \Gamma a^2 t $
+- $ \sqrt{\langle r^2 \rangle} = \sqrt{n} \rightarrow $ **RMSD**
+
+ ##### **Application**: how to estimate the **size of a polymer chain**?
+
+**Ideal Polymer Chain** $\equiv $ Gaussian Polymer Chain $\rightarrow$ They are all undergoing **Random Walk**
+- Polymer $\equiv $ **N** Monomer Segments of length **a**
+- **Random Walk** $\equiv $
+    - It **cannot be any correlation** between the motions, everything has to be **independent** of one another, they can move 360°.
+    - **No interaction** between them.
+    
+**REMEMBER THIS ABOVE FOR CONCEPTUAL QUESTIONS IN THE EXAM!**
+
+- **Contour Length** $ = Na $
+- **Average Size** $ = \langle \vec{r} \rangle = 0 $ (**Random Walk**)
+
+To get the **Polymer Length**, we look at the **MSD**:
+- $ \langle r^2 \rangle = \langle \vec{r}\vec{r} \rangle = Na^2 $
+- $ \sqrt{\langle r^2 \rangle} = \sqrt{N a^2} = N^{\frac{1}{2}}a $
+
+A scientist figured out that the **polymer conformation** is very similar to the **spin conformation** in magnetic materials.
+
+- $ P(x,y,z) = P(\vec{r}) = (const) \, e^{-\frac{(x - \langle x \rangle)^2}{2\sigma_x}} \, e^{-\frac{(y - \langle y \rangle)^2}{2\sigma_y}} \, e^{-\frac{(z - \langle z \rangle)^2}{2\sigma_z}} $
+    - $ \sigma_x \equiv \langle (x - \langle x \rangle)^2 \rangle \Rightarrow \sigma_x = \langle x^2 \rangle $
+    - $ \langle x \rangle = \langle y \rangle = \langle z \rangle = 0 $
+    - $ \langle x^2 \rangle + \langle y^2 \rangle + \langle z^2 \rangle = \langle r^2 \rangle \Rightarrow \langle x^2 \rangle = \langle y^2 \rangle = \langle z^2 \rangle = \frac{\langle r^2 \rangle}{3} $
+    
+Then, the probability of a **polymeler chain having the size r** is:
+
+- $ P(r) = (const) \, e^{-\frac{3r^2}{2 \langle r^2 \rangle}} \propto e^{\frac{-F(r)}{k_BT}}$
+    - Where $F(r)$ is the **Free Energy of a polymer chain** of size $r \equiv$  also called the **Elasticity of a Polymer Chain**.
+    - **Free Energy** $ = F(r) = (const) + \frac{3k_BT}{2Na^2} \, r^2  $
+    - The $ \propto $ is replaced by the (const)
+    - The elasticity is $ \propto $ to $ r^2 \Rightarrow $ **elasticity** is $ \propto $ to the **Fluctuation**
+    - $ \Rightarrow $ **The elasticity of a polymer chain comes from Fluctuation**
+    - Spring Constant $ \rightarrow Force = - \frac{\partial F(r)}{\partial r} = -\frac{3k_BT}{Na^2} \, r $
+        - Spring Constant $ = k = -\frac{3k_BT}{Na^2} $
+
+**THIS ABOVE IS GOING TO BE ON THE EXAM · POLYMER CHAIN PROPERTIES IS ALSO ON THE HOME WORK: QUESTION 5**
+
+If a **Process has Energy E**, how do I calculate the probability for that process to happening?
+
+**Detour** · Thermodynamics Concept
+- An event has energy $ E_i $
+- $ P(event) \propto e^{-\frac{E_i}{k_BT}} $
+
+Now let's bring these concepts together... **SUMMARY**:
+
+## Connecting **Random Walk to Diffusion in Crystals**
+
+**Simple Picture**:
+- Take an **Atom** or a **Molecule**
+- Put it into a **Solvent**
+- Those **Atoms** or **Molecules** have some **Thermal Energy**
+- The **Thermal Energy** will put the Atom or Molecule to undergo **Fluctuation**
+
+Everything else that we've seen comes out of this basic physical concept.
+
+If the particle has some velocity $ v $:
+- $ \langle v^2 \rangle = \frac{3k_BT}{m} $
+ - It is moving **fast**
+ - It is moving **constantly**, because it has thermal energy
+ - It is **random**
+ 
+It is driven by the **Fluctuation**, but the **Dissipation** is dictating how things are going to move:
+- $ \tau = \frac{m}{b} $
+
+Then the **Displacement** is:
+- $ P(\vec{r}) = \frac{c}{(2 \pi \langle r^2 \rangle)^{\frac{d}{2}}} \, e^{-\frac{r^2}{2 \langle r^2 \rangle}} $
+
+Again:
+- $ \langle \vec{r} \rangle = 0 \rightarrow $ **Mean Position**
+- $ \langle r^2 \rangle = Na^2 \rightarrow $ **MSD** ($ \langle r^2 \rangle = \Gamma a^2t $) 
+- $ \sqrt{\langle r^2 \rangle} = \sqrt{N a^2} = N^{\frac{1}{2}}a \rightarrow $ **RMSD**
+
+**IT IS ON THE HOMEWORK!**
+
+**Brownian Motion** · The same thing but using a different notation:
+
+**If I know the position of an particle** at time $t$ and at time $0$, then I can move from the **MSD** to the **Exact Location** of the particle:
+- $ \langle [r(t) - r(0)]^2 \rangle_{ensemble} = 2dD \, t $
+    - $ d \equiv $ **dimensionality**
+    
+Everything is for $ t >> \tau $!
+If this is not true, we move to a **Super Diffusive Motion**.
+**IT IS ON THE HOMEWORK**
+
+Diffusivity $\Rightarrow$ **Diffusion Constant**
+- $ D \equiv \frac{\langle [r(t) - r(0)]^2 \rangle}{2d \, t} = \frac{\Gamma a^2}{2d} $
+- $ D \equiv \frac{k_BT}{b} \rightarrow $ **Stokes-Einstein Equation**
+
+If I have any kind of **Fluctuation**, this Fluctuation is intimately dependent on the **Drag** in my system $ \rightarrow b $
+
+Then, if I want to know the **Diffusion Length** or **Diffusion Distance**:
+- $ \sqrt{\langle r^2 \rangle} = \sqrt{2dD \, t} \propto t^{\frac{1}{2}} $
+    - **Diffusion Motion** $ \propto t $
+    - **Diffusion Length** $ \propto t^{\frac{1}{2}} $
+    - $ \sqrt{\langle r^2 \rangle} = \sqrt{D} \,t^{\frac{1}{2}} $
+

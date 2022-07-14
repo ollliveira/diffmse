@@ -1,0 +1,131 @@
+# Lecture 6 · Various Diffusion Problems
+
+## Summary
+
+- Fick's **First Law** $\rightarrow$ **steady state** problems
+- Fick's **Second Law** $\rightarrow$ **transient** problems
+    - Derived from **mass conservation**
+    
+## Transient Systems
+
+### Thin Film
+
+$c(x,t) = \frac{M_{total}}{\sqrt{4\pi Dt}} e^{\frac{-x^2}{4Dt}}$
+
+### Semi Infinite Slab
+
+Approach:
+- **Propose a solution** to Fick's Second Law
+- **Prove the solution is a general solution**
+- **Make the solution specific** by carefully choosing BC
+
+$ c(x,t) = \frac{c_o}{2} [1- erf(\frac{x}{\sqrt{4Dt}})]$
+
+## Sligthly More Complicated — But Similar Class of Problems
+
+**Semi Infinite Slab + Thin Film** $\rightarrow$ **SUPERPOSITION**
+
+- **Semi Infinite Slab** $\rightarrow c(x,t) = \frac{c_o}{2} [1- erf(\frac{x}{\sqrt{4Dt}})]$
+    - **Error Function**
+    - This is going to dominate
+- **Semi Infinite Slab + Thin Film** $\rightarrow c(x,t) = \frac{c_o}{2} [1- erf(\frac{x}{\sqrt{4Dt}})] +\frac{bc_o}{\sqrt{4\pi Dt}} e^{-\frac{(x-l)^2}{4Dt}}$
+    - Thin film is sitting at the location $l$ and has a width $b$
+    - **Gaussian** Concentration Profile
+    
+### Concentration Evolution
+
+- **Superposition** $\rightarrow$ **general solution**
+- **Time BC**
+    - $c(x,\infty) =\frac{c_o}{2}$
+- **Space BCs**
+    - $c(-\infty,t) = c_o$
+    - $c(\infty,t) = 0$
+- **Steady State** $\rightarrow c(x,\infty) \approx \frac{c_o}{2}$
+
+## Problems Involving Thicker Films
+
+**Too thick** to be model by a **Gaussian Profile**
+
+**FINAL EXAM**
+
+- Approach I (**Manipulation of Concentration Profiles · SUPERPOSITION**):
+    - **Superposition of Gaussian**: we can sum over a finite thickness as a sum of the many **Gaussians** $\rightarrow$ **Error Function**
+    - $\frac{c_o}{2}[1 - erf\frac{(x-l)}{\sqrt{4Dt}}]\rightarrow$ positive x direction
+    - **Diffusion Couple**: $\frac{c_o}{2}[1 - erf\frac{(-x-l)}{\sqrt{4Dt}}]\rightarrow$ negative x direction
+    - **Addition**: $\frac{c_o}{2}[2 - erf\frac{(x-l)}{\sqrt{4Dt}} + erf\frac{(x+l)}{\sqrt{4Dt}}]$
+    - **Subtract** $c_o$: $\frac{c_o}{2}[erf\frac{(x+l)}{\sqrt{4Dt}} - erf\frac{(x-l)}{\sqrt{4Dt}}]$
+
+- **Time BC**
+    - $c(x,0) = 0$ for $|x| > l$
+    - $c(x,0) = c_o$ for any other condition
+- **Space BCs**
+    - $c(-\infty,t) = 0$
+    - $c(\infty,t) = 0$
+    - $J(\infty,t) = 0$
+- **Steady State** $\rightarrow c(x, \infty) = 0 $ as in both sides we have semi infinite slabs, the finite amount behaves as a thin film as time goes to infinity.
+
+### Another Example Problem
+
+Here is a **superposition example** which I wrote on my notebook.
+
+## Reflections
+
+**Finite thickness** films (not semi infinite anymore)
+- Slab thickness $\approx 2l$
+
+Let's say it was a **thin film** $\rightarrow$ it is a **good starting point**
+- $c(x,t) = \frac{M_{total}}{\sqrt{4\pi Dt}}e^{-\frac{x^2}{4Dt}}$
+- $M_{total} = bc_o$
+    - $b \rightarrow$ thickness of the film
+    - $c_o \rightarrow$ initial concentration
+
+However:
+- $\int_{0.1}^{0.1} c(x,t) \neq M_{total}$ considering only **One Gaussian**
+
+By **reflection** we considered how things are moving back into the film $\rightarrow$ **put back missing mass**
+- $c(x,t) = \frac{M_{total}}{\sqrt{4\pi Dt}}[e^{-\frac{x^2}{4Dt}} + e^{-\frac{(x-0.2)^2}{4Dt}} + e^{-\frac{(x+0.2)^2}{4Dt}}] $
+
+But overtime, dopant move farther, also image source dopands also leak out. In this case, the **real solution will be**:
+- $c(x,t) = \frac{M_{total}}{\sqrt{4\pi Dt}} \sum_{i =-\infty}^{\infty} e^{-\frac{(x-2il)^2}{4Dt}}  $
+    - Slag thickness $\approx 2l$
+    - It is still **superposition of known solutions** $\rightarrow$ still **general solutions** of Fick's Second Law
+    
+- **Time BC**
+    - $c(x,\infty) \approx \frac{M_{total}}{2l}$
+- **Space BCs**
+    - $J(0,t) = 0$
+    - $J(-l,t) = 0$
+    - $J(l,t) = 0$
+- Solutions **only valid** for $-l \leq x \leq l$
+
+**Mass Conservation BC** $\rightarrow J=0$ at **open surface**
+- This typwe of BC works for **finite & semi infinite** systems
+
+**Reflections** should always be beyond the free surface $\rightarrow$ **outside** of the sample.
+
+## Semi Infinite Slab with Constant Surface Composition
+
+This is particularly important for **biological systems**.
+
+$c_o \rightarrow$ the concentration needed at the surface
+- Use $x>0$ solution for semi infinite slab:
+- $c(x,t) = c_o[1-erf(\frac{x}{\sqrt{4Dt}})]$
+- **Time BC**
+    - $c(x>0,t=0) = 0$
+    - $c(x=0,t=0) = c_o$
+- **Space BCs**
+    - $c(0,t) = c_o$
+    - $c(\infty,t) = 0$
+- **Plug** into $c(x>0,t)$, just to verify they satisfy:
+    - $c(x>0, t=0) = c_o[1-erf(\frac{x}{\sqrt{4Dt}})] = 0$
+        - $erf(\infty) = 1$
+    - $c(x=0, t=0) = c_o[1-erf(\frac{x}{\sqrt{4Dt}})] = c_o$
+        - $erf(0) = 0$
+
+## Use of Reflections & Superpositions Together
+
+Start with **Reflection** $\rightarrow J=0$
+- BC $\Rightarrow \frac{dc}{dx}|_{surface}^{source} = -\frac{dc}{dx}|_{image}^{source}$
+
+Then go to **Superposition** $\rightarrow$ composition
+- BC $\Rightarrow c_o^{source} = c_o^{source} + c_o^{image} - c_o^{superposition}$

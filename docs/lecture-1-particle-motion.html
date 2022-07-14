@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter1 Lecture 1 · Particle Motion | Notes from a Class on Diffusion in Materials</title>
+  <meta name="description" content="This is a booknote from a class in diffusion in materials." />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter1 Lecture 1 · Particle Motion | Notes from a Class on Diffusion in Materials" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a booknote from a class in diffusion in materials." />
+  <meta name="github-repo" content="ollliveira/diffmse" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter1 Lecture 1 · Particle Motion | Notes from a Class on Diffusion in Materials" />
+  
+  <meta name="twitter:description" content="This is a booknote from a class in diffusion in materials." />
+  
+
+<meta name="author" content="Thiago Oliveira" />
+
+
+<meta name="date" content="2022-07-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="lecture-2-random-walk.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diffusion Notes</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Diffusion in Materials · Notes from Class</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#syllabus"><i class="fa fa-check"></i>Syllabus</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#notes-for-exam"><i class="fa fa-check"></i>Notes for Exam</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#overall-structure-of-the-class"><i class="fa fa-check"></i>Overall Structure of the Class</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#basic-concepts"><i class="fa fa-check"></i>Basic Concepts</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="lecture-1-particle-motion.html"><a href="lecture-1-particle-motion.html"><i class="fa fa-check"></i><b>1</b> Lecture 1 · Particle Motion</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="lecture-1-particle-motion.html"><a href="lecture-1-particle-motion.html#equilibrium-configuration-energies"><i class="fa fa-check"></i><b>1.1</b> Equilibrium Configuration &amp; Energies</a></li>
+<li class="chapter" data-level="1.2" data-path="lecture-1-particle-motion.html"><a href="lecture-1-particle-motion.html#time-scale-for-fluid-response"><i class="fa fa-check"></i><b>1.2</b> Time Scale for Fluid Response</a></li>
+<li class="chapter" data-level="1.3" data-path="lecture-1-particle-motion.html"><a href="lecture-1-particle-motion.html#for-water"><i class="fa fa-check"></i><b>1.3</b> For Water</a></li>
+<li class="chapter" data-level="1.4" data-path="lecture-1-particle-motion.html"><a href="lecture-1-particle-motion.html#modulus"><i class="fa fa-check"></i><b>1.4</b> Modulus</a></li>
+<li class="chapter" data-level="1.5" data-path="lecture-1-particle-motion.html"><a href="lecture-1-particle-motion.html#motions-that-are-temporarily-correlated"><i class="fa fa-check"></i><b>1.5</b> Motions that are Temporarily Correlated</a></li>
+<li class="chapter" data-level="1.6" data-path="lecture-1-particle-motion.html"><a href="lecture-1-particle-motion.html#classes-of-problem-we-are-interested-in"><i class="fa fa-check"></i><b>1.6</b> Classes of problem we are interested in</a></li>
+<li class="chapter" data-level="1.7" data-path="lecture-1-particle-motion.html"><a href="lecture-1-particle-motion.html#msd"><i class="fa fa-check"></i><b>1.7</b> MSD</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lecture-2-random-walk.html"><a href="lecture-2-random-walk.html"><i class="fa fa-check"></i><b>2</b> Lecture 2 · Random Walk</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="lecture-2-random-walk.html"><a href="lecture-2-random-walk.html#at-equilibrium"><i class="fa fa-check"></i><b>2.0.1</b> At Equilibrium</a></li>
+<li class="chapter" data-level="2.1" data-path="lecture-2-random-walk.html"><a href="lecture-2-random-walk.html#domain-size-average-distance"><i class="fa fa-check"></i><b>2.1</b> Domain Size · Average Distance</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="lecture-2-random-walk.html"><a href="lecture-2-random-walk.html#atom-in-a-1d-crystal"><i class="fa fa-check"></i><b>2.1.1</b> 1 Atom in a 1D Crystal</a></li>
+<li class="chapter" data-level="2.1.2" data-path="lecture-2-random-walk.html"><a href="lecture-2-random-walk.html#random-walk-rw"><i class="fa fa-check"></i><b>2.1.2</b> Random Walk (RW)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="lecture-2-random-walk.html"><a href="lecture-2-random-walk.html#connecting-random-walk-to-diffusion-in-crystals"><i class="fa fa-check"></i><b>2.2</b> Connecting <strong>Random Walk to Diffusion in Crystals</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lecture-3-random-walk-and-diffusion-in-crystals.html"><a href="lecture-3-random-walk-and-diffusion-in-crystals.html"><i class="fa fa-check"></i><b>3</b> Lecture 3 · Random Walk and Diffusion in Crystals</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="lecture-3-random-walk-and-diffusion-in-crystals.html"><a href="lecture-3-random-walk-and-diffusion-in-crystals.html#diffusion-in-crystals-mechanisms"><i class="fa fa-check"></i><b>3.1</b> Diffusion in Crystals · <strong>Mechanisms</strong></a></li>
+<li class="chapter" data-level="3.2" data-path="lecture-3-random-walk-and-diffusion-in-crystals.html"><a href="lecture-3-random-walk-and-diffusion-in-crystals.html#impurities"><i class="fa fa-check"></i><b>3.2</b> Impurities</a></li>
+<li class="chapter" data-level="3.3" data-path="lecture-3-random-walk-and-diffusion-in-crystals.html"><a href="lecture-3-random-walk-and-diffusion-in-crystals.html#measuring-diffusion-in-crystals"><i class="fa fa-check"></i><b>3.3</b> Measuring diffusion in Crystals</a></li>
+<li class="chapter" data-level="3.4" data-path="lecture-3-random-walk-and-diffusion-in-crystals.html"><a href="lecture-3-random-walk-and-diffusion-in-crystals.html#interstitial-solute-diffusion"><i class="fa fa-check"></i><b>3.4</b> Interstitial Solute Diffusion</a></li>
+<li class="chapter" data-level="3.5" data-path="lecture-3-random-walk-and-diffusion-in-crystals.html"><a href="lecture-3-random-walk-and-diffusion-in-crystals.html#remarks-on-interstitial-solute-diffusion"><i class="fa fa-check"></i><b>3.5</b> Remarks on Interstitial Solute Diffusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><i class="fa fa-check"></i><b>4</b> Lecture 4 · Diffusion in Liquids, Amorphous Solids and Polymers</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html#summary"><i class="fa fa-check"></i><b>4.1</b> Summary</a></li>
+<li class="chapter" data-level="4.2" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html#non-newtonian-liquid"><i class="fa fa-check"></i><b>4.2</b> Non-Newtonian Liquid</a></li>
+<li class="chapter" data-level="4.3" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html#free-volume-model"><i class="fa fa-check"></i><b>4.3</b> Free Volume Model</a></li>
+<li class="chapter" data-level="4.4" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html#diffusion-characteristics-in-non-newtonian-fluids"><i class="fa fa-check"></i><b>4.4</b> Diffusion Characteristics in Non-Newtonian Fluids</a></li>
+<li class="chapter" data-level="4.5" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html#velocity"><i class="fa fa-check"></i><b>4.5</b> Velocity</a></li>
+<li class="chapter" data-level="4.6" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html#d"><i class="fa fa-check"></i><b>4.6</b> D</a></li>
+<li class="chapter" data-level="4.7" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html#diffusion-in-amorphous-solids"><i class="fa fa-check"></i><b>4.7</b> Diffusion in Amorphous Solids</a></li>
+<li class="chapter" data-level="4.8" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html#what-happens-to-free-volume"><i class="fa fa-check"></i><b>4.8</b> WHAT HAPPENS TO FREE VOLUME</a></li>
+<li class="chapter" data-level="4.9" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html#diffusion-in-amorphous-solids-self-diffusion"><i class="fa fa-check"></i><b>4.9</b> Diffusion in Amorphous Solids: SELF-DIFFUSION</a></li>
+<li class="chapter" data-level="4.10" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html#experimental-observations"><i class="fa fa-check"></i><b>4.10</b> Experimental Observations</a></li>
+<li class="chapter" data-level="4.11" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html#interstitial-diffusion-in-amorphous-solids"><i class="fa fa-check"></i><b>4.11</b> Interstitial Diffusion in Amorphous Solids</a></li>
+<li class="chapter" data-level="4.12" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html#polymers-different-class-of-amorphous-solid"><i class="fa fa-check"></i><b>4.12</b> Polymers (different class of amorphous solid)</a></li>
+<li class="chapter" data-level="4.13" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html#polymer-diffusion-in-solvents"><i class="fa fa-check"></i><b>4.13</b> Polymer Diffusion in Solvents</a></li>
+<li class="chapter" data-level="4.14" data-path="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html"><a href="lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers.html#polymer-self-diffusion-in-a-melt-no-solvent"><i class="fa fa-check"></i><b>4.14</b> Polymer Self-Diffusion in a Melt (NO SOLVENT)</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lecture-5-ficks-law-from-random-walk.html"><a href="lecture-5-ficks-law-from-random-walk.html"><i class="fa fa-check"></i><b>5</b> Lecture 5 · Fick’s Law from Random Walk</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="lecture-5-ficks-law-from-random-walk.html"><a href="lecture-5-ficks-law-from-random-walk.html#ficks-laws-from-random-walk"><i class="fa fa-check"></i><b>5.1</b> Fick’s Laws from Random Walk</a></li>
+<li class="chapter" data-level="5.2" data-path="lecture-5-ficks-law-from-random-walk.html"><a href="lecture-5-ficks-law-from-random-walk.html#linear-transport-1d"><i class="fa fa-check"></i><b>5.2</b> Linear Transport (1D)</a></li>
+<li class="chapter" data-level="5.3" data-path="lecture-5-ficks-law-from-random-walk.html"><a href="lecture-5-ficks-law-from-random-walk.html#rephrase-with-random-walk"><i class="fa fa-check"></i><b>5.3</b> Rephrase with Random Walk</a></li>
+<li class="chapter" data-level="5.4" data-path="lecture-5-ficks-law-from-random-walk.html"><a href="lecture-5-ficks-law-from-random-walk.html#diffusion-equation"><i class="fa fa-check"></i><b>5.4</b> Diffusion Equation</a></li>
+<li class="chapter" data-level="5.5" data-path="lecture-5-ficks-law-from-random-walk.html"><a href="lecture-5-ficks-law-from-random-walk.html#diffusion-equation-in-terms-of-flux"><i class="fa fa-check"></i><b>5.5</b> Diffusion Equation in terms of Flux</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="lecture-5-ficks-law-from-random-walk.html"><a href="lecture-5-ficks-law-from-random-walk.html#steady-state-diffusion-through-a-membrane"><i class="fa fa-check"></i><b>5.5.1</b> Steady-State Diffusion Through a Membrane</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="lecture-5-ficks-law-from-random-walk.html"><a href="lecture-5-ficks-law-from-random-walk.html#transient-systems"><i class="fa fa-check"></i><b>5.6</b> Transient Systems</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="lecture-5-ficks-law-from-random-walk.html"><a href="lecture-5-ficks-law-from-random-walk.html#one-class-of-problems"><i class="fa fa-check"></i><b>5.6.1</b> One Class of Problems</a></li>
+<li class="chapter" data-level="5.6.2" data-path="lecture-5-ficks-law-from-random-walk.html"><a href="lecture-5-ficks-law-from-random-walk.html#solution-approach"><i class="fa fa-check"></i><b>5.6.2</b> Solution Approach</a></li>
+<li class="chapter" data-level="5.6.3" data-path="lecture-5-ficks-law-from-random-walk.html"><a href="lecture-5-ficks-law-from-random-walk.html#another-class-of-problems"><i class="fa fa-check"></i><b>5.6.3</b> Another Class of Problems</a></li>
+<li class="chapter" data-level="5.6.4" data-path="lecture-5-ficks-law-from-random-walk.html"><a href="lecture-5-ficks-law-from-random-walk.html#semi-infinite-slab"><i class="fa fa-check"></i><b>5.6.4</b> Semi Infinite Slab</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="lecture-6-various-diffusion-problems.html"><a href="lecture-6-various-diffusion-problems.html"><i class="fa fa-check"></i><b>6</b> Lecture 6 · Various Diffusion Problems</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="lecture-6-various-diffusion-problems.html"><a href="lecture-6-various-diffusion-problems.html#summary-1"><i class="fa fa-check"></i><b>6.1</b> Summary</a></li>
+<li class="chapter" data-level="6.2" data-path="lecture-6-various-diffusion-problems.html"><a href="lecture-6-various-diffusion-problems.html#transient-systems-1"><i class="fa fa-check"></i><b>6.2</b> Transient Systems</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="lecture-6-various-diffusion-problems.html"><a href="lecture-6-various-diffusion-problems.html#thin-film"><i class="fa fa-check"></i><b>6.2.1</b> Thin Film</a></li>
+<li class="chapter" data-level="6.2.2" data-path="lecture-6-various-diffusion-problems.html"><a href="lecture-6-various-diffusion-problems.html#semi-infinite-slab-1"><i class="fa fa-check"></i><b>6.2.2</b> Semi Infinite Slab</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="lecture-6-various-diffusion-problems.html"><a href="lecture-6-various-diffusion-problems.html#sligthly-more-complicated-but-similar-class-of-problems"><i class="fa fa-check"></i><b>6.3</b> Sligthly More Complicated — But Similar Class of Problems</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="lecture-6-various-diffusion-problems.html"><a href="lecture-6-various-diffusion-problems.html#concentration-evolution"><i class="fa fa-check"></i><b>6.3.1</b> Concentration Evolution</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="lecture-6-various-diffusion-problems.html"><a href="lecture-6-various-diffusion-problems.html#problems-involving-thicker-films"><i class="fa fa-check"></i><b>6.4</b> Problems Involving Thicker Films</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="lecture-6-various-diffusion-problems.html"><a href="lecture-6-various-diffusion-problems.html#another-example-problem"><i class="fa fa-check"></i><b>6.4.1</b> Another Example Problem</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="lecture-6-various-diffusion-problems.html"><a href="lecture-6-various-diffusion-problems.html#reflections"><i class="fa fa-check"></i><b>6.5</b> Reflections</a></li>
+<li class="chapter" data-level="6.6" data-path="lecture-6-various-diffusion-problems.html"><a href="lecture-6-various-diffusion-problems.html#semi-infinite-slab-with-constant-surface-composition"><i class="fa fa-check"></i><b>6.6</b> Semi Infinite Slab with Constant Surface Composition</a></li>
+<li class="chapter" data-level="6.7" data-path="lecture-6-various-diffusion-problems.html"><a href="lecture-6-various-diffusion-problems.html#use-of-reflections-superpositions-together"><i class="fa fa-check"></i><b>6.7</b> Use of Reflections &amp; Superpositions Together</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html"><i class="fa fa-check"></i><b>7</b> Lecture 7 · Composition Dependence of Diffusion</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#if-solute-diffusion-neq-solvent-diffusion"><i class="fa fa-check"></i><b>7.1</b> If Solute Diffusion <span class="math inline">\(\neq\)</span> Solvent Diffusion</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#finite-au-ag-block"><i class="fa fa-check"></i><b>7.1.1</b> Finite Au-Ag Block</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#kirkendall-smigelskas-experiment"><i class="fa fa-check"></i><b>7.2</b> Kirkendall-Smigelskas Experiment</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#lab-frame"><i class="fa fa-check"></i><b>7.2.1</b> Lab Frame</a></li>
+<li class="chapter" data-level="7.2.2" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#sample-frame"><i class="fa fa-check"></i><b>7.2.2</b> Sample Frame</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#the-k-s-experiment"><i class="fa fa-check"></i><b>7.3</b> The K-S Experiment</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#mechanism-behind-k-s-effect"><i class="fa fa-check"></i><b>7.3.1</b> Mechanism Behind K-S Effect</a></li>
+<li class="chapter" data-level="7.3.2" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#concentration"><i class="fa fa-check"></i><b>7.3.2</b> Concentration</a></li>
+<li class="chapter" data-level="7.3.3" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#shape"><i class="fa fa-check"></i><b>7.3.3</b> Shape</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#fracpartial-c_vpartial-t"><i class="fa fa-check"></i><b>7.4</b> <span class="math inline">\(\frac{\partial c_V}{\partial t}\)</span></a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#schematically"><i class="fa fa-check"></i><b>7.4.1</b> Schematically</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#reconcile-k-s-effect-with-void-formation"><i class="fa fa-check"></i><b>7.5</b> Reconcile K-S Effect with Void Formation</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#lab-frame-1"><i class="fa fa-check"></i><b>7.5.1</b> Lab Frame</a></li>
+<li class="chapter" data-level="7.5.2" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#sample-frame-1"><i class="fa fa-check"></i><b>7.5.2</b> Sample Frame</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#darken-suggestion"><i class="fa fa-check"></i><b>7.6</b> Darken Suggestion</a></li>
+<li class="chapter" data-level="7.7" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#marker-motion-speed"><i class="fa fa-check"></i><b>7.7</b> Marker Motion Speed</a></li>
+<li class="chapter" data-level="7.8" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#darken-proposal-use-chemical-diffusion-coefficient-tilde-d-for-diffusion-couple-problems"><i class="fa fa-check"></i><b>7.8</b> Darken Proposal: Use Chemical Diffusion Coefficient <span class="math inline">\(\tilde D\)</span> for Diffusion Couple Problems</a></li>
+<li class="chapter" data-level="7.9" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#ideal-solutions"><i class="fa fa-check"></i><b>7.9</b> Ideal Solutions</a></li>
+<li class="chapter" data-level="7.10" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#effect-of-strong-a-b"><i class="fa fa-check"></i><b>7.10</b> Effect of Strong A-B</a></li>
+<li class="chapter" data-level="7.11" data-path="lecture-7-composition-dependence-of-diffusion.html"><a href="lecture-7-composition-dependence-of-diffusion.html#physical-insight-from-bolzmann-matano-analysis"><i class="fa fa-check"></i><b>7.11</b> Physical Insight from Bolzmann-Matano Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lecture-8-microstructure-dependence-of-diffusion.html"><a href="lecture-8-microstructure-dependence-of-diffusion.html"><i class="fa fa-check"></i><b>8</b> Lecture 8 · Microstructure Dependence of Diffusion</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="lecture-8-microstructure-dependence-of-diffusion.html"><a href="lecture-8-microstructure-dependence-of-diffusion.html#overall-diffusivity-d"><i class="fa fa-check"></i><b>8.1</b> Overall Diffusivity · D</a></li>
+<li class="chapter" data-level="8.2" data-path="lecture-8-microstructure-dependence-of-diffusion.html"><a href="lecture-8-microstructure-dependence-of-diffusion.html#edge-dislocation"><i class="fa fa-check"></i><b>8.2</b> Edge Dislocation</a></li>
+<li class="chapter" data-level="8.3" data-path="lecture-8-microstructure-dependence-of-diffusion.html"><a href="lecture-8-microstructure-dependence-of-diffusion.html#revisit"><i class="fa fa-check"></i><b>8.3</b> Revisit</a></li>
+<li class="chapter" data-level="8.4" data-path="lecture-8-microstructure-dependence-of-diffusion.html"><a href="lecture-8-microstructure-dependence-of-diffusion.html#extend-to-grain-boundary"><i class="fa fa-check"></i><b>8.4</b> Extend to Grain Boundary</a></li>
+<li class="chapter" data-level="8.5" data-path="lecture-8-microstructure-dependence-of-diffusion.html"><a href="lecture-8-microstructure-dependence-of-diffusion.html#gb-network"><i class="fa fa-check"></i><b>8.5</b> GB Network</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="lecture-9-diffusion-stress.html"><a href="lecture-9-diffusion-stress.html"><i class="fa fa-check"></i><b>9</b> Lecture 9 · Diffusion &amp; Stress</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="lecture-9-diffusion-stress.html"><a href="lecture-9-diffusion-stress.html#mass-transport-rightarrow-random-walk"><i class="fa fa-check"></i><b>9.1</b> Mass Transport <span class="math inline">\(\rightarrow\)</span> Random Walk</a></li>
+<li class="chapter" data-level="9.2" data-path="lecture-9-diffusion-stress.html"><a href="lecture-9-diffusion-stress.html#mass-transport-microstructure"><i class="fa fa-check"></i><b>9.2</b> Mass Transport &amp; Microstructure</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="lecture-9-diffusion-stress.html"><a href="lecture-9-diffusion-stress.html#polycrystall-in-tension"><i class="fa fa-check"></i><b>9.2.1</b> Polycrystall in Tension</a></li>
+<li class="chapter" data-level="9.2.2" data-path="lecture-9-diffusion-stress.html"><a href="lecture-9-diffusion-stress.html#flux-of-vacancies"><i class="fa fa-check"></i><b>9.2.2</b> Flux of Vacancies</a></li>
+<li class="chapter" data-level="9.2.3" data-path="lecture-9-diffusion-stress.html"><a href="lecture-9-diffusion-stress.html#physical-mechanism"><i class="fa fa-check"></i><b>9.2.3</b> Physical Mechanism</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="lecture-9-diffusion-stress.html"><a href="lecture-9-diffusion-stress.html#marker-motion"><i class="fa fa-check"></i><b>9.3</b> Marker Motion</a></li>
+<li class="chapter" data-level="9.4" data-path="lecture-9-diffusion-stress.html"><a href="lecture-9-diffusion-stress.html#determining-creep-mechanism"><i class="fa fa-check"></i><b>9.4</b> Determining Creep Mechanism</a></li>
+<li class="chapter" data-level="9.5" data-path="lecture-9-diffusion-stress.html"><a href="lecture-9-diffusion-stress.html#role-of-interfaces"><i class="fa fa-check"></i><b>9.5</b> Role of Interfaces</a></li>
+<li class="chapter" data-level="9.6" data-path="lecture-9-diffusion-stress.html"><a href="lecture-9-diffusion-stress.html#capillary-relaxation"><i class="fa fa-check"></i><b>9.6</b> Capillary Relaxation</a></li>
+<li class="chapter" data-level="9.7" data-path="lecture-9-diffusion-stress.html"><a href="lecture-9-diffusion-stress.html#crystalline-interfaces"><i class="fa fa-check"></i><b>9.7</b> Crystalline Interfaces</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="lecture-10-diffusion-and-nucleation-growth.html"><a href="lecture-10-diffusion-and-nucleation-growth.html"><i class="fa fa-check"></i><b>10</b> Lecture 10 · Diffusion and Nucleation &amp; Growth</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="lecture-10-diffusion-and-nucleation-growth.html"><a href="lecture-10-diffusion-and-nucleation-growth.html#grain-growth"><i class="fa fa-check"></i><b>10.1</b> Grain Growth</a></li>
+<li class="chapter" data-level="10.2" data-path="lecture-10-diffusion-and-nucleation-growth.html"><a href="lecture-10-diffusion-and-nucleation-growth.html#kinetics-of-phase-transformation"><i class="fa fa-check"></i><b>10.2</b> Kinetics of Phase Transformation</a></li>
+<li class="chapter" data-level="10.3" data-path="lecture-10-diffusion-and-nucleation-growth.html"><a href="lecture-10-diffusion-and-nucleation-growth.html#determination-of-r"><i class="fa fa-check"></i><b>10.3</b> Determination of <span class="math inline">\(r^*\)</span></a></li>
+<li class="chapter" data-level="10.4" data-path="lecture-10-diffusion-and-nucleation-growth.html"><a href="lecture-10-diffusion-and-nucleation-growth.html#nucleation-rate"><i class="fa fa-check"></i><b>10.4</b> Nucleation Rate</a></li>
+<li class="chapter" data-level="10.5" data-path="lecture-10-diffusion-and-nucleation-growth.html"><a href="lecture-10-diffusion-and-nucleation-growth.html#homogeneous-nucleation"><i class="fa fa-check"></i><b>10.5</b> Homogeneous Nucleation</a></li>
+<li class="chapter" data-level="10.6" data-path="lecture-10-diffusion-and-nucleation-growth.html"><a href="lecture-10-diffusion-and-nucleation-growth.html#heterogeneous-nucleation"><i class="fa fa-check"></i><b>10.6</b> Heterogeneous Nucleation</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notes from a Class on Diffusion in Materials</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lecture-1-particle-motion" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter1</span> Lecture 1 · Particle Motion<a href="lecture-1-particle-motion.html#lecture-1-particle-motion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Diffusion</strong> fundamentally relies on the fact that the constituents molecules/atoms are constantly undergoing <strong>Fluctuation</strong>.</p>
+<p>If I’m interested in the materials properties, I have to understand the motion of the contituent particles and if <strong>there is any kind of correlation</strong> in the motion (<span class="math inline">\(0^{th}\)</span> order).</p>
+<p>What other properties are intimately related to the mechanical properties of the material?
+- Thermal Properties</p>
+<div id="equilibrium-configuration-energies" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Equilibrium Configuration &amp; Energies<a href="lecture-1-particle-motion.html#equilibrium-configuration-energies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Statistical Mechanics</li>
+<li>Molecular Thermodynamics</li>
+</ul>
+<p>Diffusion: things are moving… they are not really stationary.</p>
+<p>The <strong>Dynamics/Response of Fluctuation</strong> must be connected with this <strong>Equilibrium Configuration</strong>. Therefore, we need something else.</p>
+<p>Other point to have in mind is <strong>how the mechanical properties behave with and without external forces</strong>:</p>
+<p><strong>External Forces</strong> <span class="math inline">\(\leftrightarrow\)</span> <strong>Configuration</strong>.</p>
+<p><strong>Langevin Equation:</strong></p>
+<p><span class="math inline">\(m\frac{d\vec{v}}{dt} = -b\vec{v} + \vec{f}(t) + External Forces\)</span></p>
+<ul>
+<li><strong>Viscous Drag</strong> · Average Property (from average response of solvent - flow): <span class="math inline">\(-b\vec{v}\)</span></li>
+<li><strong>Rapid Fluctuations</strong> · Instantaneous Property (collisions with solvent molecules): <span class="math inline">\(\vec{f}(t)\)</span></li>
+<li><strong>External Forces</strong></li>
+</ul>
+<p><strong>Viscous Drag</strong></p>
+<ul>
+<li><p>It is a <strong>Friction Coefficient</strong></p></li>
+<li><p>For a sphere: <span class="math inline">\(b = 6 \pi \eta R\)</span></p>
+<ul>
+<li><span class="math inline">\(\eta =\)</span> <strong>Viscosity</strong></li>
+<li><span class="math inline">\([\eta] = Pa \, s = \frac{N}{m^2} \, s\)</span></li>
+<li><span class="math inline">\([\eta] = \frac{dyne}{cm^2} \, s = Poise\)</span></li>
+</ul></li>
+</ul>
+<p><strong>Newtonian Fluid · A Simple Liquid</strong></p>
+<ul>
+<li><span class="math inline">\(\eta = constant\)</span></li>
+</ul>
+<p><strong>Non-Newtonian Fluid · Colloidal or Polymer Solution</strong></p>
+<ul>
+<li><span class="math inline">\(\eta \neq constant \rightarrow\)</span> It will depend on <strong>Shear Rate</strong>
+<ul>
+<li>Milk</li>
+<li>Shampoo</li>
+</ul></li>
+</ul>
+</div>
+<div id="time-scale-for-fluid-response" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Time Scale for Fluid Response<a href="lecture-1-particle-motion.html#time-scale-for-fluid-response" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Assume</strong> <span class="math inline">\(T &gt;&gt; T_g\)</span> (Temperature of Glass Transition)</p>
+<p><span class="math inline">\(t = \frac{LengthScale}{\sqrt{\langle v^2 \rangle}}\)</span></p>
+<p><span class="math inline">\(LengthScale \equiv X \equiv Particle \, Diameter = 2R\)</span></p>
+</div>
+<div id="for-water" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> For Water<a href="lecture-1-particle-motion.html#for-water" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It is one molecule of water diffusing in a sea of water molecules:</p>
+<ul>
+<li><span class="math inline">\(t^* = \frac{DiameterWaterMolecule}{velocity} = \frac{2Angstrons}{velocity} = \frac{0.2 \times 10^{-9}m}{velocity}\)</span></li>
+</ul>
+<p><strong>How do I get the velocity?</strong></p>
+<ul>
+<li><span class="math inline">\(\sqrt{\langle (v^*)^2 \rangle} = \frac{k_BT}{m}\)</span></li>
+</ul>
+<p>Here we are trying to find the <strong>length scale for a diffusion process</strong>, and we can say that at <strong>R</strong>oom <strong>T</strong>emperature (RT):</p>
+<p><span class="math inline">\(k_{B}T = 4\,pNnm = 4\times10^{-21} Nm \Rightarrow\)</span> <strong>WE NEED TO REMEMBER THIS FOR EXAM</strong></p>
+<p><span class="math inline">\(t^* = \frac{0.2 \times 10^{-9}m}{\sqrt {4 \times 10^{-21}Nm}} \, \frac{18 \times 10^{-3}\frac{kg}{mole}}{6 \times 10^{23}\frac{molecule}{mole}} = 5 \times 10^{-13} \sim 10^{-12} \, s\)</span></p>
+</div>
+<div id="modulus" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Modulus<a href="lecture-1-particle-motion.html#modulus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math inline">\(Modulus \equiv \frac{energy}{volume}\)</span></p>
+<ul>
+<li><span class="math inline">\(Liquid \sim k_BT\)</span></li>
+<li><span class="math inline">\(Solid &gt;&gt; k_BT\)</span></li>
+<li><span class="math inline">\(Gas &lt;&lt; k_BT\)</span></li>
+</ul>
+<p>Looking only at the <strong>Liquid</strong>:</p>
+<p><span class="math inline">\(Modulus \sim \frac{k_BT}{(2R)^3} \sim \frac{4\times 10^{-21}Nm}{(0.2\times 10^{-9}m)^3} \sim 5\times 10^{8} \frac{N}{m^2} (Pa)\)</span></p>
+<p>It tells us that the <strong>viscosity</strong> of any fluid should be of the order of (close to the Boiling Point (BP):</p>
+<p><span class="math inline">\(\eta \sim Modulus \times RelaxationTime = 5 \times 10^{8} \frac{N}{m^2} \, 5\times 10^{-13}s \sim 0.3\times 10^{-3}Pa\,s\)</span></p>
+<p>Let’s take a step further…
+How that is going to impact the evolution of motion:</p>
+<p><strong>Langevin Equation</strong>:</p>
+<p><span class="math inline">\(m\frac{d\vec{v}}{dt} = -b\vec{v} + \vec{f}(t)\)</span></p>
+<ul>
+<li><span class="math inline">\(\frac{d\vec{v}}{dt} \rightarrow\)</span> is going to <strong>fluctuate</strong> because of <span class="math inline">\(\vec{f}\)</span></li>
+<li><span class="math inline">\(\vec{f}(t) \rightarrow\)</span> rapidly fluctuate <span class="math inline">\(\sim 10^{-12}s \rightarrow\)</span> due to <strong>collisions</strong> from many solvent motions <span class="math inline">\(\rightarrow\)</span> usually <strong>uncorrelated</strong>.</li>
+</ul>
+<p>If there is no correlation between <span class="math inline">\(\vec{f}(t)\)</span> and <span class="math inline">\(\vec{f}(t&#39;)\)</span> except at the time equals to <span class="math inline">\(t&#39;\)</span>:</p>
+<ul>
+<li><span class="math inline">\(\langle f(t) \cdot f(t + t&#39;) \rangle \propto \delta (t&#39;)\)</span></li>
+</ul>
+<p>If I’m interested in an average, then:</p>
+<ul>
+<li><span class="math inline">\(\vec{f}(t) \rightarrow 0\)</span></li>
+<li><span class="math inline">\(m\frac{d\vec{v}}{dt} = -b\vec{v}\)</span></li>
+<li><strong>Solution</strong>: <span class="math inline">\(v(t) = v(0) \cdot e^{-\frac{t}{\tau}}\)</span>
+<ul>
+<li>Where <span class="math inline">\(v(0)\)</span> is related to the <strong>boundary/initial condition</strong></li>
+</ul></li>
+<li><span class="math inline">\(\tau \equiv \frac{m}{b} \equiv ViscousRelaxationTimescale\)</span></li>
+</ul>
+<p>The only thing we need to worry about is that <strong>if there is a correlation in the motion</strong>… if there is no correlation in the motion, those fluctuations are going to cancel each other out.</p>
+</div>
+<div id="motions-that-are-temporarily-correlated" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Motions that are Temporarily Correlated<a href="lecture-1-particle-motion.html#motions-that-are-temporarily-correlated" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can now rewrite the <strong>Langevin Equation</strong>:</p>
+<p><span class="math inline">\(\frac{d\vec{v}(t&#39;)}{dt&#39;} = -\frac{\vec{v}(t&#39;)}{\tau} + \frac{\vec{f}(t&#39;)}{m}\)</span></p>
+<p>How can I find the velocity for this kind of equation (<strong>solve the differential equation</strong>)?</p>
+<ul>
+<li>Multiply both sides by <span class="math inline">\(e^{\frac{t&#39;}{\tau}}\)</span></li>
+<li>Integrate <span class="math inline">\(\int_{0}^t dt&#39;\)</span></li>
+<li>Integrate by parts: <span class="math inline">\(\int GdF = GF - \int FdG\)</span></li>
+</ul>
+<p>If we consider the <strong>average velocity</strong> due to <strong>Fluctuation</strong>:</p>
+<p><span class="math inline">\(\langle \vec{v}(t) \rangle = \langle \vec{v}(0) \rangle e^{-\frac{t}{\tau}} + 0\)</span></p>
+<p>(<span class="math inline">\(0\)</span> because <span class="math inline">\(\vec{f}\)</span> is random)</p>
+<p><strong>Here is the exercise for the homework:</strong></p>
+<p>When we measure the fluctuations we only measure the motions that are correlated, otherwise they would cancel each other out and be zero.</p>
+<p>So, when we are measuring the correlation, we are measuring the <strong>Thermal Energy</strong>:</p>
+<p><span class="math inline">\(\int_{-\infty}^\infty \langle \vec{v}(t) \cdot \vec{v}(0) \rangle dt = \frac{6k_BT}{b}\)</span></p>
+<ul>
+<li><span class="math inline">\(\frac{6k_BT}{b} \equiv\)</span> <strong>Damping or Dissipation</strong></li>
+<li><span class="math inline">\(6 \equiv\)</span> <strong>3 Dimension</strong></li>
+<li><span class="math inline">\(b \equiv\)</span> <strong>Drag</strong></li>
+</ul>
+<p>A similar situation is a <strong>current through resistor</strong>:</p>
+<p><span class="math inline">\(\int_{-\infty}^\infty \langle I(t) \cdot I(0) \rangle dt = \frac{6k_BT}{R}\)</span></p>
+<p>Diffusion come in for understanding how a given structure evolves as a function of time.</p>
+</div>
+<div id="classes-of-problem-we-are-interested-in" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> Classes of problem we are interested in<a href="lecture-1-particle-motion.html#classes-of-problem-we-are-interested-in" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Continuous Matrix: how does the thing evolves as a function of time?</p>
+<p>The obstacles interfere with the velocity of the diffusion:</p>
+<ul>
+<li>Friction</li>
+<li>Viscosity</li>
+</ul>
+<p>That’s what Langevin equation says:</p>
+<p>A particle forgets its velocity over a time of <span class="math inline">\(\tau\)</span>.</p>
+</div>
+<div id="msd" class="section level2 hasAnchor" number="1.7">
+<h2><span class="header-section-number">1.7</span> MSD<a href="lecture-1-particle-motion.html#msd" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>What is the <strong>Mean Square Displacement</strong> due to solvent molecule fluctuation?</p>
+<p>We start with the <strong>Langevin Equation</strong>:</p>
+<p><span class="math inline">\(m\frac{d\vec{v}}{dt} = -b\vec{v} + \vec{f}(t)\)</span></p>
+<p>From there we can show that the <strong>MSD</strong> is (here he is giving us what it should look like, and he asks us to derive it in the homework):</p>
+<p><span class="math inline">\(\langle \, r^2(t) - r^2(0) \, \rangle = 6k_BT \frac{\tau}{m}[t - \tau(1 - e^{\frac{-t}{\tau}})]\)</span></p>
+<p>Why do we mean by evolving?
+Phase separation, things are changing…
+How the properties are changing along this change…</p>
+<p><strong>Again</strong>, he is giving the answer and we will have to derive it:</p>
+<p>The particle has two types of motion:</p>
+<ul>
+<li><p><strong>Balistic Motion</strong>: <span class="math inline">\(\langle r^2(t) - r^2(0) \rangle = \langle v^2 \rangle t^2 \\\)</span>
+We want to do at a time scale that we do not worry about the Balistic Motion</p></li>
+<li><p><strong>Diffusive Motion</strong>: <span class="math inline">\(\langle r^2(t) - r^2(0) \rangle = \frac{6\,k_{B}T}{b}t \\\)</span></p></li>
+</ul>
+<p>This is what we are really interested in. It evolves linearly with time.</p>
+<p>If I’m interested at the <strong>Mean Square Displacement</strong> and I assume that the initial position is at the origin (zero), then we can simplify this equation to:</p>
+<p><span class="math inline">\(\langle r^2(t) \rangle = \frac{6\,k_{B}T}{b}t \\\)</span></p>
+<p>OR</p>
+<p><span class="math inline">\(\langle r^2(t) \rangle = 6Dt\)</span> , where <span class="math inline">\(D = \frac{k_{B}T}{b}\)</span></p>
+<ul>
+<li><strong>Fluctuation</strong>: <span class="math inline">\(\langle r^2(t) \rangle\)</span></li>
+<li>Friction/Dissipation Factor: <span class="math inline">\(D = \frac{k_{B}T}{b}\)</span></li>
+</ul>
+<p>We are using the symbol <strong>r</strong> to denote we are doing everything in 3 dimensions — 3D.</p>
+<p>We can also write the same thing in a different way: <span class="math inline">\(\langle \Delta r^2(t) \rangle = 2dDt \\\)</span></p>
+<p>Where <strong>d</strong> is the dimensionality of the situation:</p>
+<ul>
+<li>1 D: d = 1</li>
+<li>2 D: d = 2</li>
+<li>3 D: d = 3</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>If we have an impurity which is diffusing along a thin film… that should be a <strong>2D problem</strong>.</li>
+<li>If we have an impurity diffusion within a grain boundary… although it is a 3D situation, normally a grain boundary is a 1D movement, so it is a <strong>1D problem</strong>.</li>
+</ul>
+<p>This assignment of dimensionality is a tricky task, and we have to figure out the <strong>correct equation to evaluate the motion</strong>.</p>
+<p>So, here we have the three ways to write the same thing:</p>
+<p><span class="math inline">\(\langle r^2(t) - r^2(0) \rangle = \frac{6\,k_{B}T}{b}t \\\)</span></p>
+<p><span class="math inline">\(\langle r^2(t) \rangle = \frac{6\,k_{B}T}{b}t \\\)</span></p>
+<p><span class="math inline">\(\langle \Delta r^2(t) \rangle = \frac{6\,k_{B}T}{b}t \\\)</span></p>
+<p>There is a classical expression that come about, which is the <strong>Diffusivity of a Sphere</strong>:</p>
+<p><span class="math inline">\(D = \frac{k_{B}T}{6 \pi \eta R} \\\)</span></p>
+<p>Which is the <strong>Stokes-Einstein Equation</strong>.</p>
+<p>This calculation is being done everywhere we have a kind of coating.</p>
+<p>Measuring Diffusion using Video Microscopy (<strong>paper is on canvas, for homework</strong>):</p>
+<p><span class="math inline">\(R \sim 0.498 \mu m \\\)</span></p>
+<p>The diameter is about a micron. The plot is <strong>MSD</strong> vs <strong>different time when you are measuring</strong>.</p>
+<p>The answer is gonna be:</p>
+<p><span class="math inline">\(\langle \Delta r^2(\tau) \rangle = 2dD\tau \\\)</span>
+So that the slope is gonna be <span class="math inline">\(\sim 4D\)</span>, from where we can get the diffusion constant:
+<span class="math inline">\(D = 0.46 \pm 0.01 \mu \frac{m^2}{s} \\\)</span></p>
+<p>Dissipation is not a good thing, but without dissipation we cannot have fluctuation.</p>
+<p>It is the causality relation.</p>
+<p><strong>If we take out dissipation, the fluctuation will die away.</strong></p>
+<p>Dissipation is the origin of Fluctuation, however if we have larger dissipation we will have smaller fluctuation. But temperature will always keep things fluctuating.</p>
+<p><span class="math inline">\(\frac{6k_{B}T}{b} = \int_{-\infty}^\infty \vec{v}(0) \cdot \vec{v}(t) dt \\\)</span></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lecture-2-random-walk.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-particle-motion.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

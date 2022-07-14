@@ -1,0 +1,275 @@
+# Lecture 9 · Diffusion & Stress
+
+**Particle in a solvent** $\rightarrow$ **Random Motion** $\rightarrow$ **Random Walk**
+- Motion characteristics
+- Probability of finding a particle in a location
+
+**Polymer in a Liquid**
+- Conformation of the polymer
+- Size of the polymer
+- Motion of the polymer
+
+**Ordered System** (Crystalline solids)
+
+**Disordered System** (Amorphous solids)
+
+We have to be comfortable to transfer the knowledge to other systems
+
+## Mass Transport $\rightarrow$ Random Walk
+
+- **Solute diffusion** driven by the **concentration gradient**
+- **Solvent diffusion** driven by concentration gradient or **chemical potential**
+
+## Mass Transport & Microstructure
+
+Diffusion can be heavily influenced by microstructure (GB, dislocations, etc)
+- **Diffusion $\leftrightarrow$ Microstructure**
+    - Properties
+    - Creep (Mechanical)
+    - Processing
+        - Sintering
+        - Coarsening
+        
+**Sintering & Coarsening** $\Rightarrow$ **Nucleation & Growth**
+
+**Diffusion** is the process through which all these processes happen in a material.
+
+### Polycrystall in Tension
+
+$\sigma = $ **stress**
+- The grain will **alongate along the stress direction**
+- **Tension** $\updownarrow$ then $\Rightarrow$ crystal lattice expands $\Rightarrow$ creates volume $\Rightarrow$ **vacancy creation** $\Rightarrow N_V$
+- **Compression** $\leftrightarrow$ then $\Rightarrow$ crystal lattice contracts $\Rightarrow$ densification $\Rightarrow$ **vacancy annihilation** $\Rightarrow N_V$
+
+Note: **mechanical energy** we are applying $\Rightarrow$ **free energy**
+
+- Free energy per atom
+    - $u_{\sigma e} = \frac{energy}{volume}\cdot \frac{volume}{atom}$
+    - $u_{\sigma e} = \sigma \,\Omega$
+        - $\sigma = $ stress
+        - $\Omega = $ atomic volume
+        
+When a material is stressed $\rightarrow N_V$ **changes (creation - annihilation)**
+- $G_V$ is the energy for creating a vacancy
+- $G = G_V - \sigma \, \Omega$
+- $N_V^{tension} = e^{\frac{-G}{K_BT}}$
+    - $N_V^o = e^{\frac{-G_V}{K_BT}} \rightarrow$ **equilibrium vacancies**
+    - $e^{\frac{\sigma \, \Omega}{K_BT}} \rightarrow$ **vacancies generated** by applied stress
+    
+Therefore
+- $N_V^{tension} = N_V^o e^{\frac{\sigma \, \Omega}{K_BT}}$
+- $N_V^{compression} = N_V^o e^{-\frac{\sigma \, \Omega}{K_BT}}$
+
+### Flux of Vacancies
+
+**Tensile Region** $\rightarrow$ **Compressed Region**
+- $[Flux] = \frac{1}{Area}\frac{vacancy}{time} = \frac{1}{r^2}\frac{dN_V}{dt}$
+- $J = - D_V \frac{\Delta N_V}{\Delta X}$
+
+What would be a **good length**? It is a cubic sample, cubic grain $\rightarrow$ r
+- $J = - D_V \frac{\Delta N_V}{\Delta X}$
+- $\Delta N_V = N_V|_{final} -  N_V|_{initial}$
+- $\Delta N_V = N_V^{compression} -  N_V^{tension}$
+
+Then
+- $\dot N_V = -r^2 \frac{D_VN_V^o}{r} [e^{-\frac{\sigma \, \Omega}{K_BT}} - e^{+\frac{\sigma \, \Omega}{K_BT}}]$
+- $\dot N_V = r D_VN_V^o [e^{+\frac{\sigma \, \Omega}{K_BT}} - e^{-\frac{\sigma \, \Omega}{K_BT}}]$
+
+Converting to **Strain Rate**
+- $\dot \epsilon \equiv \frac{\Delta \dot V}{V} = \frac{d}{dt}[\frac{\Delta V}{V}]$
+    - $V = r^3$
+    - $\Delta V = N_V \Omega$
+- $\dot \epsilon = \frac{\dot N_V \Omega}{r^3} = \frac{r}{r^3} D_VN_V^o \Omega [e^{+\frac{\sigma \, \Omega}{K_BT}} - e^{-\frac{\sigma \, \Omega}{K_BT}}]$
+
+$D_VN_V^o \Omega \equiv D_b$ which is the **bulk diffusivity**
+
+**Taylor Expansion**: $e^{\pm a} \approx 1 \pm a$
+
+$\dot \epsilon = \frac{\alpha}{r^2}D_b \, \frac{\sigma \Omega}{K_BT} \rightarrow$ **Nabarro-Herring Creep**
+- $\alpha \equiv$ **grain shape dependent** $\rightarrow$ **geometric factor**
+- I did not consider defects
+- **N-H creep only happens through bulk diffusion**
+- $T \uparrow$ should imply $\dot \epsilon \uparrow$ (which doesn't seem to happen)
+    - The reason is that $D_V$ equation has also the **$T$ factor and it is going to dominate**.
+    
+### Physical Mechanism
+
+- **Tension Region** $\Rightarrow$ **High** vacancy concentration
+- **Compression Region** $\Rightarrow$ **Low** vacancy concentration
+- To **maintain equilibrium** $\rightarrow$ vacanccy creation $=$ vacancy annihilation
+
+By **Random Walk** (& remember Kirkendall-Smigelskas Effect)
+- $J_{atom} \rightarrow$ **Tension Region**
+- $J_V \rightarrow$ **Compression Region**
+- **K-S Effect** $\rightarrow$ The same process we've apllied to **diffusion couple** happens when we apply stress.
+
+Atoms are jumping towards tension region.
+- $D \propto X_V$
+
+## Marker Motion
+
+The same process as in **Kirkendall-Smigelskas Experiment**:
+- **Markers will move** towards the **compreesion region** till hits the end of the sample.
+
+**With Grain Boundary**
+- $D \Rightarrow \langle D \rangle = D_b + \frac{3 \delta}{r}D_{GB}$
+- $D \Rightarrow \langle D \rangle = D_b + \frac{6r^2 \delta}{r^3}D_{GB} = D_b + \frac{6 \delta}{r}D_{GB} \rightarrow$ for a **cubic grain** (6 surfaces $r^2\delta$ and volume of $r^3$
+
+If **No Grain Boudary**
+- $D \Rightarrow D_b$
+
+Then:
+- $\dot \epsilon = \frac{\alpha}{r^2} \langle D \rangle \frac{\sigma \Omega}{K_BT}$
+- $\dot \epsilon = \frac{\alpha}{r^2} D_b \frac{\sigma \Omega}{K_BT} + \frac{\alpha}{r^2} \frac{3 \delta}{r}D_{GB} \frac{\sigma \Omega}{K_BT} $
+- $\dot \epsilon = \frac{\alpha}{r^2} D_b \frac{\sigma \Omega}{K_BT} + \frac{\alpha}{r^2} \frac{6 \delta}{r}D_{GB} \frac{\sigma \Omega}{K_BT} \rightarrow$ for a **cubic grain** $
+
+Each term:
+- $\frac{\alpha}{r^2} D_b \frac{\sigma \Omega}{K_BT} = \dot \epsilon_{N-H} $
+
+- $\frac{\alpha}{r^2} \frac{3 \delta}{r}D_{GB} \frac{\sigma \Omega}{K_BT} = \dot \epsilon_{c} \rightarrow $ **coble creep**
+
+We can write that:
+- $\frac{D_{GB}}{D_b} \uparrow$ as $T \downarrow \Rightarrow$ **coble creep dominates at low temperature**
+
+## Determining Creep Mechanism
+
+At a **fixed temperature**
+
+The most commom kind of deformation in a material that has GB
+- **GB sliding**
+- $\dot \epsilon = c \frac{\sigma^n D_{GB}}{r} \rightarrow$ **remember this** $\rightarrow \frac{1}{r}$
+
+**Remember** strain rate from GB sliding goes with the stress to the **power 3**, much faster.
+
+- When $\dot \epsilon$ vs $\sigma$
+    - Creep from **diffusion** (bulk creep mediated by diffusion) $\rightarrow n = 1$
+    - Creep from **GB sliding** $\rightarrow n = 3$
+
+N-H vs Coble
+- When $\dot \epsilon$ vs $r$
+    - N-H $\rightarrow n = -2$
+    - Coble $\rightarrow n = -3$
+
+## Role of Interfaces
+
+Between
+- Different Crystallographic Planes: **Different Orientations**
+- Different **Phases**
+- Different **Compositions**
+- Different **Structures**
+
+Interfaces $\rightarrow$ **free energy gradient**
+- Shape
+- Size
+    - Change on those will change the **free energy gradient**
+        - which in turn will change the diffusion
+            - Then repeat till it goes to zero $(0)$
+            
+## Capillary Relaxation
+
+Example
+- **Solid-vapor interface**
+- **unfilled bonds** give rise to **surface tension**
+    - $\gamma = \frac{energy}{area}$
+    - $energy = \gamma A$
+
+Remark:
+- **surface tension** gives rise to **surface energy**
+- **interface** gives rise to **interfacial energy** 
+- **GB** gives rise to **GB energy** 
+
+**FINAL EXAM**, with a different geometry
+
+How to change interfacial energy:
+- Change **surface tension** $\gamma$
+- Change **area**
+
+The driving force (actually pressure) to make this happen:
+- $P \frac{d}{dV}(energy) = \frac{d}{dV}(\gamma A) = \gamma \frac{dA}{dV}$
+- It will stop when the driving force goes to zero
+    - $\frac{dA}{dV} = 0 \Rightarrow$ **Flat Interface** $\rightarrow$ **REMEMBER THIS NAME**
+
+**EXAMPLE: Spherical Interface**
+- $\frac{dA}{dV} = \frac{2}{r} \Rightarrow P = \gamma \frac{2}{r}$
+    - Laplace Pressure for spherical system, or
+    - Gibbs-Thompson Equation
+- Therefore: small bubbles $\rightarrow$ higher pressure
+
+We often wite it in terms of **curvature**:
+- $\kappa \propto \frac{1}{r}$
+    - $\kappa = \frac{2}{r}$ for **spherical**
+- $P = \kappa \gamma$
+    - **Capillary Pressure** is another term to refer to it
+    
+## Crystalline Interfaces
+
+Crystalline interfaces means **at least one of the material** has crystalline surface.
+- It possesses a kind of structure
+- Energy depends on **orientation** with respect to the other material surface/interface
+
+Crystallographic plane mismatch $\rightarrow$ **slow relaxation** (same as capillary relaxation)
+
+**GB Interfaces** (how many types of mismatch could he have?)
+- 3 misorientation between grains
+- 2 boundary planes normals (direction)
+    - 5 crystallographic degrees of freedom (DOF)
+    
+GB motion $\rightarrow$ GB orientation $\rightarrow \gamma A$ **changes**
+
+However, for isotropic: **no orientation mismatch** (uniform)
+- when it moves $\rightarrow \gamma$ **unchanged** $\rightarrow$ isotropic interface moves to **decrease only** $A$
+    
+$\dot \epsilon \leftarrow \dot N_V \leftarrow J \leftarrow \Delta N_V$
+- What we really want is **not strain rate**, is how the a is changing with time:
+- $a(t) \rightarrow \frac{da(t)}{dt}$
+
+Surface tension contribution to the **free energy** $ G = \gamma \Omega \kappa$
+
+If sinusoidal shape holds through relaxation:
+- $a(x=0)$ & $x = \frac{\lambda}{2}$
+- $y = a(t)cos(\omega x)$
+
+Then
+- $\Delta Q = -\gamma \Omega \kappa $
+    - $\kappa = \frac{d^2}{dx^2}y $
+- $\Delta Q = -\gamma \Omega \kappa = \gamma \Omega a(t) \omega^2 cos(\omega x) $
+    - $\Delta Q(x=0) = \gamma \Omega a(t) \omega^2$
+    - $\Delta Q(x=\frac{\lambda}{2}) = -\gamma \Omega a(t) \omega^2$
+
+Therefore
+- $N_V(x=0) = e^{-(Q_V + \gamma \Omega a(t) \omega^2)/K_BT}$
+- $N_V(x=\frac{\lambda}{2}) = e^{-(Q_V - \gamma \Omega a(t) \omega^2)/K_BT}$
+
+Now, with **Taylor Expansion**
+- $\Delta N_V = N_V^o [\frac{2\Omega \lambda a(t) \omega^2}{\pi K_BT}]$
+
+To get the **Flux**, we aplly **Fick's First Law**
+- $J_V [=] \frac{N_V}{area \cdot time}$
+- $J_V = -D_V \frac{\Delta N_V}{\Delta x} = -\frac{2D_V\Omega N_V^o \gamma a(t) \omega^3}{\pi K_B T}$
+    - $\Delta x = \frac{\lambda}{2}$ would be good for this case
+- The flux is towards the negative direction of x axis
+- The flux is happening over **3D**
+    - Area $= \lambda^2$ **diffusion area**
+    - Depth $= a(t)$
+    - $\lambda^2a(t) \propto$ **diffusion volume**
+- $\frac{J_V \Omega}{a(t)} = \frac{\Delta V}{V\Delta t} = -\frac{2D_V\Omega^2 N_V^o \gamma \omega^3}{\pi K_B T}$
+
+Then
+- $\frac{\Delta V}{V\Delta t} = \frac{\Delta a \lambda^2}{a\lambda^2}\Delta t \Rightarrow \frac{\Delta a}{\Delta t} \Rightarrow \frac{da}{dt}$
+- $\frac{da}{dt} = -\frac{2D_V\Omega^2 N_V^o \gamma \omega^3 a(t)}{\pi K_B T}$
+
+We know that
+- $D_b = D_V\Omega N_V^o$
+
+Therefore
+- $\frac{da}{dt} = -\frac{2D_b\Omega \gamma \omega^3 a(t)}{\pi K_B T}$
+
+Sanity check:
+- $\frac{da}{dt} < 0 \Rightarrow$ **surface roughness** $\downarrow$ as time $\uparrow$
+- High frequency (short $\lambda$) roughness **smooths faster** than low frequency (long $\lambda$)
+
+**FINAL EXAM**: we should be able to do each step here, well understood.
+If we need to write an expression for amplitude in a bulk material:
+- $a(t) = a_0 e^{-B \omega^m t}$
+    - $m= 3 \rightarrow$ **bulk diffusion**
+    - $m= 4 \rightarrow$ **surface diffusion** (things are equilibrating via surface diffusion)
