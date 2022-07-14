@@ -1,4 +1,4 @@
-# Lecture 6 · Various Diffusion Problems
+# Various Diffusion Problems
 
 ## Summary
 

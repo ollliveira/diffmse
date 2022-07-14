@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Notes from a Class on Diffusion in Materials</title>
+  <title>Lecture 2 Random Walk | Notes from a Class on Diffusion in Materials</title>
   <meta name="description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta property="og:title" content="Lecture 2 Random Walk | Notes from a Class on Diffusion in Materials" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="github-repo" content="ollliveira/diffmse" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta name="twitter:title" content="Lecture 2 Random Walk | Notes from a Class on Diffusion in Materials" />
   
   <meta name="twitter:description" content="This is a booknote from a class in diffusion in materials." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="particle-motion.html"/>
+<link rel="prev" href="particle-motion.html"/>
+<link rel="next" href="random-walk-and-diffusion-in-crystals.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -249,65 +249,246 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Notes from a Class on Diffusion in Materials</h1>
-<p class="author"><em>Thiago Oliveira</em></p>
-<p class="date"><em>2022-07-14</em></p>
+<div id="random-walk" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Lecture 2</span> Random Walk<a href="random-walk.html#random-walk" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The <strong>Fluctuation</strong> can be understood as the change in the motion using <strong>Langevin Equation</strong>:</p>
+<p>$ m = -b + (t) + External Forces $</p>
+<p>In 3D, at a reasonably longer time, the object should have a <strong>diffusive motion</strong>:</p>
+<p>$ r^2(t) - r^2(0) = t \ $
+OR</p>
+<p>$ r^2(t) = 6D , t \ $
+- <strong>MSD</strong> Fluctuation: $ r^2(t) $
+- Dissipation: $ D = $</p>
+<p>So that this whole thing is called <strong>Fluctuation</strong> — <strong>Dissipation</strong> Theorem. They observed that this happens in every system we can look at, and it is also called the <strong>Causality Relationship</strong>.</p>
+<p>There are concepts very useful for looking at:
+- Coating
+- Thin film formation
+- Thin film stability
+- Etc</p>
+<p>Now we are going to take the concept of <strong>Fluctuation</strong> and take the next step… let’s suppose now we have metals:
+- Phase Segregation
+- Microstructure Evolution
+- Etc</p>
+<div id="at-equilibrium" class="section level3 hasAnchor" number="2.0.1">
+<h3><span class="header-section-number">2.0.1</span> At Equilibrium<a href="random-walk.html#at-equilibrium" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If we take Silver (Ag) and Copper (Au) and let them reach equilibrium, what should I get at the very end?</p>
+<p>They are not very miscible! They will segregate at the end. Silver is denser and therefore will go to the bottom and and cooper will be at the top.</p>
+<p>The thickness of the layer of each one will be given by density and <strong>The Lever Rule</strong> —&gt; Phase Separation.</p>
+<p><strong>After Quenching</strong> we don’t get that from any other way than diffusion.</p>
 </div>
-<div id="diffusion-in-materials-notes-from-class" class="section level1 unnumbered hasAnchor">
-<h1>Diffusion in Materials · Notes from Class<a href="index.html#diffusion-in-materials-notes-from-class" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Notes from Prof. Mohammad Islam Lectures</p>
-<div id="syllabus" class="section level2 unnumbered hasAnchor">
-<h2>Syllabus<a href="index.html#syllabus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The exams is not suppose to find out what we don’t know.
-- 85% to 90% is going to be concepts we are deeply familiar with,
-- 10% to 15% is going to separate the B+ form A- and A,
-- 30% of the questions <span class="math inline">\(\rightarrow\)</span> conceptual questions,
-- 70% of the questions <span class="math inline">\(\rightarrow\)</span> mathematical questions (derivation/manipulation).</p>
-<p>This is a <strong>Graduate Course</strong> which means that we have to go <strong>beyond what is given in the class</strong>.</p>
+<div id="domain-size-average-distance" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Domain Size · Average Distance<a href="random-walk.html#domain-size-average-distance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Thermo Prediction &lt; — DIFFUSION — &gt; How phase segregation is happening</p>
+<p>Thermo:
+- Classical Thermodynamics (Partial Diferential Equations)
+- Continuous Diffusion
+- Molecular Thermodynamics + Statistical Mechanincs (particles)
+- Single Particle Motion —&gt; Average over a large # of particles: $ , <em>{t} , , </em>{N} , etc $</p>
+<div id="atom-in-a-1d-crystal" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> 1 Atom in a 1D Crystal<a href="random-walk.html#atom-in-a-1d-crystal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s look for:
+- Domain size
+- Average Separation</p>
+<p>Say Free Energy $ E(0) $</p>
+<p>It starts at origin $ x = 0 $ , and it moves to $ x = x $.
+Then, what is the energy at $ x = x, E(x) $?
+If it can diffuse at any position:
+- All positions have <strong>idendical free energy</strong> (entropy + enthalpy)
+- The states are <strong>indistinguishable</strong>
+- All states are <strong>degenerate</strong> of one another
+- Then all positions have <strong>equal probability</strong> for having the Atom
+- All states are <strong>equally sampled</strong> at equilibrium
+- This is derived dirrectly from the assumptions of the problem</p>
+<p>If those are true, why the Atom moves at all? It explores different positions because he wants to <strong>maximize entropy</strong>.</p>
+<p>Occupancy Probability vs Position</p>
+<p>$ t = 0, P(x=0) =1 and P(x ) = 0 $
+$ t , P(x) \ $</p>
+<p>What does it happen in between? In a finite time? The kinetics of the problem?</p>
+<p><strong>Diffusion is only important if I care about the evolution of the system!</strong></p>
 </div>
-<div id="notes-for-exam" class="section level2 unnumbered hasAnchor">
-<h2>Notes for Exam<a href="index.html#notes-for-exam" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>$ k_{B}T = 4,pNnm = 4^{-21} Nm $</p>
-<p>$ t^* = , = 5 ^{-13} 10^{-12} , s $</p>
+<div id="random-walk-rw" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Random Walk (RW)<a href="random-walk.html#random-walk-rw" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>The physical concept behind the Random Walk is the Langevin Equation</strong></p>
+<p>Allow particles to move around among all the equally probable states, via <strong>1D Random Walk (RW)</strong>:
+- Particle moves $ +1 , or -1 $ at every time step
+- $ x _{t } = 0 $, equal probability to move $ +1 , or -1 $</p>
+<p>Remember how to do for a <strong>random step</strong>, maybe for exam…</p>
+<p><strong>Average Distance Travelled:</strong>
+- If I give enough time, it is always going to come back to where it started: $ x _{t } = 0 $
+- Particles can make <strong>large displacements (excursions)</strong>, $ max(x) $
+- Average displacement from origin $ $
+- $ avg |x| |x| &gt; 0 $</p>
+<p><strong>All Possible RW Paths of n Steps:</strong></p>
+<p>Paths:
+- $ n = 2 ++, –, +-, -+ $ 4 paths
+- $ n = 3 +++, ++-, +-+, -++, +–, -+-, –+, — $ 8 paths</p>
+<p>The pattern is $ N = 2^n $, where:
+- N is the # of <strong>distinct paths</strong>
+- n is the # of <strong>distinct step options</strong> (# of objects in each configuration)</p>
+<p><strong>How many n-step paths with displacement of length x?</strong></p>
+<p>If the <strong>Net Distance</strong> <span class="math inline">\(= +x\)</span> after n-steps of <span class="math inline">\(+1\)</span> or <span class="math inline">\(-1\)</span>:
+- <span class="math inline">\(+1\)</span> &amp; <span class="math inline">\(-1\)</span> are the <strong>step sizes</strong>
+- We need to have a number <span class="math inline">\(x\)</span> of extra <span class="math inline">\(+1\)</span>
+- It means <span class="math inline">\((n-x)\)</span> steps equally divided between <span class="math inline">\(+1\)</span> and <span class="math inline">\(-1\)</span> steps
+- $ +1 $
+- $ -1 $</p>
+<p>$ n_{+1} = x + = + \ $</p>
+<p>$ n_{-1} = = - \ $</p>
+<p><strong>How many paths have <span class="math inline">\(n_{+1}\)</span> and <span class="math inline">\(n_{-1}\)</span> regardless of order?</strong>
+- <span class="math inline">\(n_{+1} \rightarrow\)</span> number of steps with step size <span class="math inline">\(+1\)</span>
+- <span class="math inline">\(n_{-1} \rightarrow\)</span> number of steps with step size <span class="math inline">\(-1\)</span>
+- Total is still <span class="math inline">\(= n\)</span></p>
+<p>For that we use the <strong>Binomial Formula</strong>:</p>
+<p><span class="math inline">\(\frac{n!}{n_{+1}!n_{-1}!}\)</span></p>
+<p><span class="math inline">\(\frac{n!}{(\frac{n}{2}+\frac{x}{2})!(\frac{n}{2}-\frac{x}{2})!}\)</span></p>
+<p>If <span class="math inline">\(n=2\)</span>, what are the paths with a <strong>displacement equal to zero</strong> (<span class="math inline">\(x=0\)</span>)?
+- $n_{+1} = n_{-1} = 1 $
+- $ = = 2 +-, -+ , $</p>
+<p><strong>Probability of an n-step path of length x:</strong></p>
+<p>$ P(x) = , / , 2^n \ $</p>
+<p>Which is the <strong>paths of length x</strong> divided by the <strong>total number of paths</strong>. There is no science in this, this is pure math.</p>
+<p>For the homework, we will have to derive that is equal to the <strong>Gaussian Distribution or Normal Distribution</strong>:</p>
+<p>$ P(x) = , / , 2^n = e^{} \ $</p>
+<p>We can also write:</p>
+<p>$ P(x) = e^{} \ $
+- <span class="math inline">\(\langle x \rangle = 0 \rightarrow\)</span> <strong>Mean Displacement</strong>
+- <span class="math inline">\(\langle x^2 \rangle = n \rightarrow\)</span> <strong>Variance · Mean Square Displacement · MSD</strong>
+- <span class="math inline">\(\sqrt{\langle x^2 \rangle} = \sqrt{n} \rightarrow\)</span> <strong>Root MSD · RMSD · Expectation Value</strong></p>
+<p>We can now say something about <strong>distribution of positions after n steps</strong>:
+- <span class="math inline">\(x = 0 \rightarrow\)</span> is still the <strong>most probable</strong>
+- <span class="math inline">\(|x| \neq 0 \rightarrow\)</span> is also <strong>much more probable</strong>, mainly when we go to a <strong>finite time</strong></p>
+<p>For a given <span class="math inline">\(\langle x \rangle\)</span> &amp; <span class="math inline">\(\langle x^2 \rangle \rightarrow\)</span> we will have a <strong>Gaussian Distribution</strong> <span class="math inline">\(\rightarrow\)</span> Maximum Entropy <span class="math inline">\(\rightarrow\)</span> It can also have what is called a <strong>Local Equilibrium</strong>.</p>
+<p>For a <strong>Normal/Gaussian Distribution</strong>:
+- After <strong>n steps</strong> we expect to find the particle at an absolute distance from origin:
+- <span class="math inline">\(\sqrt{\langle x^2 \rangle} = \sqrt{n} \rightarrow\)</span> <strong>RMS Distance from Origin</strong> <span class="math inline">\(\rightarrow\)</span> <strong>Expectation Value from Origin (regardless of sign)</strong></p>
+<p>The particle <strong>does not stay</strong> where it starts!
+- The states are <strong>degenerate</strong> <span class="math inline">\(\rightarrow\)</span> it will not stay at the origin.</p>
+<p>Why does this happen?
+<strong>ENTROPY</strong> is driving Fluctuation!</p>
+<div id="extending-the-step-size" class="section level4 hasAnchor" number="2.1.2.1">
+<h4><span class="header-section-number">2.1.2.1</span> Extending the Step Size<a href="random-walk.html#extending-the-step-size" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>What if <strong>step size</strong> is not <span class="math inline">\(+1\)</span> or <span class="math inline">\(-1\)</span> but <span class="math inline">\(\rightarrow +a\)</span> or <span class="math inline">\(-a\)</span>?</p>
+<p>If we do a dimension analysis:
+- $ x^2 (Length)^2 $
+- $ n $ <strong>Number Of Steps</strong></p>
+<p>It seems not to be dimensionally consistent — however, we can easily <strong>make it to be consistent</strong> by writting the follwoing:
+- $ x^2 = n a^2 $</p>
+<p>If we want to write in time (<strong>easy to measure</strong>):</p>
+<ul>
+<li><strong>Number of Steps</strong> $ = time $</li>
+<li>$ = Frequency = $</li>
+<li>$ n = t $</li>
+</ul>
+<p>Then:
+- $ x^2 = a^2 t $</p>
 </div>
-<div id="overall-structure-of-the-class" class="section level2 unnumbered hasAnchor">
-<h2>Overall Structure of the Class<a href="index.html#overall-structure-of-the-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Why do we brush our teeth for 2 minutes?
-That is a P&amp;G research that showed that 2 minutes is the time necessary for <strong>Fluorite</strong> to diffuse into the tooth.
-The reason is because it is how long it takes for <strong>F</strong> to diffuse about half of thickness of our first layer of the tooth.</p>
-<p><strong>This will be on the Exam… Figure that out!</strong></p>
-<div id="basic-concepts" class="section level3 unnumbered hasAnchor">
-<h3>Basic Concepts<a href="index.html#basic-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Think about different phases of materials:
-- solid
-- liquid
-- gas/vapor</p>
-<p>Jelly is solid, made of a protein network.
-We we talk about diffusion, length scale matter.</p>
-<p>Visco-elastic fluid — honey?</p>
-<p>Start with underlying concepts: <strong>liquid</strong>
-Diffusion concept is dependent on the:
-- <strong>Fluctuation</strong> of atoms, molecules, etc…</p>
-<p>Then extend that to other classes of materials:
-- Polymers in solution
-- Polymers in other polymers (solvent is other polymers)
-- Diffusion of vacancies in a crystal
-- Diffusion of impurities in crystal
-- Diffusion in amorphous solids</p>
-<p>All this different kinds of concepts that come from <strong>Fluctuations</strong> are called <strong>Random Walk</strong> —&gt; <strong>RW</strong>.
-We are going to use this concept to extend and adjust for generallize, and adjustments we have to make to apply it for different kinds of materials.</p>
-<p><strong>RW</strong> —&gt; Ficks’ Law —&gt; Logic Extension from the <strong>Random Walk</strong>, it depends on the <strong>Random Walk</strong> concepts.
-Here is where most of the students start their Diffusion classes.</p>
-<p>Finally look at classic materials problems:
-- Composition dependence
-- Microstructure evolves (the dependence on diffusion for this evolution), primarilly under load
-- The connect that with mechanical properties</p>
-<p>If we have time:
-- Nucleation &amp; Growth
-- How to experimentally measure diffusion (how we now measure diffusion)</p>
+<div id="what-happens-if-we-move-to-2d-and-3d" class="section level4 hasAnchor" number="2.1.2.2">
+<h4><span class="header-section-number">2.1.2.2</span> What happens if we move to 2D and 3D?<a href="random-walk.html#what-happens-if-we-move-to-2d-and-3d" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>How do we <strong>add</strong> different quantities in probability? <span class="math inline">\(\Rightarrow\)</span> We <strong>multiply</strong>!</p>
+<p>We consider that events are <strong>independent in each dimension</strong>.</p>
+<ul>
+<li>$ P(x_1, …, x_n) = P(x) = , / , 2^n = e^{} $ for <strong>d = 1</strong></li>
+<li>$ P_d(x_1, …, x_d) = e^{-} $ for <strong>dimensionality = d</strong>
+<ul>
+<li><span class="math inline">\(n\)</span> is the <strong>number os steps</strong></li>
+</ul></li>
+</ul>
+<p>Notice, if we define the vector <span class="math inline">\(\vec{r}\)</span> as:</p>
+<p>$ = (x_1, x_2, …, x_n) $</p>
+<p>$ || = $ <strong>Distance from Origin</strong> $ = (x_1, x_2, …, x_n)^ $</p>
+<p>Then:</p>
+<ul>
+<li>$ P_d(r) = e^{-} $</li>
+<li>$ r = 0 $ <strong>Most Probable Position</strong> <span class="math inline">\(\equiv\)</span> <strong>Mean Position/Displacement</strong></li>
+<li>$ r^2 = n $ <strong>MSD</strong> $ = na^2 = a^2 t $</li>
+<li>$ = $ <strong>RMSD</strong></li>
+</ul>
+<p>##### <strong>Application</strong>: how to estimate the <strong>size of a polymer chain</strong>?</p>
+<p><strong>Ideal Polymer Chain</strong> $$ Gaussian Polymer Chain <span class="math inline">\(\rightarrow\)</span> They are all undergoing <strong>Random Walk</strong>
+- Polymer $$ <strong>N</strong> Monomer Segments of length <strong>a</strong>
+- <strong>Random Walk</strong> $$
+- It <strong>cannot be any correlation</strong> between the motions, everything has to be <strong>independent</strong> of one another, they can move 360°.
+- <strong>No interaction</strong> between them.</p>
+<p><strong>REMEMBER THIS ABOVE FOR CONCEPTUAL QUESTIONS IN THE EXAM!</strong></p>
+<ul>
+<li><strong>Contour Length</strong> $ = Na $</li>
+<li><strong>Average Size</strong> $ = = 0 $ (<strong>Random Walk</strong>)</li>
+</ul>
+<p>To get the <strong>Polymer Length</strong>, we look at the <strong>MSD</strong>:
+- $ r^2 = = Na^2 $
+- $ = = N^{}a $</p>
+<p>A scientist figured out that the <strong>polymer conformation</strong> is very similar to the <strong>spin conformation</strong> in magnetic materials.</p>
+<ul>
+<li>$ P(x,y,z) = P() = (const) , e^{-} , e^{-} , e^{-} $
+<ul>
+<li>$ _x (x - x )^2 _x = x^2 $</li>
+<li>$ x = y = z = 0 $</li>
+<li>$ x^2 + y^2 + z^2 = r^2 x^2 = y^2 = z^2 = $</li>
+</ul></li>
+</ul>
+<p>Then, the probability of a <strong>polymeler chain having the size r</strong> is:</p>
+<ul>
+<li>$ P(r) = (const) , e^{-} e^{}$
+<ul>
+<li>Where <span class="math inline">\(F(r)\)</span> is the <strong>Free Energy of a polymer chain</strong> of size <span class="math inline">\(r \equiv\)</span> also called the <strong>Elasticity of a Polymer Chain</strong>.</li>
+<li><strong>Free Energy</strong> $ = F(r) = (const) + , r^2 $</li>
+<li>The $ $ is replaced by the (const)</li>
+<li>The elasticity is $ $ to $ r^2 $ <strong>elasticity</strong> is $ $ to the <strong>Fluctuation</strong></li>
+<li>$ $ <strong>The elasticity of a polymer chain comes from Fluctuation</strong></li>
+<li>Spring Constant $ Force = - = - , r $
+<ul>
+<li>Spring Constant $ = k = - $</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>THIS ABOVE IS GOING TO BE ON THE EXAM · POLYMER CHAIN PROPERTIES IS ALSO ON THE HOME WORK: QUESTION 5</strong></p>
+<p>If a <strong>Process has Energy E</strong>, how do I calculate the probability for that process to happening?</p>
+<p><strong>Detour</strong> · Thermodynamics Concept
+- An event has energy $ E_i $
+- $ P(event) e^{-} $</p>
+<p>Now let’s bring these concepts together… <strong>SUMMARY</strong>:</p>
+</div>
+</div>
+</div>
+<div id="connecting-random-walk-to-diffusion-in-crystals" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Connecting <strong>Random Walk to Diffusion in Crystals</strong><a href="random-walk.html#connecting-random-walk-to-diffusion-in-crystals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Simple Picture</strong>:
+- Take an <strong>Atom</strong> or a <strong>Molecule</strong>
+- Put it into a <strong>Solvent</strong>
+- Those <strong>Atoms</strong> or <strong>Molecules</strong> have some <strong>Thermal Energy</strong>
+- The <strong>Thermal Energy</strong> will put the Atom or Molecule to undergo <strong>Fluctuation</strong></p>
+<p>Everything else that we’ve seen comes out of this basic physical concept.</p>
+<p>If the particle has some velocity $ v $:
+- $ v^2 = $
+- It is moving <strong>fast</strong>
+- It is moving <strong>constantly</strong>, because it has thermal energy
+- It is <strong>random</strong></p>
+<p>It is driven by the <strong>Fluctuation</strong>, but the <strong>Dissipation</strong> is dictating how things are going to move:
+- $ = $</p>
+<p>Then the <strong>Displacement</strong> is:
+- $ P() = , e^{-} $</p>
+<p>Again:
+- $ = 0 $ <strong>Mean Position</strong>
+- $ r^2 = Na^2 $ <strong>MSD</strong> ($ r^2 = a^2t $)
+- $ = = N^{}a $ <strong>RMSD</strong></p>
+<p><strong>IT IS ON THE HOMEWORK!</strong></p>
+<p><strong>Brownian Motion</strong> · The same thing but using a different notation:</p>
+<p><strong>If I know the position of an particle</strong> at time <span class="math inline">\(t\)</span> and at time <span class="math inline">\(0\)</span>, then I can move from the <strong>MSD</strong> to the <strong>Exact Location</strong> of the particle:
+- $ ^2 _{ensemble} = 2dD , t $
+- $ d $ <strong>dimensionality</strong></p>
+<p>Everything is for $ t &gt;&gt; $!
+If this is not true, we move to a <strong>Super Diffusive Motion</strong>.
+<strong>IT IS ON THE HOMEWORK</strong></p>
+<p>Diffusivity <span class="math inline">\(\Rightarrow\)</span> <strong>Diffusion Constant</strong>
+- $ D = $
+- $ D $ <strong>Stokes-Einstein Equation</strong></p>
+<p>If I have any kind of <strong>Fluctuation</strong>, this Fluctuation is intimately dependent on the <strong>Drag</strong> in my system $ b $</p>
+<p>Then, if I want to know the <strong>Diffusion Length</strong> or <strong>Diffusion Distance</strong>:
+- $ = t^{} $
+- <strong>Diffusion Motion</strong> $ t $
+- <strong>Diffusion Length</strong> $ t^{} $
+- $ = ,t^{} $</p>
 
-</div>
 </div>
 </div>
             </section>
@@ -315,8 +496,8 @@ Here is where most of the students start their Diffusion classes.</p>
           </div>
         </div>
       </div>
-
-<a href="particle-motion.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="particle-motion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="random-walk-and-diffusion-in-crystals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -347,7 +528,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-random-walk.Rmd",
 "text": "Edit"
 },
 "history": {

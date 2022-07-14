@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Notes from a Class on Diffusion in Materials</title>
+  <title>Lecture 5 Fick’s Law from Random Walk | Notes from a Class on Diffusion in Materials</title>
   <meta name="description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta property="og:title" content="Lecture 5 Fick’s Law from Random Walk | Notes from a Class on Diffusion in Materials" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="github-repo" content="ollliveira/diffmse" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta name="twitter:title" content="Lecture 5 Fick’s Law from Random Walk | Notes from a Class on Diffusion in Materials" />
   
   <meta name="twitter:description" content="This is a booknote from a class in diffusion in materials." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="particle-motion.html"/>
+<link rel="prev" href="diffusion-in-liquids-amorphous-solids-and-polymers.html"/>
+<link rel="next" href="various-diffusion-problems.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -249,63 +249,211 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Notes from a Class on Diffusion in Materials</h1>
-<p class="author"><em>Thiago Oliveira</em></p>
-<p class="date"><em>2022-07-14</em></p>
+<div id="ficks-law-from-random-walk" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Lecture 5</span> Fick’s Law from Random Walk<a href="ficks-law-from-random-walk.html#ficks-law-from-random-walk" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="ficks-laws-from-random-walk" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Fick’s Laws from Random Walk<a href="ficks-law-from-random-walk.html#ficks-laws-from-random-walk" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Fick’s 1st Law</strong>: If you have any concentration gradient, you are going to have a <strong>flux</strong>. It shows how the concentration is <strong>connected with some position</strong>. <strong>Spacial</strong>
+- <strong>Steady State</strong> Problems
+- Flux <span class="math inline">\(\propto\)</span> Concentration Gradient
+- $(x) = -D $
+- $ D = L^2 $
+- $ $ is the frequency in which things are diffusing
+- <span class="math inline">\(\vec{J}(x) = -D \nabla \rho \rightarrow\)</span> when generalized for <strong>any dimension</strong></p>
+<p><strong>Ficks’s 2nd Law</strong>: It is related to the rate of change in concentration. <strong>Temporal</strong>
+- <strong>Time Dependent</strong> Problems
+- $ = D $</p>
 </div>
-<div id="diffusion-in-materials-notes-from-class" class="section level1 unnumbered hasAnchor">
-<h1>Diffusion in Materials · Notes from Class<a href="index.html#diffusion-in-materials-notes-from-class" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Notes from Prof. Mohammad Islam Lectures</p>
-<div id="syllabus" class="section level2 unnumbered hasAnchor">
-<h2>Syllabus<a href="index.html#syllabus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The exams is not suppose to find out what we don’t know.
-- 85% to 90% is going to be concepts we are deeply familiar with,
-- 10% to 15% is going to separate the B+ form A- and A,
-- 30% of the questions <span class="math inline">\(\rightarrow\)</span> conceptual questions,
-- 70% of the questions <span class="math inline">\(\rightarrow\)</span> mathematical questions (derivation/manipulation).</p>
-<p>This is a <strong>Graduate Course</strong> which means that we have to go <strong>beyond what is given in the class</strong>.</p>
+<div id="linear-transport-1d" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Linear Transport (1D)<a href="ficks-law-from-random-walk.html#linear-transport-1d" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Mass Accumulation = Mass In - Mass Out</strong>
+- $ x = L $</p>
 </div>
-<div id="notes-for-exam" class="section level2 unnumbered hasAnchor">
-<h2>Notes for Exam<a href="index.html#notes-for-exam" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>$ k_{B}T = 4,pNnm = 4^{-21} Nm $</p>
-<p>$ t^* = , = 5 ^{-13} 10^{-12} , s $</p>
+<div id="rephrase-with-random-walk" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Rephrase with Random Walk<a href="ficks-law-from-random-walk.html#rephrase-with-random-walk" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>$= $ # of <strong>hops per unit time</strong> <span class="math inline">\(\rightarrow\)</span> constant</li>
+<li>$n_i = $ # of <strong>particles in box i</strong> (non-interacting)
+<ul>
+<li>if we remove the non-interacting restriction, we include the chemical potential (activity)</li>
+</ul></li>
+<li>All particles must hop every <span class="math inline">\(\frac{1}{\Gamma}\)</span>
+<ul>
+<li>$ $ to the <strong>left</strong></li>
+<li>$ $ to the <strong>right</strong></li>
+</ul></li>
+</ul>
 </div>
-<div id="overall-structure-of-the-class" class="section level2 unnumbered hasAnchor">
-<h2>Overall Structure of the Class<a href="index.html#overall-structure-of-the-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Why do we brush our teeth for 2 minutes?
-That is a P&amp;G research that showed that 2 minutes is the time necessary for <strong>Fluorite</strong> to diffuse into the tooth.
-The reason is because it is how long it takes for <strong>F</strong> to diffuse about half of thickness of our first layer of the tooth.</p>
-<p><strong>This will be on the Exam… Figure that out!</strong></p>
-<div id="basic-concepts" class="section level3 unnumbered hasAnchor">
-<h3>Basic Concepts<a href="index.html#basic-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Think about different phases of materials:
-- solid
-- liquid
-- gas/vapor</p>
-<p>Jelly is solid, made of a protein network.
-We we talk about diffusion, length scale matter.</p>
-<p>Visco-elastic fluid — honey?</p>
-<p>Start with underlying concepts: <strong>liquid</strong>
-Diffusion concept is dependent on the:
-- <strong>Fluctuation</strong> of atoms, molecules, etc…</p>
-<p>Then extend that to other classes of materials:
-- Polymers in solution
-- Polymers in other polymers (solvent is other polymers)
-- Diffusion of vacancies in a crystal
-- Diffusion of impurities in crystal
-- Diffusion in amorphous solids</p>
-<p>All this different kinds of concepts that come from <strong>Fluctuations</strong> are called <strong>Random Walk</strong> —&gt; <strong>RW</strong>.
-We are going to use this concept to extend and adjust for generallize, and adjustments we have to make to apply it for different kinds of materials.</p>
-<p><strong>RW</strong> —&gt; Ficks’ Law —&gt; Logic Extension from the <strong>Random Walk</strong>, it depends on the <strong>Random Walk</strong> concepts.
-Here is where most of the students start their Diffusion classes.</p>
-<p>Finally look at classic materials problems:
-- Composition dependence
-- Microstructure evolves (the dependence on diffusion for this evolution), primarilly under load
-- The connect that with mechanical properties</p>
-<p>If we have time:
-- Nucleation &amp; Growth
-- How to experimentally measure diffusion (how we now measure diffusion)</p>
+<div id="diffusion-equation" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Diffusion Equation<a href="ficks-law-from-random-walk.html#diffusion-equation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s look at <strong>Bin <span class="math inline">\(i\)</span></strong>:
+- $ = ( n_{i+1} + n_{i-1} - n_i) $
+- <span class="math inline">\(\frac{1}{2} n_{n+1} + \frac{1}{2} n_{i-1} \rightarrow\)</span> <strong>mass in</strong> every <span class="math inline">\(\Gamma\)</span>
+- <span class="math inline">\(- n_i \rightarrow\)</span> <strong>mass out</strong> every <span class="math inline">\(\Gamma\)</span></p>
+<p>Let’s try to write in a <strong>Continuous Expression</strong>:
+- $ = $
+- Center of <span class="math inline">\(i^{th}\)</span> bin:
+- $ (i - )L$
+- $ n_i n$ at the position $ x = (i - )L$
+- $ = L[ - ] $
+- $ = |<em>{x=iL} $
+- $ = |</em>{x=(i-1)L} $</p>
+<p>Then:
+- $ = L^2 $</p>
+<p>So, in a very general form (invoking the <strong>definition of derivative</strong>):
+- $ (x= (i-)L) = L^2 |_{x=(i-)L} $</p>
+<p>$ = L^2 $</p>
+<p>The <strong>number of particles</strong> at every bin:
+- $ n = A L $</p>
+<p>Therefore:
+- $ = L^2 $
+- $ = D $ <strong>Fick’s 2nd Law</strong>
+- $ D = L^2 $ from <strong>Random Walk</strong></p>
+<p>For some problems, we’ll write:
+- <span class="math inline">\(\frac{\partial^2 \rho(x)}{\partial x^2} = \frac{1}{D} \frac{\partial \rho}{\partial t}\)</span>
+- <span class="math inline">\(- \frac{\partial}{\partial x} (-D \frac{\partial \rho(x)}{\partial x}) = \frac{\partial \rho}{\partial t}\)</span></p>
+</div>
+<div id="diffusion-equation-in-terms-of-flux" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Diffusion Equation in terms of Flux<a href="ficks-law-from-random-walk.html#diffusion-equation-in-terms-of-flux" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong># of particles that is flowing = Q = # of particles per unit time crossing the cross-sectional interface</strong></p>
+<ul>
+<li><span class="math inline">\(Q_{i \rightarrow i+1} = \frac{1}{2} n_i - \frac{1}{2} n_{i+1} = -\frac{\Gamma L}{2} (\frac{n_{i+1}-n_i}{L})\)</span></li>
+<li><span class="math inline">\(Q(x=iL) = -\frac{\Gamma L}{2} \frac{dn(x)}{dx}|_{x=iL} \Rightarrow Q(x) = -\frac{\Gamma L}{2} \frac{dn(x)}{dx}\)</span></li>
+</ul>
+<p><span class="math inline">\(J \equiv Flux =\)</span> # of particles crossing per unit area <span class="math inline">\(\rightarrow J = \frac{Q}{A}\)</span>
+- $ n = A L $
+- <span class="math inline">\(AJ(x) = -\frac{\Gamma L^2}{2} A \frac{d\rho (x)}{dx} \Rightarrow J(x) = -\frac{\Gamma L^2}{2} \frac{d\rho (x)}{dx}\)</span>
+- <span class="math inline">\(\vec{J}(x) = -D \frac{d\rho (x)}{dx} \hat{x} \Rightarrow\)</span> <strong>Fick’s 1st Law</strong>
+- <span class="math inline">\(\vec{J}(x) = -D\nabla \rho\)</span></p>
+<p>Mass Flow (<strong>Sign Convention</strong>)
+- <span class="math inline">\(\rho_{high} \rightarrow \rho_{low}\)</span>
+- Which is opposite to direction of composition, that’s why the <strong>negative(-) sign</strong></p>
+<p>General Analysis (<strong>Transport Equations</strong>)
+- <strong>Flow</strong> of Something <span class="math inline">\(\propto\)</span> <strong>Gradient</strong> of the same thing (with a proportionality constant)
+- Over a concentration range (spacial independent)
+- <span class="math inline">\(Q_{heat} = \kappa \nabla T \rightarrow\)</span> <strong>Fourier Equation 1822</strong>
+- <span class="math inline">\(J_{charge} = \frac{1}{R} \nabla V \rightarrow\)</span> <strong>Ohm’s Law</strong></p>
+<p><strong>Velocity</strong> <span class="math inline">\(\propto\)</span> <strong>Driving Force</strong>
+- <span class="math inline">\(\frac{\partial \rho}{\partial x} \propto \frac{\partial U}{\partial x}\)</span>
+- <span class="math inline">\(J = -L (\mu, x, t, ...)\frac{\partial \mu}{\partial x}\)</span>
+- <span class="math inline">\(D = D(\rho,x,t,...)\)</span>
+- They are all following a <strong>kind of a Random Walk</strong></p>
+<p><strong>2D</strong> &amp; <strong>3D</strong>
+- <span class="math inline">\(\vec{J} = -D\nabla \rho\)</span>
+- <span class="math inline">\(\nabla^2 \rho = \frac{1}{D} \frac{\partial \rho}{\partial t}\)</span>
+- <span class="math inline">\(\rho(x,t)\)</span></p>
+<p><strong>Diffusion Length</strong>: travelling <span class="math inline">\(x\)</span> over <span class="math inline">\(t\)</span> (remember it is <strong>just a Random Walk</strong>)
+- $x^2 = t L^2 $
+- In this way we <strong>don’t have to</strong> solve any differential equation</p>
+<p><strong>Conceptual Questions</strong>:
+- <span class="math inline">\(D = D(x)\)</span> for <strong>inhomogeneous systems</strong>
+- <span class="math inline">\(D = D(x,y,z) \rightarrow\)</span> <strong>direction dependent</strong> for anisotropic systems (it is <strong>not going to be the same</strong> along x, y and z.)</p>
+<div id="steady-state-diffusion-through-a-membrane" class="section level3 hasAnchor" number="5.5.1">
+<h3><span class="header-section-number">5.5.1</span> Steady-State Diffusion Through a Membrane<a href="ficks-law-from-random-walk.html#steady-state-diffusion-through-a-membrane" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>$ _1$ and <span class="math inline">\(\rho_2\)</span> are held <strong>constant</strong></li>
+<li>$x = x_2 - x_1 $ width of the membrane</li>
+<li><span class="math inline">\(\Delta \rho = \rho_2 - \rho_1\)</span></li>
+<li><span class="math inline">\(J = -D \frac{d\rho}{dx}\)</span>
+<ul>
+<li>$ = $ <strong>constant</strong> <span class="math inline">\(= - \frac{J}{D}\)</span></li>
+<li><strong>Concentration Profile</strong> <span class="math inline">\(\rightarrow\)</span> <strong>Linear</strong></li>
+</ul></li>
+</ul>
+<p><strong>Another example</strong>: Consider <span class="math inline">\(H^+\)</span> <strong>ion removal from fine cell</strong> (how fuel cells are design):
+- BCC metal <strong>Vanadium</strong> (V)
+- It has very very high <strong>hidrogen diffusion</strong>
+- V-membrane of thickness <span class="math inline">\(10 \mu m\)</span>
+- Submerged in Fuel Cell with <span class="math inline">\(H^+\)</span> concentration $ = 10^{-4} $
+- <span class="math inline">\(D_{H^+}(in V) = 6\times 10^{-5} \frac{cm^2}{s}\)</span> at <span class="math inline">\(T = 20^o C\)</span></p>
+<p>We’ll assume <strong>steady state</strong>:
+- <span class="math inline">\(J =\)</span> constant <span class="math inline">\(=-D\frac{\Delta C}{\Delta x}\)</span></p>
+<p>Then:
+- $ J = -(6^{-5})(0 -10^{-4} )() = 6^{-6} $</p>
+<p>The <strong>mass</strong> of <span class="math inline">\(H^+\)</span> that can be removed will be:
+- <span class="math inline">\(M_{H^+} =JAt\)</span>
+- <span class="math inline">\(A =\)</span> cross-section <strong>area</strong></p>
+</div>
+</div>
+<div id="transient-systems" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Transient Systems<a href="ficks-law-from-random-walk.html#transient-systems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="one-class-of-problems" class="section level3 hasAnchor" number="5.6.1">
+<h3><span class="header-section-number">5.6.1</span> One Class of Problems<a href="ficks-law-from-random-walk.html#one-class-of-problems" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s say we are interested on <strong>doping Gold with Silver</strong>
+- <strong>Physically</strong>: 1D <strong>Random Walkers</strong> that are slowly diffusing into the gold
+- RW along <span class="math inline">\(\pm y\)</span> cancel on average for all Ag atoms</p>
+<p>If i know the probability of where the Silver atoms are by Random Walk, that should be the concentration (invoking the Random Walk):
+- <span class="math inline">\(P(x) = \rho (x) = \frac{a}{\sqrt{2\pi \langle x^2 \rangle}} e^{-\frac{x^2}{2\langle x^2 \rangle}}\)</span>
+- This is the <strong>concentration profile proposed</strong>
+- <span class="math inline">\(a =\)</span> <strong>constant</strong></p>
+<p>To show <strong>it is true</strong>, we plug into:
+- <span class="math inline">\(D\frac{\partial^2 \rho}{\partial x^2} = \frac{\partial \rho}{\partial t}\)</span></p>
+<p>Total Mass (general):
+- <span class="math inline">\(\int_{-\infty}^{\infty} \rho(x) dx = M_{total} = b \rho_o = a\int_{-\infty}^{\infty} \frac{dx}{\sqrt{4\pi Dt}} e^{-\frac{x^2}{4Dt}}\)</span>
+- <span class="math inline">\(\rho(x,t) = \frac{b\rho_o}{\sqrt{4\pi Dt}}e^{-\frac{x^2}{4Dt}}\)</span></p>
+<p>Now we apply the boundary conditions to make it more exact (generic <span class="math inline">\(\rightarrow\)</span> specific):
+- The <strong>order</strong> of the derivative says <strong>how many</strong> boundary conditions are required
+- <span class="math inline">\(\frac{\partial \rho}{\partial t} \rightarrow 1BC \Rightarrow \rho(x,t)\)</span>
+- <span class="math inline">\(x \rightarrow\)</span> all
+- <span class="math inline">\(t \rightarrow\)</span> specific
+- <span class="math inline">\(\frac{\partial^2\rho}{\partial x^2} \rightarrow 2BC \Rightarrow \rho(x,t)\)</span>
+- <span class="math inline">\(x \rightarrow\)</span> specific
+- <span class="math inline">\(t \rightarrow\)</span> all</p>
+<p>Usually (for boundary conditions):
+- for <strong>time</strong> BC: <span class="math inline">\(\rho(x,0) = 0\)</span> which is not the case for the problem above.
+- $<em>{-}^{} (x,t) dx|</em>{t=0} = M_{total} $
+- for <strong>spacial</strong> BC: <span class="math inline">\(\frac{\partial^2 \rho}{\partial x^2}\)</span>
+- We look at the concentration profile <span class="math inline">\(\rho(x,t)\)</span>, at:
+- <span class="math inline">\(x = 0\)</span>
+- <span class="math inline">\(x \pm \infty\)</span>
+- Or we <strong>look at the surface</strong></p>
+<p>Another BC:
+- <span class="math inline">\(J(0,t) = -D\frac{\partial \rho}{\partial x}|_{x=0} = 0\)</span></p>
+</div>
+<div id="solution-approach" class="section level3 hasAnchor" number="5.6.2">
+<h3><span class="header-section-number">5.6.2</span> Solution Approach<a href="ficks-law-from-random-walk.html#solution-approach" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><strong>Propose a solution</strong>: <span class="math inline">\(\rho(x,t)\)</span></li>
+<li>This is indeed a <strong>general solution</strong> by pluggin into the equation</li>
+<li>Find out <strong>appropriate boundary</strong> conditions and applying them to the equation to make a <strong>specific solution</strong></li>
+</ol>
+<p>Remember:
+- <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are <strong>generic solutions</strong> <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(f+g\)</span> (<strong>linear combination</strong>) is also a solution</p>
+</div>
+<div id="another-class-of-problems" class="section level3 hasAnchor" number="5.6.3">
+<h3><span class="header-section-number">5.6.3</span> Another Class of Problems<a href="ficks-law-from-random-walk.html#another-class-of-problems" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>How a material <strong>diffuse into another</strong> and end up equilibrated.
+- The classic example is <strong>metal A diffusing into metal B</strong>
+- <strong>Coating</strong> is another example</p>
+</div>
+<div id="semi-infinite-slab" class="section level3 hasAnchor" number="5.6.4">
+<h3><span class="header-section-number">5.6.4</span> Semi Infinite Slab<a href="ficks-law-from-random-walk.html#semi-infinite-slab" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Assumptions
+- Left side has <strong>infinite number of thin films</strong>
+- Each thin film creates a <strong>Gaussian Concentration Profile</strong> <span class="math inline">\(\rho\)</span></p>
+<p>For each film:
+- <span class="math inline">\(\rho^*(x,t) = \frac{\rho_o \Delta x}{\sqrt{4\pi Dt}} e^{\frac{-(x+m \Delta x)^2}{4Dt}}\)</span>
+- <span class="math inline">\(m\)</span> is the number of thin films (<span class="math inline">\(0, 1, 2, 3, ...\)</span>)
+- <span class="math inline">\(\Delta x\)</span> is a <strong>constant</strong></p>
+<p>So, <strong>final concentration</strong>:
+- Let’s define: $(x,t) = _0^{} ^*(x,t) = _{m=0}^{}[ e^{} x] $</p>
+<p>Variable Manipulation:
+- <span class="math inline">\(u = m \Delta x \Rightarrow u = u(m) \Rightarrow \Delta u = u_2 - u_1 = (m_2-m_1)\Delta x = \Delta x\)</span>
+- $(x,t) = _{u=0}^{}[ e^{} u] $
+- $(x,t) = _0^{}[ e^{} du] $
+- Let’s define: <span class="math inline">\(v = \frac{x+u}{\sqrt{4Dt}} \Rightarrow du = \sqrt{4Dt} dv\)</span>
+- <span class="math inline">\(\rho (x,t) = \frac{\rho_o}{\sqrt{4\pi Dt}} \int_{x\div \sqrt{4Dt}}^{\infty}[e^{-v^2} \sqrt{4Dt} \cdot dv] \rightarrow ErrorFunction\)</span></p>
+<p>Then, we can write as <strong>error functions</strong>
+- <span class="math inline">\(\frac{2}{\sqrt \pi} \int_0^{\infty} e^{-v^2} dv = erf(\infty)\)</span>
+- <span class="math inline">\(\rho (x,t) = \frac{\rho_o}{2}[ erf(\infty) - erf(\frac{x}{\sqrt{4Dt}}) ]\)</span>
+- <span class="math inline">\(\rho (x,t) = \frac{\rho_o}{2}[ 1 - erf(\frac{x}{\sqrt{4Dt}}) ]\)</span></p>
+<p><strong>Solution to Fick’s Second Law</strong> (BCs)
+- <span class="math inline">\(\rho = \rho_o\)</span> for <span class="math inline">\(x&lt;0\)</span> at <span class="math inline">\(t=0\)</span>
+- <span class="math inline">\(\rho = 0\)</span> for <span class="math inline">\(x&gt;0\)</span> at <span class="math inline">\(t=0\)</span></p>
+<p>Also
+- <span class="math inline">\(\rho = \rho_o\)</span> for <span class="math inline">\(x=-\infty\)</span>
+- <span class="math inline">\(\rho = 0\)</span> for <span class="math inline">\(x=\infty\)</span>
+- <span class="math inline">\(\rho(0,t) = \frac{\rho_o}{2}\)</span> <strong>at all time</strong></p>
 
 </div>
 </div>
@@ -315,8 +463,8 @@ Here is where most of the students start their Diffusion classes.</p>
           </div>
         </div>
       </div>
-
-<a href="particle-motion.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="various-diffusion-problems.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -347,7 +495,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-ficks-law.Rmd",
 "text": "Edit"
 },
 "history": {

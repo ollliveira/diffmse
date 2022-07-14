@@ -1,4 +1,4 @@
-# Lecture 9 · Diffusion & Stress
+# Diffusion & Stress
 
 **Particle in a solvent** $\rightarrow$ **Random Motion** $\rightarrow$ **Random Walk**
 - Motion characteristics

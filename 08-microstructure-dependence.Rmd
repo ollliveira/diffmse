@@ -1,4 +1,4 @@
-# Lecture 8 · Microstructure Dependence of Diffusion
+# Microstructure Dependence of Diffusion
 
 Impact of **non uniformity** on diffusion.
 - Process dictated by **diffusion at the microstructure**:

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Notes from a Class on Diffusion in Materials</title>
+  <title>Lecture 7 Composition Dependence of Diffusion | Notes from a Class on Diffusion in Materials</title>
   <meta name="description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta property="og:title" content="Lecture 7 Composition Dependence of Diffusion | Notes from a Class on Diffusion in Materials" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="github-repo" content="ollliveira/diffmse" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta name="twitter:title" content="Lecture 7 Composition Dependence of Diffusion | Notes from a Class on Diffusion in Materials" />
   
   <meta name="twitter:description" content="This is a booknote from a class in diffusion in materials." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="particle-motion.html"/>
+<link rel="prev" href="various-diffusion-problems.html"/>
+<link rel="next" href="microstructure-dependence-of-diffusion.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -249,65 +249,201 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Notes from a Class on Diffusion in Materials</h1>
-<p class="author"><em>Thiago Oliveira</em></p>
-<p class="date"><em>2022-07-14</em></p>
+<div id="composition-dependence-of-diffusion" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Lecture 7</span> Composition Dependence of Diffusion<a href="composition-dependence-of-diffusion.html#composition-dependence-of-diffusion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>FINAL EXAM</strong> <span class="math inline">\(\rightarrow\)</span> there will be 2 or 3 problems from these lecture, where all the concepts and solutions seen so far are called into more complex and overarching problems.</p>
+<p><strong>So far</strong> <span class="math inline">\(\rightarrow c_{solute} = 1 - c_{solvent} \rightarrow\)</span> solute diffusion <span class="math inline">\(=\)</span> solvent diffusion
+- <strong>MIRROR SYMMETRY</strong> <span class="math inline">\(\rightarrow D_{solvent} = D_{solute}\)</span>
+- Which turns out to <strong>rarely be true</strong></p>
+<div id="if-solute-diffusion-neq-solvent-diffusion" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> If Solute Diffusion <span class="math inline">\(\neq\)</span> Solvent Diffusion<a href="composition-dependence-of-diffusion.html#if-solute-diffusion-neq-solvent-diffusion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="finite-au-ag-block" class="section level3 hasAnchor" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Finite Au-Ag Block<a href="composition-dependence-of-diffusion.html#finite-au-ag-block" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Ag</strong> on the left and <strong>Au</strong> on the right
+- If <span class="math inline">\(D_{Ag} &gt; D_{Au} \rightarrow\)</span> the block should move relative to Lab Frame (to the right)</p>
+<p>So far, diffusion is driven by <strong>concentration gradient</strong>, which is true for:
+- Dilute solutions
+- Ideal solid solutions</p>
+<p>And <strong>Fick’s Laws</strong> incorporate this assumption.</p>
+<p>If <strong>not true</strong>, then <strong>chemical potential</strong> should drive diffusion.</p>
 </div>
-<div id="diffusion-in-materials-notes-from-class" class="section level1 unnumbered hasAnchor">
-<h1>Diffusion in Materials · Notes from Class<a href="index.html#diffusion-in-materials-notes-from-class" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Notes from Prof. Mohammad Islam Lectures</p>
-<div id="syllabus" class="section level2 unnumbered hasAnchor">
-<h2>Syllabus<a href="index.html#syllabus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The exams is not suppose to find out what we don’t know.
-- 85% to 90% is going to be concepts we are deeply familiar with,
-- 10% to 15% is going to separate the B+ form A- and A,
-- 30% of the questions <span class="math inline">\(\rightarrow\)</span> conceptual questions,
-- 70% of the questions <span class="math inline">\(\rightarrow\)</span> mathematical questions (derivation/manipulation).</p>
-<p>This is a <strong>Graduate Course</strong> which means that we have to go <strong>beyond what is given in the class</strong>.</p>
 </div>
-<div id="notes-for-exam" class="section level2 unnumbered hasAnchor">
-<h2>Notes for Exam<a href="index.html#notes-for-exam" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>$ k_{B}T = 4,pNnm = 4^{-21} Nm $</p>
-<p>$ t^* = , = 5 ^{-13} 10^{-12} , s $</p>
+<div id="kirkendall-smigelskas-experiment" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Kirkendall-Smigelskas Experiment<a href="composition-dependence-of-diffusion.html#kirkendall-smigelskas-experiment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Only applies to <strong>Substitutional Diffusion</strong></p>
+<p><strong>Marker</strong>: we should be able to mark the <strong>interface</strong> so that we would be able to see any movement. The marker will undergo simple diffusion and will depend on the materials involved in the system.</p>
+<div id="lab-frame" class="section level3 hasAnchor" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Lab Frame<a href="composition-dependence-of-diffusion.html#lab-frame" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The block will move, but markers do not move</p>
 </div>
-<div id="overall-structure-of-the-class" class="section level2 unnumbered hasAnchor">
-<h2>Overall Structure of the Class<a href="index.html#overall-structure-of-the-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Why do we brush our teeth for 2 minutes?
-That is a P&amp;G research that showed that 2 minutes is the time necessary for <strong>Fluorite</strong> to diffuse into the tooth.
-The reason is because it is how long it takes for <strong>F</strong> to diffuse about half of thickness of our first layer of the tooth.</p>
-<p><strong>This will be on the Exam… Figure that out!</strong></p>
-<div id="basic-concepts" class="section level3 unnumbered hasAnchor">
-<h3>Basic Concepts<a href="index.html#basic-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Think about different phases of materials:
-- solid
-- liquid
-- gas/vapor</p>
-<p>Jelly is solid, made of a protein network.
-We we talk about diffusion, length scale matter.</p>
-<p>Visco-elastic fluid — honey?</p>
-<p>Start with underlying concepts: <strong>liquid</strong>
-Diffusion concept is dependent on the:
-- <strong>Fluctuation</strong> of atoms, molecules, etc…</p>
-<p>Then extend that to other classes of materials:
-- Polymers in solution
-- Polymers in other polymers (solvent is other polymers)
-- Diffusion of vacancies in a crystal
-- Diffusion of impurities in crystal
-- Diffusion in amorphous solids</p>
-<p>All this different kinds of concepts that come from <strong>Fluctuations</strong> are called <strong>Random Walk</strong> —&gt; <strong>RW</strong>.
-We are going to use this concept to extend and adjust for generallize, and adjustments we have to make to apply it for different kinds of materials.</p>
-<p><strong>RW</strong> —&gt; Ficks’ Law —&gt; Logic Extension from the <strong>Random Walk</strong>, it depends on the <strong>Random Walk</strong> concepts.
-Here is where most of the students start their Diffusion classes.</p>
-<p>Finally look at classic materials problems:
-- Composition dependence
-- Microstructure evolves (the dependence on diffusion for this evolution), primarilly under load
-- The connect that with mechanical properties</p>
-<p>If we have time:
-- Nucleation &amp; Growth
-- How to experimentally measure diffusion (how we now measure diffusion)</p>
+<div id="sample-frame" class="section level3 hasAnchor" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> Sample Frame<a href="composition-dependence-of-diffusion.html#sample-frame" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The sample stays same size, <strong>markers move opposite to larger flux</strong></p>
+</div>
+</div>
+<div id="the-k-s-experiment" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> The K-S Experiment<a href="composition-dependence-of-diffusion.html#the-k-s-experiment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Brass</strong>
+- 70 Cu
+- 30 Zn</p>
+<p>The Brass is wrapped around with Mo wire, then coated with Cu <span class="math inline">\(\rightarrow\)</span> look at the copper diffusing into Brass.
+- <span class="math inline">\(2h\)</span> is the width of the Brass
+- <span class="math inline">\(h-h_o \propto \sqrt{t}\)</span>
+- <strong>Diffusion Zone</strong> will move with respect to the end of the diffusion couple
+- Interface moves <strong>parabolically with time</strong>
+- Diffusion controlled process
+- <strong>Substitutional Diffusion</strong></p>
+<p>But conservation of mass (<strong>or conservation of sites</strong>):
+- <span class="math inline">\(D_{Cu} = D_{Zn}\)</span>
+- <span class="math inline">\(J_{Cu} = -J_{Zn}\)</span></p>
+<p><strong>Reality</strong>
+- Zn crosses interface but <strong>Cu does not replace all former Zn sites</strong>
+- It means <strong>vacancies will be generated</strong>
+- The <strong>vacancies will diffuse</strong></p>
+<div id="mechanism-behind-k-s-effect" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Mechanism Behind K-S Effect<a href="composition-dependence-of-diffusion.html#mechanism-behind-k-s-effect" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When <span class="math inline">\(D_{Zn} &gt; D_{Cu}\)</span> and assuming $ D D(c)$
+- <span class="math inline">\(J_{Zn} = J_{Cu} + J_{V}\)</span>
+- <span class="math inline">\(J_{Zn} + J_{Cu} + J_{V} = 0\)</span>
+- <span class="math inline">\(D_{Zn}\)</span> Diffusivity of Zn in Cooper
+- <span class="math inline">\(D_{Cu}\)</span> Diffusivity of Cu in Zinc</p>
+<p>Then:
+- <span class="math inline">\(J_{V} = D_{Zn}\frac{dc_{Zn}}{dx} + D_{Cu}\frac{dc_{Cu}}{dx}\)</span></p>
+<p>But:
+- <span class="math inline">\(c_{Zn} = 1 - c_{Cu} \Rightarrow dc_{Zn} = -dc_{Cu}\)</span></p>
+<p>So:
+- <span class="math inline">\(J_{V} = (D_{Cu} - D_{Zn}) \frac{dc_{Cu}}{dx}\)</span>
+- <span class="math inline">\(\frac{\partial C_V}{\partial t} = -\nabla J_V = -(D_{Cu} - D_{Zn}) \frac{\partial^2 c_{Cu}}{dx^2}\)</span>
+- <span class="math inline">\(c(x,t) = \frac{c_o}{2}[1-erf(\frac{x}{\sqrt{4Dt}})]\)</span></p>
+</div>
+<div id="concentration" class="section level3 hasAnchor" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> Concentration<a href="composition-dependence-of-diffusion.html#concentration" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="shape" class="section level3 hasAnchor" number="7.3.3">
+<h3><span class="header-section-number">7.3.3</span> Shape<a href="composition-dependence-of-diffusion.html#shape" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Error Function</strong> is the integral of a <strong>Gaussian</strong> <span class="math inline">\(\rightarrow\)</span> The <strong>derivative of Error Function</strong> gets back to the <strong>Gaussian</strong></p>
+</div>
+</div>
+<div id="fracpartial-c_vpartial-t" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> <span class="math inline">\(\frac{\partial c_V}{\partial t}\)</span><a href="composition-dependence-of-diffusion.html#fracpartial-c_vpartial-t" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math inline">\(\frac{\partial c}{\partial t} \propto \frac{\partial^2 c}{\partial x^2} \propto -\frac{\partial J}{\partial x}\)</span></p>
+<p>To <strong>maintain the flux balance</strong>
+- <strong>Left side</strong> <span class="math inline">\(\rightarrow\)</span> vacancy accumulation <span class="math inline">\(\rightarrow\)</span> <strong>annihilate vacancies</strong>
+- <strong>Right side</strong> <span class="math inline">\(\rightarrow\)</span> vacancy shortage <span class="math inline">\(\rightarrow\)</span> <strong>creat vacancies</strong></p>
+<div id="schematically" class="section level3 hasAnchor" number="7.4.1">
+<h3><span class="header-section-number">7.4.1</span> Schematically<a href="composition-dependence-of-diffusion.html#schematically" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Left side</strong> <span class="math inline">\(\rightarrow\)</span> A</li>
+<li><strong>Right side</strong> <span class="math inline">\(\rightarrow\)</span> B</li>
+</ul>
+<p>Take <span class="math inline">\(\frac{D_A}{D_B} = \infty \Rightarrow\)</span> <strong>A diffuses</strong></p>
+<p>To <strong>maintain the flux balance</strong>
+- <strong>Left side</strong> <span class="math inline">\(\rightarrow\)</span> vacancy accumulation <span class="math inline">\(\rightarrow\)</span> <strong>annihilate vacancies</strong>
+- <strong>Right side</strong> <span class="math inline">\(\rightarrow\)</span> vacancy shortage <span class="math inline">\(\rightarrow\)</span> <strong>creat vacancies</strong>
+- The whole thing is a <strong>Thermally Activated Process</strong>
+- <span class="math inline">\(N_V = N_V(T,P,...)\)</span>
+- Eventually create <strong>dislocations, grain boundaries, free surfaces …</strong>
+- Free energy (<strong>entropy contibution</strong>)</p>
+<p>Note: <strong>generation and annihilation are reverse of one another</strong></p>
+</div>
+</div>
+<div id="reconcile-k-s-effect-with-void-formation" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Reconcile K-S Effect with Void Formation<a href="composition-dependence-of-diffusion.html#reconcile-k-s-effect-with-void-formation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If I can <strong>creat voids</strong>, neither the sample nor the markers will move.</p>
+<div id="lab-frame-1" class="section level3 hasAnchor" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> Lab Frame<a href="composition-dependence-of-diffusion.html#lab-frame-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Sample grows</strong> to the right</li>
+<li><strong>Markers stay</strong> at their positions</li>
+</ul>
+</div>
+<div id="sample-frame-1" class="section level3 hasAnchor" number="7.5.2">
+<h3><span class="header-section-number">7.5.2</span> Sample Frame<a href="composition-dependence-of-diffusion.html#sample-frame-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Markers</strong> do not move with respect to left side — <strong>but</strong>:</li>
+<li><strong>Markers</strong> move farther away from the right side</li>
+</ul>
+</div>
+</div>
+<div id="darken-suggestion" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Darken Suggestion<a href="composition-dependence-of-diffusion.html#darken-suggestion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Darken</strong> has gone further than what others have done — he included velocity in a way to correct Fick’s Law when solute and solvent don’t have the same diffusivity.</p>
+<p><strong>Consider A-B</strong>
+- If Ideal: atomic sites are conserved &amp; ideal solution
+- <span class="math inline">\(D_A \neq D_A(c)\)</span>
+- <span class="math inline">\(D_B \neq D_B(c)\)</span></p>
+</div>
+<div id="marker-motion-speed" class="section level2 hasAnchor" number="7.7">
+<h2><span class="header-section-number">7.7</span> Marker Motion Speed<a href="composition-dependence-of-diffusion.html#marker-motion-speed" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math inline">\(v_{marker} \propto v_A\)</span> &amp; <span class="math inline">\(v_B\)</span></p>
+<p>How do I get velocity from what I can measure?
+- <span class="math inline">\([J] \equiv \frac{atoms}{m^2 s}\)</span>
+- <span class="math inline">\([v] = \frac{m}{s}\)</span></p>
+<p>We can get velocity from flux by <span class="math inline">\(\frac{atoms}{volume} = \frac{1}{\Omega}\)</span>
+- <span class="math inline">\(v_{marker} = - [J_A \Omega + J_B \Omega]\)</span>
+- <span class="math inline">\(v_{marker} = -\Omega [-D_A\frac{dc_A}{dx} -D_B\frac{dc_B}{dx}]\)</span>
+- <span class="math inline">\(v_{marker} = \Omega [-D_A\frac{dc_A}{dx} +D_B\frac{dc_B}{dx}]\)</span></p>
+</div>
+<div id="darken-proposal-use-chemical-diffusion-coefficient-tilde-d-for-diffusion-couple-problems" class="section level2 hasAnchor" number="7.8">
+<h2><span class="header-section-number">7.8</span> Darken Proposal: Use Chemical Diffusion Coefficient <span class="math inline">\(\tilde D\)</span> for Diffusion Couple Problems<a href="composition-dependence-of-diffusion.html#darken-proposal-use-chemical-diffusion-coefficient-tilde-d-for-diffusion-couple-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><span class="math inline">\(c = \frac{X}{\Omega}\)</span>
+<ul>
+<li><span class="math inline">\(X =\)</span> atom fraction <span class="math inline">\(= \frac{atom}{\sum atoms}\)</span></li>
+<li><span class="math inline">\(dc = \frac{dX}{\Omega}\)</span></li>
+</ul></li>
+</ul>
+<p>Therefore:
+- <span class="math inline">\(v_{marker} = [D_A \frac{dX_A}{dx} + D_B \frac{dX_B}{dx}]\)</span>
+- <span class="math inline">\(X_A = 1 - X_B \Rightarrow dX_A = - dX_B\)</span>
+- $v_{marker} = (D_A-D_B) = (D_B-D_A) $</p>
+<p><strong>Change Fick’s Equation</strong> by incorporating both diffusion coefficient via <span class="math inline">\(v_{marker}\)</span>
+- <strong>Fick’s</strong>
+- <span class="math inline">\(-D_1 \frac{\partial c_1}{\partial x}\)</span>
+- <span class="math inline">\(\frac{\partial c_1}{\partial x} = \frac{\partial}{\partial x}(D_1\frac{\partial c_1}{\partial x})\)</span>
+- <strong>Darken</strong>
+- <span class="math inline">\(-(D_1 \frac{\partial c_1}{\partial x}-c_1v)\)</span>
+- <span class="math inline">\(\frac{\partial c_1}{\partial x} = \frac{\partial}{\partial x}[D_1\frac{\partial c_1}{\partial x} -c_1v]\)</span></p>
+<p>It is possible to get a <strong>concentration profile</strong> (HOMEWORK):
+- <span class="math inline">\(\frac{\partial X_A}{\partial t} = \frac{\partial}{\partial x}[(X_AD_B + X_BD_A) \frac{\partial X_A}{\partial x}]\)</span></p>
+<p><strong>FINAL EXAM</strong>: we will have to do this to get to the problem.</p>
+<p><strong>Ideal Solution</strong>
+- <span class="math inline">\(\tilde D = (X_AD_B + X_BD_A)\)</span></p>
+<p><strong>Non Ideal Solution</strong>
+- <span class="math inline">\(\tilde D = (X_AD_B + X_BD_A)\frac{dlna_A}{dlnX_A}\)</span></p>
+<p>Rewriting the <strong>Fick’s Second Law</strong>- <span class="math inline">\(\frac{\partial X_A}{\partial t} = \frac{\partial}{\partial x}(\tilde D \frac{\partial X_A}{\partial x})\)</span></p>
+</div>
+<div id="ideal-solutions" class="section level2 hasAnchor" number="7.9">
+<h2><span class="header-section-number">7.9</span> Ideal Solutions<a href="composition-dependence-of-diffusion.html#ideal-solutions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>FINAL EXAM</strong>: how does the net diffusivity change if different kind of interactions are incorporated?</p>
+<p>Consider <strong>A-B Diffusion Couple</strong>
+- A-A bonds
+- B-B bonds
+- A-B bonds</p>
+<p><strong>The bonds are “equal”, no neighbor preference</strong>
+- A-A = B-B = A-B
+- <span class="math inline">\(\tilde D = (X_AD_B + X_BD_A)\)</span> <strong>The Rule of Mixtures</strong>
+- <span class="math inline">\(D_A \neq D_A(X_A)\)</span>
+- <span class="math inline">\(D_B \neq D_B(X_B)\)</span>
+- <span class="math inline">\(\tilde D\)</span> is <strong>concentration dependent</strong></p>
+</div>
+<div id="effect-of-strong-a-b" class="section level2 hasAnchor" number="7.10">
+<h2><span class="header-section-number">7.10</span> Effect of Strong A-B<a href="composition-dependence-of-diffusion.html#effect-of-strong-a-b" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Consider <strong>A-B Diffusion Couple</strong>
+- A-A bonds = B-B bonds
+- A-B bonds <strong>are stronger</strong></p>
+<p>Then
+- <span class="math inline">\(X_B \rightarrow 0 \Rightarrow\)</span> B atoms are surrounded by A atoms <span class="math inline">\(\Rightarrow \tilde D \approx D_B\)</span>
+- <span class="math inline">\(X_B \rightarrow 1 \Rightarrow\)</span> A atoms are surrounded by B atoms <span class="math inline">\(\Rightarrow \tilde D \approx D_A\)</span></p>
+<p>When <span class="math inline">\(X_B = 0.5\)</span> the former constant diffusivity is going to bend down <span class="math inline">\(\downarrow\)</span> (<strong>A-B bonds are stronger</strong>)
+- <strong>Concentration dependence</strong> of diffusion
+- <span class="math inline">\(\tilde D = (X_AD_B + X_BD_A)\frac{dlna_A}{dlnX_A}\)</span></p>
+</div>
+<div id="physical-insight-from-bolzmann-matano-analysis" class="section level2 hasAnchor" number="7.11">
+<h2><span class="header-section-number">7.11</span> Physical Insight from Bolzmann-Matano Analysis<a href="composition-dependence-of-diffusion.html#physical-insight-from-bolzmann-matano-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Concentration profile changes from <strong>symmetric</strong> to <strong>asymmetric</strong>. It is as if the interface has changed so that the symmetry axix is no longer at <span class="math inline">\(x=0\)</span>.</p>
+<p>The <strong>displaced interface</strong> is called the <strong>Matano Interface</strong> (Matano Plane).</p>
 
-</div>
 </div>
 </div>
             </section>
@@ -315,8 +451,8 @@ Here is where most of the students start their Diffusion classes.</p>
           </div>
         </div>
       </div>
-
-<a href="particle-motion.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="various-diffusion-problems.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="microstructure-dependence-of-diffusion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -347,7 +483,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/07-composition-dependence.Rmd",
 "text": "Edit"
 },
 "history": {

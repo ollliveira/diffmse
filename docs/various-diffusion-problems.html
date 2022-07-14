@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Notes from a Class on Diffusion in Materials</title>
+  <title>Lecture 6 Various Diffusion Problems | Notes from a Class on Diffusion in Materials</title>
   <meta name="description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta property="og:title" content="Lecture 6 Various Diffusion Problems | Notes from a Class on Diffusion in Materials" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="github-repo" content="ollliveira/diffmse" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta name="twitter:title" content="Lecture 6 Various Diffusion Problems | Notes from a Class on Diffusion in Materials" />
   
   <meta name="twitter:description" content="This is a booknote from a class in diffusion in materials." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="particle-motion.html"/>
+<link rel="prev" href="ficks-law-from-random-walk.html"/>
+<link rel="next" href="composition-dependence-of-diffusion.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -249,65 +249,155 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Notes from a Class on Diffusion in Materials</h1>
-<p class="author"><em>Thiago Oliveira</em></p>
-<p class="date"><em>2022-07-14</em></p>
+<div id="various-diffusion-problems" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Lecture 6</span> Various Diffusion Problems<a href="various-diffusion-problems.html#various-diffusion-problems" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="summary-1" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Summary<a href="various-diffusion-problems.html#summary-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Fick’s <strong>First Law</strong> <span class="math inline">\(\rightarrow\)</span> <strong>steady state</strong> problems</li>
+<li>Fick’s <strong>Second Law</strong> <span class="math inline">\(\rightarrow\)</span> <strong>transient</strong> problems
+<ul>
+<li>Derived from <strong>mass conservation</strong></li>
+</ul></li>
+</ul>
 </div>
-<div id="diffusion-in-materials-notes-from-class" class="section level1 unnumbered hasAnchor">
-<h1>Diffusion in Materials · Notes from Class<a href="index.html#diffusion-in-materials-notes-from-class" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Notes from Prof. Mohammad Islam Lectures</p>
-<div id="syllabus" class="section level2 unnumbered hasAnchor">
-<h2>Syllabus<a href="index.html#syllabus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The exams is not suppose to find out what we don’t know.
-- 85% to 90% is going to be concepts we are deeply familiar with,
-- 10% to 15% is going to separate the B+ form A- and A,
-- 30% of the questions <span class="math inline">\(\rightarrow\)</span> conceptual questions,
-- 70% of the questions <span class="math inline">\(\rightarrow\)</span> mathematical questions (derivation/manipulation).</p>
-<p>This is a <strong>Graduate Course</strong> which means that we have to go <strong>beyond what is given in the class</strong>.</p>
+<div id="transient-systems-1" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Transient Systems<a href="various-diffusion-problems.html#transient-systems-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="thin-film" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Thin Film<a href="various-diffusion-problems.html#thin-film" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math inline">\(c(x,t) = \frac{M_{total}}{\sqrt{4\pi Dt}} e^{\frac{-x^2}{4Dt}}\)</span></p>
 </div>
-<div id="notes-for-exam" class="section level2 unnumbered hasAnchor">
-<h2>Notes for Exam<a href="index.html#notes-for-exam" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>$ k_{B}T = 4,pNnm = 4^{-21} Nm $</p>
-<p>$ t^* = , = 5 ^{-13} 10^{-12} , s $</p>
+<div id="semi-infinite-slab-1" class="section level3 hasAnchor" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Semi Infinite Slab<a href="various-diffusion-problems.html#semi-infinite-slab-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Approach:
+- <strong>Propose a solution</strong> to Fick’s Second Law
+- <strong>Prove the solution is a general solution</strong>
+- <strong>Make the solution specific</strong> by carefully choosing BC</p>
+<p>$ c(x,t) = [1- erf()]$</p>
 </div>
-<div id="overall-structure-of-the-class" class="section level2 unnumbered hasAnchor">
-<h2>Overall Structure of the Class<a href="index.html#overall-structure-of-the-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Why do we brush our teeth for 2 minutes?
-That is a P&amp;G research that showed that 2 minutes is the time necessary for <strong>Fluorite</strong> to diffuse into the tooth.
-The reason is because it is how long it takes for <strong>F</strong> to diffuse about half of thickness of our first layer of the tooth.</p>
-<p><strong>This will be on the Exam… Figure that out!</strong></p>
-<div id="basic-concepts" class="section level3 unnumbered hasAnchor">
-<h3>Basic Concepts<a href="index.html#basic-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Think about different phases of materials:
-- solid
-- liquid
-- gas/vapor</p>
-<p>Jelly is solid, made of a protein network.
-We we talk about diffusion, length scale matter.</p>
-<p>Visco-elastic fluid — honey?</p>
-<p>Start with underlying concepts: <strong>liquid</strong>
-Diffusion concept is dependent on the:
-- <strong>Fluctuation</strong> of atoms, molecules, etc…</p>
-<p>Then extend that to other classes of materials:
-- Polymers in solution
-- Polymers in other polymers (solvent is other polymers)
-- Diffusion of vacancies in a crystal
-- Diffusion of impurities in crystal
-- Diffusion in amorphous solids</p>
-<p>All this different kinds of concepts that come from <strong>Fluctuations</strong> are called <strong>Random Walk</strong> —&gt; <strong>RW</strong>.
-We are going to use this concept to extend and adjust for generallize, and adjustments we have to make to apply it for different kinds of materials.</p>
-<p><strong>RW</strong> —&gt; Ficks’ Law —&gt; Logic Extension from the <strong>Random Walk</strong>, it depends on the <strong>Random Walk</strong> concepts.
-Here is where most of the students start their Diffusion classes.</p>
-<p>Finally look at classic materials problems:
-- Composition dependence
-- Microstructure evolves (the dependence on diffusion for this evolution), primarilly under load
-- The connect that with mechanical properties</p>
-<p>If we have time:
-- Nucleation &amp; Growth
-- How to experimentally measure diffusion (how we now measure diffusion)</p>
+</div>
+<div id="sligthly-more-complicated-but-similar-class-of-problems" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Sligthly More Complicated — But Similar Class of Problems<a href="various-diffusion-problems.html#sligthly-more-complicated-but-similar-class-of-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Semi Infinite Slab + Thin Film</strong> <span class="math inline">\(\rightarrow\)</span> <strong>SUPERPOSITION</strong></p>
+<ul>
+<li><strong>Semi Infinite Slab</strong> <span class="math inline">\(\rightarrow c(x,t) = \frac{c_o}{2} [1- erf(\frac{x}{\sqrt{4Dt}})]\)</span>
+<ul>
+<li><strong>Error Function</strong></li>
+<li>This is going to dominate</li>
+</ul></li>
+<li><strong>Semi Infinite Slab + Thin Film</strong> <span class="math inline">\(\rightarrow c(x,t) = \frac{c_o}{2} [1- erf(\frac{x}{\sqrt{4Dt}})] +\frac{bc_o}{\sqrt{4\pi Dt}} e^{-\frac{(x-l)^2}{4Dt}}\)</span>
+<ul>
+<li>Thin film is sitting at the location <span class="math inline">\(l\)</span> and has a width <span class="math inline">\(b\)</span></li>
+<li><strong>Gaussian</strong> Concentration Profile</li>
+</ul></li>
+</ul>
+<div id="concentration-evolution" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Concentration Evolution<a href="various-diffusion-problems.html#concentration-evolution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Superposition</strong> <span class="math inline">\(\rightarrow\)</span> <strong>general solution</strong></li>
+<li><strong>Time BC</strong>
+<ul>
+<li><span class="math inline">\(c(x,\infty) =\frac{c_o}{2}\)</span></li>
+</ul></li>
+<li><strong>Space BCs</strong>
+<ul>
+<li><span class="math inline">\(c(-\infty,t) = c_o\)</span></li>
+<li><span class="math inline">\(c(\infty,t) = 0\)</span></li>
+</ul></li>
+<li><strong>Steady State</strong> <span class="math inline">\(\rightarrow c(x,\infty) \approx \frac{c_o}{2}\)</span></li>
+</ul>
+</div>
+</div>
+<div id="problems-involving-thicker-films" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Problems Involving Thicker Films<a href="various-diffusion-problems.html#problems-involving-thicker-films" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Too thick</strong> to be model by a <strong>Gaussian Profile</strong></p>
+<p><strong>FINAL EXAM</strong></p>
+<ul>
+<li>Approach I (<strong>Manipulation of Concentration Profiles · SUPERPOSITION</strong>):
+<ul>
+<li><strong>Superposition of Gaussian</strong>: we can sum over a finite thickness as a sum of the many <strong>Gaussians</strong> <span class="math inline">\(\rightarrow\)</span> <strong>Error Function</strong></li>
+<li><span class="math inline">\(\frac{c_o}{2}[1 - erf\frac{(x-l)}{\sqrt{4Dt}}]\rightarrow\)</span> positive x direction</li>
+<li><strong>Diffusion Couple</strong>: <span class="math inline">\(\frac{c_o}{2}[1 - erf\frac{(-x-l)}{\sqrt{4Dt}}]\rightarrow\)</span> negative x direction</li>
+<li><strong>Addition</strong>: <span class="math inline">\(\frac{c_o}{2}[2 - erf\frac{(x-l)}{\sqrt{4Dt}} + erf\frac{(x+l)}{\sqrt{4Dt}}]\)</span></li>
+<li><strong>Subtract</strong> <span class="math inline">\(c_o\)</span>: <span class="math inline">\(\frac{c_o}{2}[erf\frac{(x+l)}{\sqrt{4Dt}} - erf\frac{(x-l)}{\sqrt{4Dt}}]\)</span></li>
+</ul></li>
+<li><strong>Time BC</strong>
+<ul>
+<li><span class="math inline">\(c(x,0) = 0\)</span> for <span class="math inline">\(|x| &gt; l\)</span></li>
+<li><span class="math inline">\(c(x,0) = c_o\)</span> for any other condition</li>
+</ul></li>
+<li><strong>Space BCs</strong>
+<ul>
+<li><span class="math inline">\(c(-\infty,t) = 0\)</span></li>
+<li><span class="math inline">\(c(\infty,t) = 0\)</span></li>
+<li><span class="math inline">\(J(\infty,t) = 0\)</span></li>
+</ul></li>
+<li><strong>Steady State</strong> $c(x, ) = 0 $ as in both sides we have semi infinite slabs, the finite amount behaves as a thin film as time goes to infinity.</li>
+</ul>
+<div id="another-example-problem" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Another Example Problem<a href="various-diffusion-problems.html#another-example-problem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Here is a <strong>superposition example</strong> which I wrote on my notebook.</p>
+</div>
+</div>
+<div id="reflections" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Reflections<a href="various-diffusion-problems.html#reflections" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Finite thickness</strong> films (not semi infinite anymore)
+- Slab thickness <span class="math inline">\(\approx 2l\)</span></p>
+<p>Let’s say it was a <strong>thin film</strong> <span class="math inline">\(\rightarrow\)</span> it is a <strong>good starting point</strong>
+- <span class="math inline">\(c(x,t) = \frac{M_{total}}{\sqrt{4\pi Dt}}e^{-\frac{x^2}{4Dt}}\)</span>
+- <span class="math inline">\(M_{total} = bc_o\)</span>
+- <span class="math inline">\(b \rightarrow\)</span> thickness of the film
+- <span class="math inline">\(c_o \rightarrow\)</span> initial concentration</p>
+<p>However:
+- <span class="math inline">\(\int_{0.1}^{0.1} c(x,t) \neq M_{total}\)</span> considering only <strong>One Gaussian</strong></p>
+<p>By <strong>reflection</strong> we considered how things are moving back into the film <span class="math inline">\(\rightarrow\)</span> <strong>put back missing mass</strong>
+- $c(x,t) = [e^{-} + e^{-} + e^{-}] $</p>
+<p>But overtime, dopant move farther, also image source dopands also leak out. In this case, the <strong>real solution will be</strong>:
+- $c(x,t) = _{i =-}^{} e^{-} $
+- Slag thickness <span class="math inline">\(\approx 2l\)</span>
+- It is still <strong>superposition of known solutions</strong> <span class="math inline">\(\rightarrow\)</span> still <strong>general solutions</strong> of Fick’s Second Law</p>
+<ul>
+<li><strong>Time BC</strong>
+<ul>
+<li><span class="math inline">\(c(x,\infty) \approx \frac{M_{total}}{2l}\)</span></li>
+</ul></li>
+<li><strong>Space BCs</strong>
+<ul>
+<li><span class="math inline">\(J(0,t) = 0\)</span></li>
+<li><span class="math inline">\(J(-l,t) = 0\)</span></li>
+<li><span class="math inline">\(J(l,t) = 0\)</span></li>
+</ul></li>
+<li>Solutions <strong>only valid</strong> for <span class="math inline">\(-l \leq x \leq l\)</span></li>
+</ul>
+<p><strong>Mass Conservation BC</strong> <span class="math inline">\(\rightarrow J=0\)</span> at <strong>open surface</strong>
+- This typwe of BC works for <strong>finite &amp; semi infinite</strong> systems</p>
+<p><strong>Reflections</strong> should always be beyond the free surface <span class="math inline">\(\rightarrow\)</span> <strong>outside</strong> of the sample.</p>
+</div>
+<div id="semi-infinite-slab-with-constant-surface-composition" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Semi Infinite Slab with Constant Surface Composition<a href="various-diffusion-problems.html#semi-infinite-slab-with-constant-surface-composition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This is particularly important for <strong>biological systems</strong>.</p>
+<p><span class="math inline">\(c_o \rightarrow\)</span> the concentration needed at the surface
+- Use <span class="math inline">\(x&gt;0\)</span> solution for semi infinite slab:
+- <span class="math inline">\(c(x,t) = c_o[1-erf(\frac{x}{\sqrt{4Dt}})]\)</span>
+- <strong>Time BC</strong>
+- <span class="math inline">\(c(x&gt;0,t=0) = 0\)</span>
+- <span class="math inline">\(c(x=0,t=0) = c_o\)</span>
+- <strong>Space BCs</strong>
+- <span class="math inline">\(c(0,t) = c_o\)</span>
+- <span class="math inline">\(c(\infty,t) = 0\)</span>
+- <strong>Plug</strong> into <span class="math inline">\(c(x&gt;0,t)\)</span>, just to verify they satisfy:
+- <span class="math inline">\(c(x&gt;0, t=0) = c_o[1-erf(\frac{x}{\sqrt{4Dt}})] = 0\)</span>
+- <span class="math inline">\(erf(\infty) = 1\)</span>
+- <span class="math inline">\(c(x=0, t=0) = c_o[1-erf(\frac{x}{\sqrt{4Dt}})] = c_o\)</span>
+- <span class="math inline">\(erf(0) = 0\)</span></p>
+</div>
+<div id="use-of-reflections-superpositions-together" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Use of Reflections &amp; Superpositions Together<a href="various-diffusion-problems.html#use-of-reflections-superpositions-together" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Start with <strong>Reflection</strong> <span class="math inline">\(\rightarrow J=0\)</span>
+- BC <span class="math inline">\(\Rightarrow \frac{dc}{dx}|_{surface}^{source} = -\frac{dc}{dx}|_{image}^{source}\)</span></p>
+<p>Then go to <strong>Superposition</strong> <span class="math inline">\(\rightarrow\)</span> composition
+- BC <span class="math inline">\(\Rightarrow c_o^{source} = c_o^{source} + c_o^{image} - c_o^{superposition}\)</span></p>
 
-</div>
 </div>
 </div>
             </section>
@@ -315,8 +405,8 @@ Here is where most of the students start their Diffusion classes.</p>
           </div>
         </div>
       </div>
-
-<a href="particle-motion.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ficks-law-from-random-walk.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="composition-dependence-of-diffusion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -347,7 +437,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/06-diffusion-problems.Rmd",
 "text": "Edit"
 },
 "history": {

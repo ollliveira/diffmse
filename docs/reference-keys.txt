@@ -1,4 +1,4 @@
-lecture-1-particle-motion
+particle-motion
 equilibrium-configuration-energies
 time-scale-for-fluid-response
 for-water
@@ -6,7 +6,7 @@ modulus
 motions-that-are-temporarily-correlated
 classes-of-problem-we-are-interested-in
 msd
-lecture-2-random-walk
+random-walk
 at-equilibrium
 domain-size-average-distance
 atom-in-a-1d-crystal
@@ -14,14 +14,14 @@ random-walk-rw
 extending-the-step-size
 what-happens-if-we-move-to-2d-and-3d
 connecting-random-walk-to-diffusion-in-crystals
-lecture-3-random-walk-and-diffusion-in-crystals
+random-walk-and-diffusion-in-crystals
 diffusion-in-crystals-mechanisms
 exchange-2-atoms
 impurities
 measuring-diffusion-in-crystals
 interstitial-solute-diffusion
 remarks-on-interstitial-solute-diffusion
-lecture-4-diffusion-in-liquids-amorphous-solids-and-polymers
+diffusion-in-liquids-amorphous-solids-and-polymers
 summary
 non-newtonian-liquid
 free-volume-model
@@ -36,7 +36,7 @@ interstitial-diffusion-in-amorphous-solids
 polymers-different-class-of-amorphous-solid
 polymer-diffusion-in-solvents
 polymer-self-diffusion-in-a-melt-no-solvent
-lecture-5-ficks-law-from-random-walk
+ficks-law-from-random-walk
 ficks-laws-from-random-walk
 linear-transport-1d
 rephrase-with-random-walk
@@ -48,7 +48,7 @@ one-class-of-problems
 solution-approach
 another-class-of-problems
 semi-infinite-slab
-lecture-6-various-diffusion-problems
+various-diffusion-problems
 summary-1
 transient-systems-1
 thin-film
@@ -60,7 +60,7 @@ another-example-problem
 reflections
 semi-infinite-slab-with-constant-surface-composition
 use-of-reflections-superpositions-together
-lecture-7-composition-dependence-of-diffusion
+composition-dependence-of-diffusion
 if-solute-diffusion-neq-solvent-diffusion
 finite-au-ag-block
 kirkendall-smigelskas-experiment
@@ -81,13 +81,13 @@ darken-proposal-use-chemical-diffusion-coefficient-tilde-d-for-diffusion-couple-
 ideal-solutions
 effect-of-strong-a-b
 physical-insight-from-bolzmann-matano-analysis
-lecture-8-microstructure-dependence-of-diffusion
+microstructure-dependence-of-diffusion
 overall-diffusivity-d
 edge-dislocation
 revisit
 extend-to-grain-boundary
 gb-network
-lecture-9-diffusion-stress
+diffusion-stress
 mass-transport-rightarrow-random-walk
 mass-transport-microstructure
 polycrystall-in-tension
@@ -98,7 +98,7 @@ determining-creep-mechanism
 role-of-interfaces
 capillary-relaxation
 crystalline-interfaces
-lecture-10-diffusion-and-nucleation-growth
+diffusion-and-nucleation-growth
 grain-growth
 kinetics-of-phase-transformation
 determination-of-r

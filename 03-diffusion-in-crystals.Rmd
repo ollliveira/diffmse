@@ -1,4 +1,4 @@
-# Lecture 3 · Random Walk and Diffusion in Crystals
+# Random Walk and Diffusion in Crystals
 
 ## Diffusion in Crystals · **Mechanisms**
 

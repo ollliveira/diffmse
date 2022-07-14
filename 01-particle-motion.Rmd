@@ -1,4 +1,4 @@
-# Lecture 1 · Particle Motion
+# Particle Motion
 
 **Diffusion** fundamentally relies on the fact that the constituents molecules/atoms are constantly undergoing **Fluctuation**.
 

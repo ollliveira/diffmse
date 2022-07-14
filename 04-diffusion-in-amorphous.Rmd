@@ -1,4 +1,4 @@
-# Lecture 4 · Diffusion in Liquids, Amorphous Solids and Polymers
+# Diffusion in Liquids, Amorphous Solids and Polymers
 
 ## Summary
 

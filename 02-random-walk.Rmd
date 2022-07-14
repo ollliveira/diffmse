@@ -1,4 +1,4 @@
-# Lecture 2 · Random Walk
+# Random Walk
 
 The **Fluctuation** can be understood as the change in the motion using **Langevin Equation**:
 

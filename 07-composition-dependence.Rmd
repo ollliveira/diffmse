@@ -1,4 +1,4 @@
-# Lecture 7 · Composition Dependence of Diffusion
+# Composition Dependence of Diffusion
 
 **FINAL EXAM** $\rightarrow$ there will be 2 or 3 problems from these lecture, where all the concepts and solutions seen so far are called into more complex and overarching problems.
 

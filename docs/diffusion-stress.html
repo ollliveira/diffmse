@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Notes from a Class on Diffusion in Materials</title>
+  <title>Lecture 9 Diffusion &amp; Stress | Notes from a Class on Diffusion in Materials</title>
   <meta name="description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta property="og:title" content="Lecture 9 Diffusion &amp; Stress | Notes from a Class on Diffusion in Materials" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="github-repo" content="ollliveira/diffmse" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta name="twitter:title" content="Lecture 9 Diffusion &amp; Stress | Notes from a Class on Diffusion in Materials" />
   
   <meta name="twitter:description" content="This is a booknote from a class in diffusion in materials." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="particle-motion.html"/>
+<link rel="prev" href="microstructure-dependence-of-diffusion.html"/>
+<link rel="next" href="diffusion-and-nucleation-growth.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -249,65 +249,246 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Notes from a Class on Diffusion in Materials</h1>
-<p class="author"><em>Thiago Oliveira</em></p>
-<p class="date"><em>2022-07-14</em></p>
+<div id="diffusion-stress" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Lecture 9</span> Diffusion &amp; Stress<a href="diffusion-stress.html#diffusion-stress" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Particle in a solvent</strong> <span class="math inline">\(\rightarrow\)</span> <strong>Random Motion</strong> <span class="math inline">\(\rightarrow\)</span> <strong>Random Walk</strong>
+- Motion characteristics
+- Probability of finding a particle in a location</p>
+<p><strong>Polymer in a Liquid</strong>
+- Conformation of the polymer
+- Size of the polymer
+- Motion of the polymer</p>
+<p><strong>Ordered System</strong> (Crystalline solids)</p>
+<p><strong>Disordered System</strong> (Amorphous solids)</p>
+<p>We have to be comfortable to transfer the knowledge to other systems</p>
+<div id="mass-transport-rightarrow-random-walk" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Mass Transport <span class="math inline">\(\rightarrow\)</span> Random Walk<a href="diffusion-stress.html#mass-transport-rightarrow-random-walk" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Solute diffusion</strong> driven by the <strong>concentration gradient</strong></li>
+<li><strong>Solvent diffusion</strong> driven by concentration gradient or <strong>chemical potential</strong></li>
+</ul>
 </div>
-<div id="diffusion-in-materials-notes-from-class" class="section level1 unnumbered hasAnchor">
-<h1>Diffusion in Materials · Notes from Class<a href="index.html#diffusion-in-materials-notes-from-class" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Notes from Prof. Mohammad Islam Lectures</p>
-<div id="syllabus" class="section level2 unnumbered hasAnchor">
-<h2>Syllabus<a href="index.html#syllabus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The exams is not suppose to find out what we don’t know.
-- 85% to 90% is going to be concepts we are deeply familiar with,
-- 10% to 15% is going to separate the B+ form A- and A,
-- 30% of the questions <span class="math inline">\(\rightarrow\)</span> conceptual questions,
-- 70% of the questions <span class="math inline">\(\rightarrow\)</span> mathematical questions (derivation/manipulation).</p>
-<p>This is a <strong>Graduate Course</strong> which means that we have to go <strong>beyond what is given in the class</strong>.</p>
+<div id="mass-transport-microstructure" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Mass Transport &amp; Microstructure<a href="diffusion-stress.html#mass-transport-microstructure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Diffusion can be heavily influenced by microstructure (GB, dislocations, etc)
+- <strong>Diffusion <span class="math inline">\(\leftrightarrow\)</span> Microstructure</strong>
+- Properties
+- Creep (Mechanical)
+- Processing
+- Sintering
+- Coarsening</p>
+<p><strong>Sintering &amp; Coarsening</strong> <span class="math inline">\(\Rightarrow\)</span> <strong>Nucleation &amp; Growth</strong></p>
+<p><strong>Diffusion</strong> is the process through which all these processes happen in a material.</p>
+<div id="polycrystall-in-tension" class="section level3 hasAnchor" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> Polycrystall in Tension<a href="diffusion-stress.html#polycrystall-in-tension" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>$= $ <strong>stress</strong>
+- The grain will <strong>alongate along the stress direction</strong>
+- <strong>Tension</strong> <span class="math inline">\(\updownarrow\)</span> then <span class="math inline">\(\Rightarrow\)</span> crystal lattice expands <span class="math inline">\(\Rightarrow\)</span> creates volume <span class="math inline">\(\Rightarrow\)</span> <strong>vacancy creation</strong> <span class="math inline">\(\Rightarrow N_V\)</span>
+- <strong>Compression</strong> <span class="math inline">\(\leftrightarrow\)</span> then <span class="math inline">\(\Rightarrow\)</span> crystal lattice contracts <span class="math inline">\(\Rightarrow\)</span> densification <span class="math inline">\(\Rightarrow\)</span> <strong>vacancy annihilation</strong> <span class="math inline">\(\Rightarrow N_V\)</span></p>
+<p>Note: <strong>mechanical energy</strong> we are applying <span class="math inline">\(\Rightarrow\)</span> <strong>free energy</strong></p>
+<ul>
+<li>Free energy per atom
+<ul>
+<li><span class="math inline">\(u_{\sigma e} = \frac{energy}{volume}\cdot \frac{volume}{atom}\)</span></li>
+<li><span class="math inline">\(u_{\sigma e} = \sigma \,\Omega\)</span>
+<ul>
+<li>$= $ stress</li>
+<li>$= $ atomic volume</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>When a material is stressed <span class="math inline">\(\rightarrow N_V\)</span> <strong>changes (creation - annihilation)</strong>
+- <span class="math inline">\(G_V\)</span> is the energy for creating a vacancy
+- <span class="math inline">\(G = G_V - \sigma \, \Omega\)</span>
+- <span class="math inline">\(N_V^{tension} = e^{\frac{-G}{K_BT}}\)</span>
+- <span class="math inline">\(N_V^o = e^{\frac{-G_V}{K_BT}} \rightarrow\)</span> <strong>equilibrium vacancies</strong>
+- <span class="math inline">\(e^{\frac{\sigma \, \Omega}{K_BT}} \rightarrow\)</span> <strong>vacancies generated</strong> by applied stress</p>
+<p>Therefore
+- <span class="math inline">\(N_V^{tension} = N_V^o e^{\frac{\sigma \, \Omega}{K_BT}}\)</span>
+- <span class="math inline">\(N_V^{compression} = N_V^o e^{-\frac{\sigma \, \Omega}{K_BT}}\)</span></p>
 </div>
-<div id="notes-for-exam" class="section level2 unnumbered hasAnchor">
-<h2>Notes for Exam<a href="index.html#notes-for-exam" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>$ k_{B}T = 4,pNnm = 4^{-21} Nm $</p>
-<p>$ t^* = , = 5 ^{-13} 10^{-12} , s $</p>
+<div id="flux-of-vacancies" class="section level3 hasAnchor" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Flux of Vacancies<a href="diffusion-stress.html#flux-of-vacancies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Tensile Region</strong> <span class="math inline">\(\rightarrow\)</span> <strong>Compressed Region</strong>
+- <span class="math inline">\([Flux] = \frac{1}{Area}\frac{vacancy}{time} = \frac{1}{r^2}\frac{dN_V}{dt}\)</span>
+- <span class="math inline">\(J = - D_V \frac{\Delta N_V}{\Delta X}\)</span></p>
+<p>What would be a <strong>good length</strong>? It is a cubic sample, cubic grain <span class="math inline">\(\rightarrow\)</span> r
+- <span class="math inline">\(J = - D_V \frac{\Delta N_V}{\Delta X}\)</span>
+- <span class="math inline">\(\Delta N_V = N_V|_{final} - N_V|_{initial}\)</span>
+- <span class="math inline">\(\Delta N_V = N_V^{compression} - N_V^{tension}\)</span></p>
+<p>Then
+- <span class="math inline">\(\dot N_V = -r^2 \frac{D_VN_V^o}{r} [e^{-\frac{\sigma \, \Omega}{K_BT}} - e^{+\frac{\sigma \, \Omega}{K_BT}}]\)</span>
+- <span class="math inline">\(\dot N_V = r D_VN_V^o [e^{+\frac{\sigma \, \Omega}{K_BT}} - e^{-\frac{\sigma \, \Omega}{K_BT}}]\)</span></p>
+<p>Converting to <strong>Strain Rate</strong>
+- <span class="math inline">\(\dot \epsilon \equiv \frac{\Delta \dot V}{V} = \frac{d}{dt}[\frac{\Delta V}{V}]\)</span>
+- <span class="math inline">\(V = r^3\)</span>
+- <span class="math inline">\(\Delta V = N_V \Omega\)</span>
+- <span class="math inline">\(\dot \epsilon = \frac{\dot N_V \Omega}{r^3} = \frac{r}{r^3} D_VN_V^o \Omega [e^{+\frac{\sigma \, \Omega}{K_BT}} - e^{-\frac{\sigma \, \Omega}{K_BT}}]\)</span></p>
+<p><span class="math inline">\(D_VN_V^o \Omega \equiv D_b\)</span> which is the <strong>bulk diffusivity</strong></p>
+<p><strong>Taylor Expansion</strong>: <span class="math inline">\(e^{\pm a} \approx 1 \pm a\)</span></p>
+<p><span class="math inline">\(\dot \epsilon = \frac{\alpha}{r^2}D_b \, \frac{\sigma \Omega}{K_BT} \rightarrow\)</span> <strong>Nabarro-Herring Creep</strong>
+- <span class="math inline">\(\alpha \equiv\)</span> <strong>grain shape dependent</strong> <span class="math inline">\(\rightarrow\)</span> <strong>geometric factor</strong>
+- I did not consider defects
+- <strong>N-H creep only happens through bulk diffusion</strong>
+- <span class="math inline">\(T \uparrow\)</span> should imply <span class="math inline">\(\dot \epsilon \uparrow\)</span> (which doesn’t seem to happen)
+- The reason is that <span class="math inline">\(D_V\)</span> equation has also the <strong><span class="math inline">\(T\)</span> factor and it is going to dominate</strong>.</p>
 </div>
-<div id="overall-structure-of-the-class" class="section level2 unnumbered hasAnchor">
-<h2>Overall Structure of the Class<a href="index.html#overall-structure-of-the-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Why do we brush our teeth for 2 minutes?
-That is a P&amp;G research that showed that 2 minutes is the time necessary for <strong>Fluorite</strong> to diffuse into the tooth.
-The reason is because it is how long it takes for <strong>F</strong> to diffuse about half of thickness of our first layer of the tooth.</p>
-<p><strong>This will be on the Exam… Figure that out!</strong></p>
-<div id="basic-concepts" class="section level3 unnumbered hasAnchor">
-<h3>Basic Concepts<a href="index.html#basic-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Think about different phases of materials:
-- solid
-- liquid
-- gas/vapor</p>
-<p>Jelly is solid, made of a protein network.
-We we talk about diffusion, length scale matter.</p>
-<p>Visco-elastic fluid — honey?</p>
-<p>Start with underlying concepts: <strong>liquid</strong>
-Diffusion concept is dependent on the:
-- <strong>Fluctuation</strong> of atoms, molecules, etc…</p>
-<p>Then extend that to other classes of materials:
-- Polymers in solution
-- Polymers in other polymers (solvent is other polymers)
-- Diffusion of vacancies in a crystal
-- Diffusion of impurities in crystal
-- Diffusion in amorphous solids</p>
-<p>All this different kinds of concepts that come from <strong>Fluctuations</strong> are called <strong>Random Walk</strong> —&gt; <strong>RW</strong>.
-We are going to use this concept to extend and adjust for generallize, and adjustments we have to make to apply it for different kinds of materials.</p>
-<p><strong>RW</strong> —&gt; Ficks’ Law —&gt; Logic Extension from the <strong>Random Walk</strong>, it depends on the <strong>Random Walk</strong> concepts.
-Here is where most of the students start their Diffusion classes.</p>
-<p>Finally look at classic materials problems:
-- Composition dependence
-- Microstructure evolves (the dependence on diffusion for this evolution), primarilly under load
-- The connect that with mechanical properties</p>
-<p>If we have time:
-- Nucleation &amp; Growth
-- How to experimentally measure diffusion (how we now measure diffusion)</p>
+<div id="physical-mechanism" class="section level3 hasAnchor" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> Physical Mechanism<a href="diffusion-stress.html#physical-mechanism" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Tension Region</strong> <span class="math inline">\(\Rightarrow\)</span> <strong>High</strong> vacancy concentration</li>
+<li><strong>Compression Region</strong> <span class="math inline">\(\Rightarrow\)</span> <strong>Low</strong> vacancy concentration</li>
+<li>To <strong>maintain equilibrium</strong> <span class="math inline">\(\rightarrow\)</span> vacanccy creation <span class="math inline">\(=\)</span> vacancy annihilation</li>
+</ul>
+<p>By <strong>Random Walk</strong> (&amp; remember Kirkendall-Smigelskas Effect)
+- <span class="math inline">\(J_{atom} \rightarrow\)</span> <strong>Tension Region</strong>
+- <span class="math inline">\(J_V \rightarrow\)</span> <strong>Compression Region</strong>
+- <strong>K-S Effect</strong> <span class="math inline">\(\rightarrow\)</span> The same process we’ve apllied to <strong>diffusion couple</strong> happens when we apply stress.</p>
+<p>Atoms are jumping towards tension region.
+- <span class="math inline">\(D \propto X_V\)</span></p>
+</div>
+</div>
+<div id="marker-motion" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Marker Motion<a href="diffusion-stress.html#marker-motion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The same process as in <strong>Kirkendall-Smigelskas Experiment</strong>:
+- <strong>Markers will move</strong> towards the <strong>compreesion region</strong> till hits the end of the sample.</p>
+<p><strong>With Grain Boundary</strong>
+- <span class="math inline">\(D \Rightarrow \langle D \rangle = D_b + \frac{3 \delta}{r}D_{GB}\)</span>
+- <span class="math inline">\(D \Rightarrow \langle D \rangle = D_b + \frac{6r^2 \delta}{r^3}D_{GB} = D_b + \frac{6 \delta}{r}D_{GB} \rightarrow\)</span> for a <strong>cubic grain</strong> (6 surfaces <span class="math inline">\(r^2\delta\)</span> and volume of <span class="math inline">\(r^3\)</span></p>
+<p>If <strong>No Grain Boudary</strong>
+- <span class="math inline">\(D \Rightarrow D_b\)</span></p>
+<p>Then:
+- <span class="math inline">\(\dot \epsilon = \frac{\alpha}{r^2} \langle D \rangle \frac{\sigma \Omega}{K_BT}\)</span>
+- $= D_b + D_{GB} $
+- <span class="math inline">\(\dot \epsilon = \frac{\alpha}{r^2} D_b \frac{\sigma \Omega}{K_BT} + \frac{\alpha}{r^2} \frac{6 \delta}{r}D_{GB} \frac{\sigma \Omega}{K_BT} \rightarrow\)</span> for a <strong>cubic grain</strong> $</p>
+<p>Each term:
+- $ D_b = _{N-H} $</p>
+<ul>
+<li>$ D_{GB} = _{c} $ <strong>coble creep</strong></li>
+</ul>
+<p>We can write that:
+- <span class="math inline">\(\frac{D_{GB}}{D_b} \uparrow\)</span> as <span class="math inline">\(T \downarrow \Rightarrow\)</span> <strong>coble creep dominates at low temperature</strong></p>
+</div>
+<div id="determining-creep-mechanism" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Determining Creep Mechanism<a href="diffusion-stress.html#determining-creep-mechanism" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>At a <strong>fixed temperature</strong></p>
+<p>The most commom kind of deformation in a material that has GB
+- <strong>GB sliding</strong>
+- <span class="math inline">\(\dot \epsilon = c \frac{\sigma^n D_{GB}}{r} \rightarrow\)</span> <strong>remember this</strong> <span class="math inline">\(\rightarrow \frac{1}{r}\)</span></p>
+<p><strong>Remember</strong> strain rate from GB sliding goes with the stress to the <strong>power 3</strong>, much faster.</p>
+<ul>
+<li>When <span class="math inline">\(\dot \epsilon\)</span> vs <span class="math inline">\(\sigma\)</span>
+<ul>
+<li>Creep from <strong>diffusion</strong> (bulk creep mediated by diffusion) <span class="math inline">\(\rightarrow n = 1\)</span></li>
+<li>Creep from <strong>GB sliding</strong> <span class="math inline">\(\rightarrow n = 3\)</span></li>
+</ul></li>
+</ul>
+<p>N-H vs Coble
+- When <span class="math inline">\(\dot \epsilon\)</span> vs <span class="math inline">\(r\)</span>
+- N-H <span class="math inline">\(\rightarrow n = -2\)</span>
+- Coble <span class="math inline">\(\rightarrow n = -3\)</span></p>
+</div>
+<div id="role-of-interfaces" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Role of Interfaces<a href="diffusion-stress.html#role-of-interfaces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Between
+- Different Crystallographic Planes: <strong>Different Orientations</strong>
+- Different <strong>Phases</strong>
+- Different <strong>Compositions</strong>
+- Different <strong>Structures</strong></p>
+<p>Interfaces <span class="math inline">\(\rightarrow\)</span> <strong>free energy gradient</strong>
+- Shape
+- Size
+- Change on those will change the <strong>free energy gradient</strong>
+- which in turn will change the diffusion
+- Then repeat till it goes to zero <span class="math inline">\((0)\)</span></p>
+</div>
+<div id="capillary-relaxation" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> Capillary Relaxation<a href="diffusion-stress.html#capillary-relaxation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Example
+- <strong>Solid-vapor interface</strong>
+- <strong>unfilled bonds</strong> give rise to <strong>surface tension</strong>
+- <span class="math inline">\(\gamma = \frac{energy}{area}\)</span>
+- <span class="math inline">\(energy = \gamma A\)</span></p>
+<p>Remark:
+- <strong>surface tension</strong> gives rise to <strong>surface energy</strong>
+- <strong>interface</strong> gives rise to <strong>interfacial energy</strong>
+- <strong>GB</strong> gives rise to <strong>GB energy</strong></p>
+<p><strong>FINAL EXAM</strong>, with a different geometry</p>
+<p>How to change interfacial energy:
+- Change <strong>surface tension</strong> <span class="math inline">\(\gamma\)</span>
+- Change <strong>area</strong></p>
+<p>The driving force (actually pressure) to make this happen:
+- <span class="math inline">\(P \frac{d}{dV}(energy) = \frac{d}{dV}(\gamma A) = \gamma \frac{dA}{dV}\)</span>
+- It will stop when the driving force goes to zero
+- <span class="math inline">\(\frac{dA}{dV} = 0 \Rightarrow\)</span> <strong>Flat Interface</strong> <span class="math inline">\(\rightarrow\)</span> <strong>REMEMBER THIS NAME</strong></p>
+<p><strong>EXAMPLE: Spherical Interface</strong>
+- <span class="math inline">\(\frac{dA}{dV} = \frac{2}{r} \Rightarrow P = \gamma \frac{2}{r}\)</span>
+- Laplace Pressure for spherical system, or
+- Gibbs-Thompson Equation
+- Therefore: small bubbles <span class="math inline">\(\rightarrow\)</span> higher pressure</p>
+<p>We often wite it in terms of <strong>curvature</strong>:
+- <span class="math inline">\(\kappa \propto \frac{1}{r}\)</span>
+- <span class="math inline">\(\kappa = \frac{2}{r}\)</span> for <strong>spherical</strong>
+- <span class="math inline">\(P = \kappa \gamma\)</span>
+- <strong>Capillary Pressure</strong> is another term to refer to it</p>
+</div>
+<div id="crystalline-interfaces" class="section level2 hasAnchor" number="9.7">
+<h2><span class="header-section-number">9.7</span> Crystalline Interfaces<a href="diffusion-stress.html#crystalline-interfaces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Crystalline interfaces means <strong>at least one of the material</strong> has crystalline surface.
+- It possesses a kind of structure
+- Energy depends on <strong>orientation</strong> with respect to the other material surface/interface</p>
+<p>Crystallographic plane mismatch <span class="math inline">\(\rightarrow\)</span> <strong>slow relaxation</strong> (same as capillary relaxation)</p>
+<p><strong>GB Interfaces</strong> (how many types of mismatch could he have?)
+- 3 misorientation between grains
+- 2 boundary planes normals (direction)
+- 5 crystallographic degrees of freedom (DOF)</p>
+<p>GB motion <span class="math inline">\(\rightarrow\)</span> GB orientation <span class="math inline">\(\rightarrow \gamma A\)</span> <strong>changes</strong></p>
+<p>However, for isotropic: <strong>no orientation mismatch</strong> (uniform)
+- when it moves <span class="math inline">\(\rightarrow \gamma\)</span> <strong>unchanged</strong> <span class="math inline">\(\rightarrow\)</span> isotropic interface moves to <strong>decrease only</strong> <span class="math inline">\(A\)</span></p>
+<p><span class="math inline">\(\dot \epsilon \leftarrow \dot N_V \leftarrow J \leftarrow \Delta N_V\)</span>
+- What we really want is <strong>not strain rate</strong>, is how the a is changing with time:
+- <span class="math inline">\(a(t) \rightarrow \frac{da(t)}{dt}\)</span></p>
+<p>Surface tension contribution to the <strong>free energy</strong> $ G = $</p>
+<p>If sinusoidal shape holds through relaxation:
+- <span class="math inline">\(a(x=0)\)</span> &amp; <span class="math inline">\(x = \frac{\lambda}{2}\)</span>
+- <span class="math inline">\(y = a(t)cos(\omega x)\)</span></p>
+<p>Then
+- $Q = -$
+- $= y $
+- $Q = -= a(t) ^2 cos(x) $
+- <span class="math inline">\(\Delta Q(x=0) = \gamma \Omega a(t) \omega^2\)</span>
+- <span class="math inline">\(\Delta Q(x=\frac{\lambda}{2}) = -\gamma \Omega a(t) \omega^2\)</span></p>
+<p>Therefore
+- <span class="math inline">\(N_V(x=0) = e^{-(Q_V + \gamma \Omega a(t) \omega^2)/K_BT}\)</span>
+- <span class="math inline">\(N_V(x=\frac{\lambda}{2}) = e^{-(Q_V - \gamma \Omega a(t) \omega^2)/K_BT}\)</span></p>
+<p>Now, with <strong>Taylor Expansion</strong>
+- <span class="math inline">\(\Delta N_V = N_V^o [\frac{2\Omega \lambda a(t) \omega^2}{\pi K_BT}]\)</span></p>
+<p>To get the <strong>Flux</strong>, we aplly <strong>Fick’s First Law</strong>
+- <span class="math inline">\(J_V [=] \frac{N_V}{area \cdot time}\)</span>
+- <span class="math inline">\(J_V = -D_V \frac{\Delta N_V}{\Delta x} = -\frac{2D_V\Omega N_V^o \gamma a(t) \omega^3}{\pi K_B T}\)</span>
+- <span class="math inline">\(\Delta x = \frac{\lambda}{2}\)</span> would be good for this case
+- The flux is towards the negative direction of x axis
+- The flux is happening over <strong>3D</strong>
+- Area <span class="math inline">\(= \lambda^2\)</span> <strong>diffusion area</strong>
+- Depth <span class="math inline">\(= a(t)\)</span>
+- <span class="math inline">\(\lambda^2a(t) \propto\)</span> <strong>diffusion volume</strong>
+- <span class="math inline">\(\frac{J_V \Omega}{a(t)} = \frac{\Delta V}{V\Delta t} = -\frac{2D_V\Omega^2 N_V^o \gamma \omega^3}{\pi K_B T}\)</span></p>
+<p>Then
+- <span class="math inline">\(\frac{\Delta V}{V\Delta t} = \frac{\Delta a \lambda^2}{a\lambda^2}\Delta t \Rightarrow \frac{\Delta a}{\Delta t} \Rightarrow \frac{da}{dt}\)</span>
+- <span class="math inline">\(\frac{da}{dt} = -\frac{2D_V\Omega^2 N_V^o \gamma \omega^3 a(t)}{\pi K_B T}\)</span></p>
+<p>We know that
+- <span class="math inline">\(D_b = D_V\Omega N_V^o\)</span></p>
+<p>Therefore
+- <span class="math inline">\(\frac{da}{dt} = -\frac{2D_b\Omega \gamma \omega^3 a(t)}{\pi K_B T}\)</span></p>
+<p>Sanity check:
+- <span class="math inline">\(\frac{da}{dt} &lt; 0 \Rightarrow\)</span> <strong>surface roughness</strong> <span class="math inline">\(\downarrow\)</span> as time <span class="math inline">\(\uparrow\)</span>
+- High frequency (short <span class="math inline">\(\lambda\)</span>) roughness <strong>smooths faster</strong> than low frequency (long <span class="math inline">\(\lambda\)</span>)</p>
+<p><strong>FINAL EXAM</strong>: we should be able to do each step here, well understood.
+If we need to write an expression for amplitude in a bulk material:
+- <span class="math inline">\(a(t) = a_0 e^{-B \omega^m t}\)</span>
+- <span class="math inline">\(m= 3 \rightarrow\)</span> <strong>bulk diffusion</strong>
+- <span class="math inline">\(m= 4 \rightarrow\)</span> <strong>surface diffusion</strong> (things are equilibrating via surface diffusion)</p>
 
-</div>
 </div>
 </div>
             </section>
@@ -315,8 +496,8 @@ Here is where most of the students start their Diffusion classes.</p>
           </div>
         </div>
       </div>
-
-<a href="particle-motion.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="microstructure-dependence-of-diffusion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="diffusion-and-nucleation-growth.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -347,7 +528,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/09-diffusion-and-stress.Rmd",
 "text": "Edit"
 },
 "history": {

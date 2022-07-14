@@ -1,4 +1,4 @@
-# Lecture 5 · Fick's Law from Random Walk
+# Fick's Law from Random Walk
 
 ## Fick's Laws from Random Walk
 

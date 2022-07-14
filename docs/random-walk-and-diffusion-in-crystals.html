@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Notes from a Class on Diffusion in Materials</title>
+  <title>Lecture 3 Random Walk and Diffusion in Crystals | Notes from a Class on Diffusion in Materials</title>
   <meta name="description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta property="og:title" content="Lecture 3 Random Walk and Diffusion in Crystals | Notes from a Class on Diffusion in Materials" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="github-repo" content="ollliveira/diffmse" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta name="twitter:title" content="Lecture 3 Random Walk and Diffusion in Crystals | Notes from a Class on Diffusion in Materials" />
   
   <meta name="twitter:description" content="This is a booknote from a class in diffusion in materials." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="particle-motion.html"/>
+<link rel="prev" href="random-walk.html"/>
+<link rel="next" href="diffusion-in-liquids-amorphous-solids-and-polymers.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -249,65 +249,154 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Notes from a Class on Diffusion in Materials</h1>
-<p class="author"><em>Thiago Oliveira</em></p>
-<p class="date"><em>2022-07-14</em></p>
+<div id="random-walk-and-diffusion-in-crystals" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Lecture 3</span> Random Walk and Diffusion in Crystals<a href="random-walk-and-diffusion-in-crystals.html#random-walk-and-diffusion-in-crystals" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="diffusion-in-crystals-mechanisms" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Diffusion in Crystals · <strong>Mechanisms</strong><a href="random-walk-and-diffusion-in-crystals.html#diffusion-in-crystals-mechanisms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>How to extend the Random Walk to Crystals?</p>
+<p>We have only considered <strong>Free Motion</strong> — but typically Motions are not really Free in a Crystal… <strong>We have to make adjustments</strong>.</p>
+<p>FCC (111) Plane.</p>
+<p>Direct exchange between atoms.</p>
+<p>The physical mechanism for diffusion to happen has to be that one of the atoms pushing one another out of the way
+- <span class="math inline">\(\rightarrow\)</span> Crystal will distort
+- <span class="math inline">\(\rightarrow\)</span> <strong>Energy is required</strong>
+- <span class="math inline">\(\rightarrow\)</span> At the end Crystal goes back to original shape</p>
+<div id="exchange-2-atoms" class="section level4 hasAnchor" number="3.1.0.1">
+<h4><span class="header-section-number">3.1.0.1</span> Exchange 2 Atoms<a href="random-walk-and-diffusion-in-crystals.html#exchange-2-atoms" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>It costs energy <span class="math inline">\(\rightarrow\)</span> but <strong>it can get the energy back</strong>
+- <span class="math inline">\(E_i \rightarrow Q(ActivationEnergy) \rightarrow E_f\)</span>
+- <span class="math inline">\(ActivationEnergy \equiv Directional\)</span> (<strong>ice melting</strong>)
+- <strong>Activation Energy is always gonna be directional</strong> (different along different directions)
+- <span class="math inline">\(ActivationEnergy \equiv Direction Dependent\)</span></p>
+<p>Probability of activated process occurring:
+- <span class="math inline">\(P(x) \propto e^\frac{-Q_x}{k_BT}\)</span></p>
+<p>Every atom or molecule is undergoing this vibration, this fluctuation in the system. When they are exchanging position it is a <strong>Random Event</strong> <span class="math inline">\(\rightarrow\)</span> It is connected with the # of attempts available.
+- <span class="math inline">\(SuccessRate = P(x) \times AttemptRate\)</span>
+- <span class="math inline">\(SuccessRate = P(x) \times DebyeFrequency\)</span>
+- <span class="math inline">\(SuccessRate = P(x) \times VibrationalFrequency\)</span>
+- $(x) = P(x) $
+- This is for <strong>1D</strong>
+- <span class="math inline">\(DebyeFrequency = \nu \approx 10^{-13}s^{-1}\)</span></p>
+<p>How can I generalize for <strong>3D</strong>?
+- To account for <strong>different materials</strong> in <strong>differnet crystaline structures</strong> <span class="math inline">\(\rightarrow\)</span> We need to insert the <strong>Coordination Number · Z</strong>
+- $(x) = P(x) $
+- For <strong>3D</strong> <span class="math inline">\(\rightarrow\)</span> correct <span class="math inline">\(\nu\)</span> or <span class="math inline">\(\Gamma (x)\)</span> by <strong>Coordination Number Z</strong></p>
+<p><strong>Thermal Energy</strong> tells you about <strong>how many vacancies you have</strong>.</p>
+<p><strong>Consider Cu @ <span class="math inline">\(1200^oC \,\, (0.9 T_m)\)</span></strong>
+- $ k_B = 8.6^{-5} , $
+- $ = 10<sup>{-13}s</sup>{-1} $
+- $ Q , eV/atom $
+- <strong>Therefore</strong> $ (x) = e^ <sup>{-21}s</sup>{-1} $</p>
+<p><strong>Problem 1</strong>: here we have a problem, because the <strong>age of the universe</strong> $ 10^{17} s$, so we need to take a look at <strong>what really happens</strong>:</p>
+<p><strong>Consider Vacancy</strong></p>
+<ul>
+<li>$ k_B = 8.6^{-5} , $</li>
+<li>$ = 10<sup>{-13}s</sup>{-1} $</li>
+<li>$ Q , eV/atom $</li>
+<li><strong>Therefore</strong> $ (x) = e^ <sup>{8}s</sup>{-1} $</li>
+</ul>
+<p><strong>Problem 2:</strong> but vacancy can <strong>exchange position</strong> with neighbors with <strong>equal probability</strong> <span class="math inline">\(\rightarrow\)</span> In crystal is <strong>not how atoms move</strong>, it is <strong>how the vacancies move</strong>.
+- Atoms <strong>get stuck</strong> in their motion.
+- <strong>Vacancies</strong> have no limitation <span class="math inline">\(\rightarrow\)</span> They can move freely.</p>
+<p>Therefore <span class="math inline">\(\rightarrow\)</span> <strong>Vacancy Motion</strong> <span class="math inline">\(\equiv\)</span> <strong>Ideal Random Walk</strong>.
+- <strong>Not</strong> Random Walk of atoms, but Random Walk of <strong>Vacancies</strong>.
+- Random Walk <strong>Step</strong> will be related to the <strong>Lattice</strong>.</p>
+<p><strong>Counterintuitive</strong> <span class="math inline">\(\rightarrow\)</span> When we think about diffusion we think about atoms, but <strong>it can only happen by vacancy diffusion</strong>.</p>
+<p>This is <strong>self-diffusion</strong> <span class="math inline">\(\rightarrow\)</span> mediated <strong>by vacancies</strong>.</p>
 </div>
-<div id="diffusion-in-materials-notes-from-class" class="section level1 unnumbered hasAnchor">
-<h1>Diffusion in Materials · Notes from Class<a href="index.html#diffusion-in-materials-notes-from-class" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Notes from Prof. Mohammad Islam Lectures</p>
-<div id="syllabus" class="section level2 unnumbered hasAnchor">
-<h2>Syllabus<a href="index.html#syllabus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The exams is not suppose to find out what we don’t know.
-- 85% to 90% is going to be concepts we are deeply familiar with,
-- 10% to 15% is going to separate the B+ form A- and A,
-- 30% of the questions <span class="math inline">\(\rightarrow\)</span> conceptual questions,
-- 70% of the questions <span class="math inline">\(\rightarrow\)</span> mathematical questions (derivation/manipulation).</p>
-<p>This is a <strong>Graduate Course</strong> which means that we have to go <strong>beyond what is given in the class</strong>.</p>
 </div>
-<div id="notes-for-exam" class="section level2 unnumbered hasAnchor">
-<h2>Notes for Exam<a href="index.html#notes-for-exam" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>$ k_{B}T = 4,pNnm = 4^{-21} Nm $</p>
-<p>$ t^* = , = 5 ^{-13} 10^{-12} , s $</p>
+<div id="impurities" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Impurities<a href="random-walk-and-diffusion-in-crystals.html#impurities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Substitutional Impurities</strong>
+<ul>
+<li>The <strong>self-diffusion</strong> can easily be applied to <strong>Substitutional Impurities</strong></li>
+</ul></li>
+<li><strong>Interstitial Impurities</strong></li>
+</ul>
+<p>Notice: Atoms only move when <strong>next to a vacancy</strong>.
+- $(x) = P(x) $
+- We need to corret this experssion in term of the vacancies.
+- There for, <strong>for atoms</strong>: $(x) = _v(x) P_v $
+- <span class="math inline">\(\Gamma_v\)</span> includes <strong>Z</strong>.
+- <span class="math inline">\(P_v\)</span> is the probability that a given site (or lattice point) is a vacancy.</p>
 </div>
-<div id="overall-structure-of-the-class" class="section level2 unnumbered hasAnchor">
-<h2>Overall Structure of the Class<a href="index.html#overall-structure-of-the-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Why do we brush our teeth for 2 minutes?
-That is a P&amp;G research that showed that 2 minutes is the time necessary for <strong>Fluorite</strong> to diffuse into the tooth.
-The reason is because it is how long it takes for <strong>F</strong> to diffuse about half of thickness of our first layer of the tooth.</p>
-<p><strong>This will be on the Exam… Figure that out!</strong></p>
-<div id="basic-concepts" class="section level3 unnumbered hasAnchor">
-<h3>Basic Concepts<a href="index.html#basic-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Think about different phases of materials:
-- solid
-- liquid
-- gas/vapor</p>
-<p>Jelly is solid, made of a protein network.
-We we talk about diffusion, length scale matter.</p>
-<p>Visco-elastic fluid — honey?</p>
-<p>Start with underlying concepts: <strong>liquid</strong>
-Diffusion concept is dependent on the:
-- <strong>Fluctuation</strong> of atoms, molecules, etc…</p>
-<p>Then extend that to other classes of materials:
-- Polymers in solution
-- Polymers in other polymers (solvent is other polymers)
-- Diffusion of vacancies in a crystal
-- Diffusion of impurities in crystal
-- Diffusion in amorphous solids</p>
-<p>All this different kinds of concepts that come from <strong>Fluctuations</strong> are called <strong>Random Walk</strong> —&gt; <strong>RW</strong>.
-We are going to use this concept to extend and adjust for generallize, and adjustments we have to make to apply it for different kinds of materials.</p>
-<p><strong>RW</strong> —&gt; Ficks’ Law —&gt; Logic Extension from the <strong>Random Walk</strong>, it depends on the <strong>Random Walk</strong> concepts.
-Here is where most of the students start their Diffusion classes.</p>
-<p>Finally look at classic materials problems:
-- Composition dependence
-- Microstructure evolves (the dependence on diffusion for this evolution), primarilly under load
-- The connect that with mechanical properties</p>
-<p>If we have time:
-- Nucleation &amp; Growth
-- How to experimentally measure diffusion (how we now measure diffusion)</p>
+<div id="measuring-diffusion-in-crystals" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Measuring diffusion in Crystals<a href="random-walk-and-diffusion-in-crystals.html#measuring-diffusion-in-crystals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Everytime a <strong>vacancy moves</strong> <span class="math inline">\(\rightarrow\)</span> <strong>an atom moves</strong>.</p>
+<p><strong>Atom Diffusion Rate <span class="math inline">\(\equiv\)</span> Vacancy Diffusion Rate.</strong></p>
+<p>However, <strong>we can’t see vancancies</strong> and <strong>can’t tell atoms apart</strong>. So, what is the solution?
+1. One solution is to <strong>introduce substitutional impurities</strong>.
+2. Another would be to <strong>use isotopes</strong>.
+- <strong>Limitation</strong>:
+- Interactions between substitutional impurities (or isotopes) and crystal atoms are often different than crystal atom - crystal atom.
+- <strong>Complication</strong>:
+- <strong>Random Walk may not be independent</strong> of each other or history <span class="math inline">\(\rightarrow\)</span> <strong>Correlation</strong>, which can be small or very large.</p>
+<ul>
+<li><strong>Tracers</strong>:
+<ul>
+<li>Substitutional Impurities</li>
+<li>Isotopes</li>
+</ul></li>
+</ul>
+<p>We need <strong>3 distinguishable species</strong> in a way that we can see them participating in diffusion.</p>
+<p>If we are doing this kind of measurement we have to account for these effects.
+- If the tracers only exchange position with vacancy (only the tracers atoms exchange position with the vancancies):
+- <span class="math inline">\(P_v\)</span> <strong>reduced</strong> relative to average.
+- Reduce <span class="math inline">\(\Gamma\)</span> by the extent of the <strong>correlation factor</strong> <span class="math inline">\(f\)</span>:
+- $0 f $
+- <span class="math inline">\(0 \rightarrow\)</span> <strong>fully correlated</strong>
+- $1 $ <strong>uncorrelated</strong></p>
+<p>How to get <strong>correlation factor</strong> <span class="math inline">\(f\)</span> in a 3D crystal? (here we are trying to correct for the case there is any correlation in the motion)
+- For <strong>coordination number <span class="math inline">\(Z\)</span></strong> <span class="math inline">\(\rightarrow\)</span> at each <strong>time step</strong> <span class="math inline">\(\frac{1}{Z}\)</span> vacancy jumps will be back to <strong>original configuration</strong>.
+- If <span class="math inline">\(n\)</span> <strong>number of jumps</strong> <span class="math inline">\(\rightarrow \frac{n}{Z}\)</span> jump back to original configuration.
+- This means <strong>each event erases 2 time steps</strong>:
+- 1 <strong>forward</strong>
+- 1 <strong>backward</strong>
+- <span class="math inline">\(n_{eff} \approx n - 2\frac{n}{Z}\)</span> [to 1st order]</p>
+<pre><code>    Then:
+    - $\Gamma = \frac{n}{t} \Rightarrow \Gamma_{eff} = [1 - \frac{2}{Z}]\frac{n}{t} = [1 - \frac{2}{Z}]\Gamma $
+    - $D_{eff} = \frac{\Gamma_{eff}a^2}{6} = [1 - \frac{2}{Z}]\frac{\Gamma a^2}{6} = fD_{uncorrelated} $
+        - $\Gamma_{eff} = f\, \Gamma$
+        - $f = [1 - \frac{2}{Z}]$
+        - $\frac{\Gamma a^2}{6} = D_{uncorrelated} $
+        </code></pre>
+<p>This is how we tippicaly understand <strong>self-diffusion</strong>.</p>
+</div>
+<div id="interstitial-solute-diffusion" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Interstitial Solute Diffusion<a href="random-walk-and-diffusion-in-crystals.html#interstitial-solute-diffusion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The intesrstitial atoms are going to be <strong>significantly smaller</strong> than the crystal atoms.</p>
+<p><strong>Interstitial Sites</strong>
+- BCC
+- 18 <strong>Octahedral</strong>
+- 24 <strong>Tetrahedral</strong>
+- FCC
+- 13 <strong>Octahedral</strong>
+- 8 <strong>Tetrahedral</strong></p>
+<p>For a <strong>2D Rectangular Lattice</strong>:
+- Assume dilute interstitial concentration.
+- Interstitial atoms can <strong>freely move</strong> (equal probability of moving) to other interstitial sites.
+Then:
+- <span class="math inline">\(P_v = 1 \rightarrow\)</span> completely <strong>uncorrelated</strong>.
+- Normal <strong>Random Walk</strong>
+Therefore, <strong>Interstitial Diffusion</strong> is completly <strong>Random Walk</strong>
+- <span class="math inline">\(\langle x^2 \rangle = \Gamma t a^2\)</span>
+- $D_i = $
+- Where <span class="math inline">\(d\)</span> is the <strong>dimensionality</strong></p>
+<p>What could we say about the <strong>Activation Energy</strong> of interstitial impurities?
+- $ Q 0.7 ,eV$ (which is less then <span class="math inline">\(1.0 \,eV\)</span>, which is the activation energy for the vacancies)</p>
+</div>
+<div id="remarks-on-interstitial-solute-diffusion" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Remarks on Interstitial Solute Diffusion<a href="random-walk-and-diffusion-in-crystals.html#remarks-on-interstitial-solute-diffusion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>From the <strong>view of interstitial atom</strong> the whole crytal is empty space in which it can freely move.</li>
+<li><strong>Interstitial Diffusion</strong> is going to be the <strong>faster</strong>:
+<ul>
+<li><strong>Jump Sites</strong> are always available.</li>
+<li>It doesn’t have to overcome all constraints of bonding <span class="math inline">\(\rightarrow\)</span> It has a lower <strong>Activation Energy</strong> $ 0.7 , eV$</li>
+</ul></li>
+</ul>
 
-</div>
 </div>
 </div>
             </section>
@@ -315,8 +404,8 @@ Here is where most of the students start their Diffusion classes.</p>
           </div>
         </div>
       </div>
-
-<a href="particle-motion.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="random-walk.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -347,7 +436,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-diffusion-in-crystals.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Notes from a Class on Diffusion in Materials</title>
+  <title>Lecture 4 Diffusion in Liquids, Amorphous Solids and Polymers | Notes from a Class on Diffusion in Materials</title>
   <meta name="description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta property="og:title" content="Lecture 4 Diffusion in Liquids, Amorphous Solids and Polymers | Notes from a Class on Diffusion in Materials" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="github-repo" content="ollliveira/diffmse" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta name="twitter:title" content="Lecture 4 Diffusion in Liquids, Amorphous Solids and Polymers | Notes from a Class on Diffusion in Materials" />
   
   <meta name="twitter:description" content="This is a booknote from a class in diffusion in materials." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="particle-motion.html"/>
+<link rel="prev" href="random-walk-and-diffusion-in-crystals.html"/>
+<link rel="next" href="ficks-law-from-random-walk.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -249,65 +249,223 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Notes from a Class on Diffusion in Materials</h1>
-<p class="author"><em>Thiago Oliveira</em></p>
-<p class="date"><em>2022-07-14</em></p>
+<div id="diffusion-in-liquids-amorphous-solids-and-polymers" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Lecture 4</span> Diffusion in Liquids, Amorphous Solids and Polymers<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#diffusion-in-liquids-amorphous-solids-and-polymers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="summary" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Summary<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>In <strong>liquid</strong> <span class="math inline">\(\rightarrow\)</span> particle will undergo <strong>random walk</strong>.</li>
+<li><strong>Polymer in liquid</strong> <span class="math inline">\(\rightarrow\)</span> <strong>random walk</strong> tells us the <strong>size of the polymer</strong>.</li>
+<li>We can apply <strong>random walk</strong> to <strong>vacancy diffusion</strong>.
+<ul>
+<li>Substitutional Diffusion</li>
+<li>Self-Diffusion
+<ul>
+<li>The <strong>vacancy diffusion</strong> is proportioal to the <strong>atom diffusion</strong></li>
+</ul></li>
+<li>Interstitial Diffusion</li>
+</ul></li>
+</ul>
+<p>How can we apply random walk to diffusion in Amorphous Solid?</p>
+<p>Let’s remember for <strong>Liquid</strong>.
+- Newtonian Fluid <span class="math inline">\(\rightarrow\)</span> Simple Fluid <span class="math inline">\(\rightarrow \eta\)</span> is constant.
+- Particles undergo <strong>Brownian motion</strong> <span class="math inline">\(\rightarrow\)</span> exchange of <strong>Kinetic Energy</strong> between <strong>particles</strong>* (solute) and <strong>solvent</strong>.
+- ‘+’ Collisions that randomized motion (direction)
+- $ = $ in <strong>3D</strong>
+- $x^2 = t $ for a spherical particle (solute)
+- $ D $ <strong>Diffusion Constant</strong>
+- $ $ is the <strong>viscosity</strong> that provides the <strong>drag</strong> that is slowing things down and is essencial for the particles to fluctuate, to maintain the fluctuation.</p>
+<p><strong>Viscosity</strong> is a thermally activated property.</p>
+<p>Let’s define: $Q $ <strong>activation energy for fluid to flow</strong>.
+- <span class="math inline">\(\eta = e^{\frac{+Q}{k_BT}}\)</span>
+- $Q $</p>
+<p>What <strong>Insight</strong> we can get on <strong>Diffusion</strong> for Amorphous Solids?
+- K.E. <span class="math inline">\(\Rightarrow D \propto T\)</span> (linearly)
+- $D e^{} $ (this is a concern, a kind of contradiction that we would ingnore in certain cases)</p>
+<p><strong>Overall</strong>
+- <span class="math inline">\(D \rightarrow\)</span> thermally activated process.
+- <span class="math inline">\(D \rightarrow\)</span> <strong>Brownian Diffusion</strong>.</p>
 </div>
-<div id="diffusion-in-materials-notes-from-class" class="section level1 unnumbered hasAnchor">
-<h1>Diffusion in Materials · Notes from Class<a href="index.html#diffusion-in-materials-notes-from-class" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Notes from Prof. Mohammad Islam Lectures</p>
-<div id="syllabus" class="section level2 unnumbered hasAnchor">
-<h2>Syllabus<a href="index.html#syllabus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The exams is not suppose to find out what we don’t know.
-- 85% to 90% is going to be concepts we are deeply familiar with,
-- 10% to 15% is going to separate the B+ form A- and A,
-- 30% of the questions <span class="math inline">\(\rightarrow\)</span> conceptual questions,
-- 70% of the questions <span class="math inline">\(\rightarrow\)</span> mathematical questions (derivation/manipulation).</p>
-<p>This is a <strong>Graduate Course</strong> which means that we have to go <strong>beyond what is given in the class</strong>.</p>
+<div id="non-newtonian-liquid" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Non-Newtonian Liquid<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#non-newtonian-liquid" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
-<div id="notes-for-exam" class="section level2 unnumbered hasAnchor">
-<h2>Notes for Exam<a href="index.html#notes-for-exam" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>$ k_{B}T = 4,pNnm = 4^{-21} Nm $</p>
-<p>$ t^* = , = 5 ^{-13} 10^{-12} , s $</p>
+<div id="free-volume-model" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Free Volume Model<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#free-volume-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Particles <strong>do not have free range</strong> of motion.</p>
 </div>
-<div id="overall-structure-of-the-class" class="section level2 unnumbered hasAnchor">
-<h2>Overall Structure of the Class<a href="index.html#overall-structure-of-the-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Why do we brush our teeth for 2 minutes?
-That is a P&amp;G research that showed that 2 minutes is the time necessary for <strong>Fluorite</strong> to diffuse into the tooth.
-The reason is because it is how long it takes for <strong>F</strong> to diffuse about half of thickness of our first layer of the tooth.</p>
-<p><strong>This will be on the Exam… Figure that out!</strong></p>
-<div id="basic-concepts" class="section level3 unnumbered hasAnchor">
-<h3>Basic Concepts<a href="index.html#basic-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Think about different phases of materials:
-- solid
-- liquid
-- gas/vapor</p>
-<p>Jelly is solid, made of a protein network.
-We we talk about diffusion, length scale matter.</p>
-<p>Visco-elastic fluid — honey?</p>
-<p>Start with underlying concepts: <strong>liquid</strong>
-Diffusion concept is dependent on the:
-- <strong>Fluctuation</strong> of atoms, molecules, etc…</p>
-<p>Then extend that to other classes of materials:
-- Polymers in solution
-- Polymers in other polymers (solvent is other polymers)
-- Diffusion of vacancies in a crystal
-- Diffusion of impurities in crystal
-- Diffusion in amorphous solids</p>
-<p>All this different kinds of concepts that come from <strong>Fluctuations</strong> are called <strong>Random Walk</strong> —&gt; <strong>RW</strong>.
-We are going to use this concept to extend and adjust for generallize, and adjustments we have to make to apply it for different kinds of materials.</p>
-<p><strong>RW</strong> —&gt; Ficks’ Law —&gt; Logic Extension from the <strong>Random Walk</strong>, it depends on the <strong>Random Walk</strong> concepts.
-Here is where most of the students start their Diffusion classes.</p>
-<p>Finally look at classic materials problems:
-- Composition dependence
-- Microstructure evolves (the dependence on diffusion for this evolution), primarilly under load
-- The connect that with mechanical properties</p>
-<p>If we have time:
-- Nucleation &amp; Growth
-- How to experimentally measure diffusion (how we now measure diffusion)</p>
+<div id="diffusion-characteristics-in-non-newtonian-fluids" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Diffusion Characteristics in Non-Newtonian Fluids<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#diffusion-characteristics-in-non-newtonian-fluids" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>FINAL EXAM</strong>: we will have a similar one: we should be able to write <strong>what the diffusion equation should look like</strong>.</p>
+<ul>
+<li>Solvent molecules are constrained to some average position created by their neighboring atoms (feature is analogous to close-pack but it is not a close-pack system)</li>
+<li>Solvent molecules <strong>are not close-packed</strong>
+<ul>
+<li>There is free volume $V_{free} $ and $ $</li>
+<li>Locally fluctuate</li>
+<li>It can move if there is a open path for diffusion (if a path opens up)</li>
+<li>It can move the entire distance in a large Jump (how long the leap path the solvent presents)</li>
+<li>Atoms may jump one to many steps</li>
+<li>It has many different step sizes</li>
+</ul></li>
+</ul>
+</div>
+<div id="velocity" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Velocity<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#velocity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Atoms move along a free path</strong>, they need to find a free path. Once it finds the free path:
+- $ $ velocity in a gas till it his the <strong>dead-end</strong> (“wall”)</p>
+<p>So if there is motion in an amorphous solid, it is going to be like <strong>Random Walk with some constraints</strong>:
+- Step size
+- Direction
+- Frequency
+- Randomly distributed (probability of finding a free path)</p>
+</div>
+<div id="d" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> D<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#d" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math inline">\(D = C R \langle v \rangle P(motion)\)</span>
+- C: constant
+- R: step size (it will be a fraction or multiple of a radius) <span class="math inline">\(\propto R\)</span> radius of the particle
+- P: probability of finding a free path</p>
+<p>Let’s say:
+- $V_p $ particle volume
+- $V_f $ <strong>average free volume per particle</strong></p>
+<p>The particle volume needs to fit the free volume.</p>
+<p>Then: <span class="math inline">\(P = e^{-\frac{V_p}{\langle V_f \rangle}}\)</span></p>
+<p><span class="math inline">\(D = C R \langle v \rangle e^{-\frac{V_p}{\langle V_f \rangle}}\)</span></p>
+<p>We will <strong>impose that particles with different sizes all move with the same velocity</strong> <span class="math inline">\(\langle v \rangle\)</span>
+- Larger <span class="math inline">\(R\)</span> have <strong>larger kinetic energy</strong> <span class="math inline">\(\rightarrow\)</span> <strong>Larger Jumps</strong>
+- That’s why <strong>larger particles present larger diffusion in amorphous solid</strong></p>
+<p><strong>KEY CONCEPT: in amorphous system diffusion is not thermally activated <span class="math inline">\(\rightarrow\)</span> does not depend on temperature</strong>
+- At any time, particles have large enough <span class="math inline">\(\langle v \rangle\)</span> (kinetic energy).
+- If finds a path <span class="math inline">\(\rightarrow\)</span> particle moves.</p>
+<p><strong>Notice</strong>: Hidden T-dep:
+- <span class="math inline">\(\langle v \rangle \propto \sqrt{T}\)</span> from K.E.
+- <span class="math inline">\(\langle V_f \rangle \propto \sqrt{T}\)</span></p>
+<p>Therefore: <strong>at high temperture the thermal activation takes over</strong></p>
+<p><strong>THIS APPROACH CANNOT BE APPLIED TO SIMPLE NEWTONIAN FLUIDS</strong></p>
+</div>
+<div id="diffusion-in-amorphous-solids" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> Diffusion in Amorphous Solids<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#diffusion-in-amorphous-solids" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Amorphous Liquids <span class="math inline">\(\rightarrow\)</span> <strong>cooling</strong> <span class="math inline">\(\rightarrow\)</span> <strong>Amorphous Solids</strong>
+- Supports <strong>shear stress</strong>
+- <span class="math inline">\(T_g\)</span> (depends on cooling rate)
+- <strong>No long-range order</strong>
+- <strong>Meta-stable</strong> with respect to crystals</p>
+</div>
+<div id="what-happens-to-free-volume" class="section level2 hasAnchor" number="4.8">
+<h2><span class="header-section-number">4.8</span> WHAT HAPPENS TO FREE VOLUME<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#what-happens-to-free-volume" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>During cooling <span class="math inline">\(\rightarrow\)</span> <strong>geometric amorphous structure in an amorphous liquid gets embedded into the amorphous solid</strong> (we are making)</p>
+<p>If annealed or slowly cooled:
+- Liquid part of the free volume anneals out
+- Diffusion is going to go down <span class="math inline">\(D \downarrow\)</span></p>
+<p>In amorphous solids, the “vacancies” are built into the free volume.</p>
+</div>
+<div id="diffusion-in-amorphous-solids-self-diffusion" class="section level2 hasAnchor" number="4.9">
+<h2><span class="header-section-number">4.9</span> Diffusion in Amorphous Solids: SELF-DIFFUSION<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#diffusion-in-amorphous-solids-self-diffusion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This mechanism is a <strong>very active area of research</strong>.</p>
+<p>If <span class="math inline">\(\langle V_f \rangle\)</span> is insufficient <span class="math inline">\(\rightarrow\)</span> discrete &amp; long jumps should not happen — <strong>however</strong> experimental data shows that this is not the case.</p>
+</div>
+<div id="experimental-observations" class="section level2 hasAnchor" number="4.10">
+<h2><span class="header-section-number">4.10</span> Experimental Observations<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#experimental-observations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Amorphous solids undergo diffusion even in the absence of any vacancy in the system</strong></p>
+<ul>
+<li>No (amorphous equivalent) vacancy to enable diffusion.</li>
+<li>If <span class="math inline">\(T\)</span> changes suddenly <span class="math inline">\(\rightarrow D\)</span> changes instantaneously &amp; it is faster than defect concentration change.</li>
+<li><strong>Diffusion is not pressure dependent!</strong> (in an amorphous solid)</li>
+<li>Diffusion happens by collective motion (cooperative motion)
+<ul>
+<li><strong>Collective motion</strong> <span class="math inline">\(\equiv\)</span> Force chains</li>
+</ul></li>
+<li>Diffusion is <strong>thermally activated</strong> <span class="math inline">\(\rightarrow D = e^{-\frac{Q}{K_BT}}\)</span></li>
+</ul>
+<p>Amorphous solid <span class="math inline">\(\rightarrow\)</span> <strong>superdiffusive</strong>
+- <span class="math inline">\(\langle r^2 \rangle \propto t^1\)</span> (diffusive)
+- <span class="math inline">\(\langle r^2 \rangle \propto t^m\)</span> (<strong>superdiffusive</strong>)
+- where <span class="math inline">\(m &gt; 1\)</span></p>
+<p>Although <span class="math inline">\(\Gamma\)</span> <strong>is a constant in Random Walk</strong>, here it is <strong>time dependend</strong> (amorphous solid)
+- <span class="math inline">\(\Gamma = \Gamma (t)\)</span></p>
+<p>How to incorporate time dependence in any function?
+- <span class="math inline">\(\Gamma = \Gamma_o t^{\alpha} \rightarrow\)</span> <strong><span class="math inline">\(\Gamma\)</span> has a Power Law Dependence on Time</strong></p>
+<p>We now have 2 equations:
+- <span class="math inline">\(\langle r^2 \rangle \propto t^m (m&gt;1) \rightarrow\)</span> <strong>MSD</strong>
+- <span class="math inline">\(\Gamma = \Gamma_o t^{\alpha}\)</span>
+- <span class="math inline">\(\Rightarrow \langle r^2 \rangle \propto t^{\alpha +1}\)</span>
+- <span class="math inline">\(m = \alpha +1 \Rightarrow \alpha = m -1\)</span></p>
+<p>Then:
+- <span class="math inline">\(\Gamma = \Gamma_o t^{m-1}\)</span></p>
+</div>
+<div id="interstitial-diffusion-in-amorphous-solids" class="section level2 hasAnchor" number="4.11">
+<h2><span class="header-section-number">4.11</span> Interstitial Diffusion in Amorphous Solids<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#interstitial-diffusion-in-amorphous-solids" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Each interstitial site can only have one interstitial impurity</strong>
+<ul>
+<li><span class="math inline">\(\equiv\)</span> Fermi Dirac Particle</li>
+</ul></li>
+</ul>
+<p>It should be <strong>thermally activated</strong> diffusion <span class="math inline">\(\rightarrow\)</span> <strong>Random Walk</strong>
+- <span class="math inline">\(D \propto e^{\frac{-Q(c)}{K_BT}}\)</span>
+- <span class="math inline">\(Q \equiv\)</span> <strong>activation energy</strong> <span class="math inline">\(\rightarrow\)</span> concentration dependent
+- <span class="math inline">\(c \equiv\)</span> <strong>fraction of interstitial sites occupied</strong> <span class="math inline">\(\equiv\)</span> interstitial concentration</p>
+<p>Then:
+- <span class="math inline">\(D = D_o \frac{(1-c)^2}{c} e^{\frac{-Q(c)}{K_BT}}\)</span>
+- <span class="math inline">\(a \equiv\)</span> <strong>atomic radius</strong> is built into <span class="math inline">\(D_o\)</span></p>
+<p>Physically:
+- At early stage <span class="math inline">\(\rightarrow\)</span> <strong>atoms populate largest &amp; lowest energy interstitial sites</strong> <span class="math inline">\(\rightarrow\)</span> stable <span class="math inline">\(\rightarrow\)</span> cannot diffuse out.
+- At a later time <span class="math inline">\(\rightarrow\)</span> interstitial impurities can only go to smaller interstitial sites with higher energy states (which need smaller <span class="math inline">\(Q\)</span> to put interstitial atoms in vacant sites) <span class="math inline">\(\rightarrow\)</span> interstitial atoms can diffuse out.</p>
+</div>
+<div id="polymers-different-class-of-amorphous-solid" class="section level2 hasAnchor" number="4.12">
+<h2><span class="header-section-number">4.12</span> Polymers (different class of amorphous solid)<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#polymers-different-class-of-amorphous-solid" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Reminder:
+- <strong>Random Walk</strong> <span class="math inline">\(\rightarrow\)</span> <strong>Polymer Conformation</strong>
+- <span class="math inline">\(a \equiv\)</span> <strong>monomer length</strong>
+- <span class="math inline">\(N \equiv\)</span> <strong>degree of polymerization</strong>
+- <span class="math inline">\(\sqrt{\langle r^2 \rangle} = \sqrt{N}a \equiv\)</span> <strong>size of the polymer</strong></p>
+</div>
+<div id="polymer-diffusion-in-solvents" class="section level2 hasAnchor" number="4.13">
+<h2><span class="header-section-number">4.13</span> Polymer Diffusion in Solvents<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#polymer-diffusion-in-solvents" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>If we take the polymer and put it in a solvent, then the polymer is now the impurity.</strong></p>
+<p>If polymer <strong>likes the solvent</strong> <span class="math inline">\(\rightarrow\)</span> <strong>Good Solvent</strong>
+- <strong>Self Avoiding Random Walk</strong> (SARW) <span class="math inline">\(\rightarrow\)</span> <strong>Flory Theory</strong>
+- It does not want to overlap with itself
+- <span class="math inline">\(\sqrt{\langle r^2 \rangle} = N^{\frac{3}{5}}a\)</span></p>
+<p>If polymer <strong>does not</strong> like the solvent: <span class="math inline">\(\rightarrow\)</span> <strong>Poor/Theta Solvent</strong>
+- <span class="math inline">\(\sqrt{\langle r^2 \rangle} = \sqrt{N}a\)</span></p>
+<p><span class="math inline">\(D = c \frac{K_BT}{6\pi \eta \sqrt{\langle r^2 \rangle}}\)</span>
+- <span class="math inline">\(c \equiv\)</span> geometric factor
+- Use <strong>appropriate MSD equation depending on the different solvent types</strong></p>
+</div>
+<div id="polymer-self-diffusion-in-a-melt-no-solvent" class="section level2 hasAnchor" number="4.14">
+<h2><span class="header-section-number">4.14</span> Polymer Self-Diffusion in a Melt (NO SOLVENT)<a href="diffusion-in-liquids-amorphous-solids-and-polymers.html#polymer-self-diffusion-in-a-melt-no-solvent" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Very similar to the physical picture we had before.
+- Apply simple picture of diffusion in an amorphous solid
+- The polymer is a long interconnected molecule <span class="math inline">\(\rightarrow\)</span> <strong>entangled</strong> with other long interconnected molecules.
+- Polymer motion <strong>requires larger</strong> <span class="math inline">\(Q\)</span> (<strong>however</strong> the temperature range is limited)
+- <span class="math inline">\(D\)</span> will be <strong>very small</strong> but <span class="math inline">\(\neq 0\)</span></p>
+<p>Then:
+- Free volume small
+- Entire polymer cannot move as a single unit
+- it diffuses along its length
+- Polymer will move <strong>within a tube</strong> <span class="math inline">\(\rightarrow\)</span> it <strong>reptates</strong>
+- This motion is called <strong>reptation</strong>
+- <strong>Still a Random Walk</strong> <span class="math inline">\(\rightarrow\)</span> <strong>polymer diffusing in a 1D tube</strong></p>
+<p><strong>IMPORTANT</strong>: it <strong>does not matter the dimensionality</strong> of the material, it will diffuse along a <strong>1D tube</strong>
+- The <strong>tube length</strong> <span class="math inline">\(\langle L \rangle\)</span> of this imaginary tube will be the length of the polymer
+- <span class="math inline">\(\langle L \rangle = Na\)</span></p>
+<p><strong>MSD</strong> of the polymer within the tube:
+- $= L^2 = N<sup>2a</sup>2 = a^2 t $
+- <span class="math inline">\(t = \frac{N^2}{\Gamma}\)</span></p>
+<p>The <strong>right way to think about it</strong> is not the diffusion of the head or of the tail of the polymer <span class="math inline">\(\rightarrow\)</span> it is <strong>how the center of mass is diffusing</strong></p>
+<p><strong>RMSD</strong> travel by the tube:
+- <span class="math inline">\(\sqrt{\langle x^2 \rangle} = \sqrt{N}a\)</span>
+- <span class="math inline">\(\langle x^2 \rangle = 2dDt\)</span>
+- <span class="math inline">\(d \equiv\)</span> <strong>dimensionality</strong>
+- $D = = = $
+- <span class="math inline">\(D = \frac{\Gamma a^2}{6N} \rightarrow\)</span> <strong>in 3D</strong></p>
+<p>Given that:
+- <span class="math inline">\(\Gamma = \frac{\Gamma_o}{N}\)</span></p>
+<p>We have that:
+- <span class="math inline">\(D = \frac{\Gamma_o a^2}{6N^2}\)</span>
+- <strong>Self-diffusivity is strongly affected by degree of polymerization</strong> <span class="math inline">\(N\)</span></p>
 
-</div>
 </div>
 </div>
             </section>
@@ -315,8 +473,8 @@ Here is where most of the students start their Diffusion classes.</p>
           </div>
         </div>
       </div>
-
-<a href="particle-motion.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="random-walk-and-diffusion-in-crystals.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ficks-law-from-random-walk.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -347,7 +505,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-diffusion-in-amorphous.Rmd",
 "text": "Edit"
 },
 "history": {

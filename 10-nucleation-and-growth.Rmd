@@ -1,4 +1,4 @@
-# Lecture 10 · Diffusion and Nucleation & Growth
+# Diffusion and Nucleation & Growth
 
 - Mechanical source of deformation $\rightarrow \sigma \Omega$ (**free energy**) $\rightarrow$ **creep**
 

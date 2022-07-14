@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Notes from a Class on Diffusion in Materials</title>
+  <title>Lecture 1 Particle Motion | Notes from a Class on Diffusion in Materials</title>
   <meta name="description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta property="og:title" content="Lecture 1 Particle Motion | Notes from a Class on Diffusion in Materials" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a booknote from a class in diffusion in materials." />
   <meta name="github-repo" content="ollliveira/diffmse" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes from a Class on Diffusion in Materials" />
+  <meta name="twitter:title" content="Lecture 1 Particle Motion | Notes from a Class on Diffusion in Materials" />
   
   <meta name="twitter:description" content="This is a booknote from a class in diffusion in materials." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="particle-motion.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="random-walk.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -249,65 +249,208 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Notes from a Class on Diffusion in Materials</h1>
-<p class="author"><em>Thiago Oliveira</em></p>
-<p class="date"><em>2022-07-14</em></p>
+<div id="particle-motion" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Lecture 1</span> Particle Motion<a href="particle-motion.html#particle-motion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Diffusion</strong> fundamentally relies on the fact that the constituents molecules/atoms are constantly undergoing <strong>Fluctuation</strong>.</p>
+<p>If I’m interested in the materials properties, I have to understand the motion of the constituent particles and if <strong>there is any kind of correlation</strong> in the motion (<span class="math inline">\(0^{th}\)</span> order).</p>
+<p>What other properties are intimately related to the mechanical properties of the material?</p>
+<ul>
+<li>Thermal Properties</li>
+</ul>
+<div id="equilibrium-configuration-energies" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Equilibrium Configuration &amp; Energies<a href="particle-motion.html#equilibrium-configuration-energies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Statistical Mechanics</li>
+<li>Molecular Thermodynamics</li>
+</ul>
+<p>Diffusion: things are moving… they are not really stationary.</p>
+<p>The <strong>Dynamics/Response of Fluctuation</strong> must be connected with this <strong>Equilibrium Configuration</strong>. Therefore, we need something else.</p>
+<p>Other point to have in mind is <strong>how the mechanical properties behave with and without external forces</strong>:</p>
+<p><strong>External Forces</strong> <span class="math inline">\(\leftrightarrow\)</span> <strong>Configuration</strong>.</p>
+<p><strong>Langevin Equation:</strong></p>
+<p><span class="math inline">\(m\frac{d\vec{v}}{dt} = -b\vec{v} + \vec{f}(t) + External Forces\)</span></p>
+<ul>
+<li><strong>Viscous Drag</strong> · Average Property (from average response of solvent - flow): <span class="math inline">\(-b\vec{v}\)</span></li>
+<li><strong>Rapid Fluctuations</strong> · Instantaneous Property (collisions with solvent molecules): <span class="math inline">\(\vec{f}(t)\)</span></li>
+<li><strong>External Forces</strong></li>
+</ul>
+<p><strong>Viscous Drag</strong></p>
+<ul>
+<li><p>It is a <strong>Friction Coefficient</strong></p></li>
+<li><p>For a sphere: <span class="math inline">\(b = 6 \pi \eta R\)</span></p>
+<ul>
+<li><span class="math inline">\(\eta =\)</span> <strong>Viscosity</strong></li>
+<li><span class="math inline">\([\eta] = Pa \, s = \frac{N}{m^2} \, s\)</span></li>
+<li><span class="math inline">\([\eta] = \frac{dyne}{cm^2} \, s = Poise\)</span></li>
+</ul></li>
+</ul>
+<p><strong>Newtonian Fluid · A Simple Liquid</strong></p>
+<ul>
+<li><span class="math inline">\(\eta = constant\)</span></li>
+</ul>
+<p><strong>Non-Newtonian Fluid · Colloidal or Polymer Solution</strong></p>
+<ul>
+<li><span class="math inline">\(\eta \neq constant \rightarrow\)</span> It will depend on <strong>Shear Rate</strong>
+<ul>
+<li>Milk</li>
+<li>Shampoo</li>
+</ul></li>
+</ul>
 </div>
-<div id="diffusion-in-materials-notes-from-class" class="section level1 unnumbered hasAnchor">
-<h1>Diffusion in Materials · Notes from Class<a href="index.html#diffusion-in-materials-notes-from-class" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Notes from Prof. Mohammad Islam Lectures</p>
-<div id="syllabus" class="section level2 unnumbered hasAnchor">
-<h2>Syllabus<a href="index.html#syllabus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The exams is not suppose to find out what we don’t know.
-- 85% to 90% is going to be concepts we are deeply familiar with,
-- 10% to 15% is going to separate the B+ form A- and A,
-- 30% of the questions <span class="math inline">\(\rightarrow\)</span> conceptual questions,
-- 70% of the questions <span class="math inline">\(\rightarrow\)</span> mathematical questions (derivation/manipulation).</p>
-<p>This is a <strong>Graduate Course</strong> which means that we have to go <strong>beyond what is given in the class</strong>.</p>
+<div id="time-scale-for-fluid-response" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Time Scale for Fluid Response<a href="particle-motion.html#time-scale-for-fluid-response" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Assume</strong> <span class="math inline">\(T &gt;&gt; T_g\)</span> (Temperature of Glass Transition)</p>
+<p><span class="math inline">\(t = \frac{LengthScale}{\sqrt{\langle v^2 \rangle}}\)</span></p>
+<p><span class="math inline">\(LengthScale \equiv X \equiv Particle \, Diameter = 2R\)</span></p>
 </div>
-<div id="notes-for-exam" class="section level2 unnumbered hasAnchor">
-<h2>Notes for Exam<a href="index.html#notes-for-exam" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>$ k_{B}T = 4,pNnm = 4^{-21} Nm $</p>
-<p>$ t^* = , = 5 ^{-13} 10^{-12} , s $</p>
+<div id="for-water" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> For Water<a href="particle-motion.html#for-water" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It is one molecule of water diffusing in a sea of water molecules:</p>
+<ul>
+<li><span class="math inline">\(t^* = \frac{DiameterWaterMolecule}{velocity} = \frac{2Angstrons}{velocity} = \frac{0.2 \times 10^{-9}m}{velocity}\)</span></li>
+</ul>
+<p><strong>How do I get the velocity?</strong></p>
+<ul>
+<li><span class="math inline">\(\sqrt{\langle (v^*)^2 \rangle} = \frac{k_BT}{m}\)</span></li>
+</ul>
+<p>Here we are trying to find the <strong>length scale for a diffusion process</strong>, and we can say that at <strong>R</strong>oom <strong>T</strong>emperature (RT):</p>
+<p><span class="math inline">\(k_{B}T = 4\,pNnm = 4\times10^{-21} Nm \Rightarrow\)</span> <strong>WE NEED TO REMEMBER THIS FOR EXAM</strong></p>
+<p><span class="math inline">\(t^* = \frac{0.2 \times 10^{-9}m}{\sqrt {4 \times 10^{-21}Nm}} \, \frac{18 \times 10^{-3}\frac{kg}{mole}}{6 \times 10^{23}\frac{molecule}{mole}} = 5 \times 10^{-13} \sim 10^{-12} \, s\)</span></p>
 </div>
-<div id="overall-structure-of-the-class" class="section level2 unnumbered hasAnchor">
-<h2>Overall Structure of the Class<a href="index.html#overall-structure-of-the-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Why do we brush our teeth for 2 minutes?
-That is a P&amp;G research that showed that 2 minutes is the time necessary for <strong>Fluorite</strong> to diffuse into the tooth.
-The reason is because it is how long it takes for <strong>F</strong> to diffuse about half of thickness of our first layer of the tooth.</p>
-<p><strong>This will be on the Exam… Figure that out!</strong></p>
-<div id="basic-concepts" class="section level3 unnumbered hasAnchor">
-<h3>Basic Concepts<a href="index.html#basic-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Think about different phases of materials:
-- solid
-- liquid
-- gas/vapor</p>
-<p>Jelly is solid, made of a protein network.
-We we talk about diffusion, length scale matter.</p>
-<p>Visco-elastic fluid — honey?</p>
-<p>Start with underlying concepts: <strong>liquid</strong>
-Diffusion concept is dependent on the:
-- <strong>Fluctuation</strong> of atoms, molecules, etc…</p>
-<p>Then extend that to other classes of materials:
-- Polymers in solution
-- Polymers in other polymers (solvent is other polymers)
-- Diffusion of vacancies in a crystal
-- Diffusion of impurities in crystal
-- Diffusion in amorphous solids</p>
-<p>All this different kinds of concepts that come from <strong>Fluctuations</strong> are called <strong>Random Walk</strong> —&gt; <strong>RW</strong>.
-We are going to use this concept to extend and adjust for generallize, and adjustments we have to make to apply it for different kinds of materials.</p>
-<p><strong>RW</strong> —&gt; Ficks’ Law —&gt; Logic Extension from the <strong>Random Walk</strong>, it depends on the <strong>Random Walk</strong> concepts.
-Here is where most of the students start their Diffusion classes.</p>
-<p>Finally look at classic materials problems:
-- Composition dependence
-- Microstructure evolves (the dependence on diffusion for this evolution), primarilly under load
-- The connect that with mechanical properties</p>
-<p>If we have time:
-- Nucleation &amp; Growth
-- How to experimentally measure diffusion (how we now measure diffusion)</p>
+<div id="modulus" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Modulus<a href="particle-motion.html#modulus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math inline">\(Modulus \equiv \frac{energy}{volume}\)</span></p>
+<ul>
+<li><span class="math inline">\(Liquid \sim k_BT\)</span></li>
+<li><span class="math inline">\(Solid &gt;&gt; k_BT\)</span></li>
+<li><span class="math inline">\(Gas &lt;&lt; k_BT\)</span></li>
+</ul>
+<p>Looking only at the <strong>Liquid</strong>:</p>
+<p><span class="math inline">\(Modulus \sim \frac{k_BT}{(2R)^3} \sim \frac{4\times 10^{-21}Nm}{(0.2\times 10^{-9}m)^3} \sim 5\times 10^{8} \frac{N}{m^2} (Pa)\)</span></p>
+<p>It tells us that the <strong>viscosity</strong> of any fluid should be of the order of (close to the Boiling Point (BP):</p>
+<p><span class="math inline">\(\eta \sim Modulus \times RelaxationTime = 5 \times 10^{8} \frac{N}{m^2} \, 5\times 10^{-13}s \sim 0.3\times 10^{-3}Pa\,s\)</span></p>
+<p>Let’s take a step further…
+How that is going to impact the evolution of motion:</p>
+<p><strong>Langevin Equation</strong>:</p>
+<p><span class="math inline">\(m\frac{d\vec{v}}{dt} = -b\vec{v} + \vec{f}(t)\)</span></p>
+<ul>
+<li><span class="math inline">\(\frac{d\vec{v}}{dt} \rightarrow\)</span> is going to <strong>fluctuate</strong> because of <span class="math inline">\(\vec{f}\)</span></li>
+<li><span class="math inline">\(\vec{f}(t) \rightarrow\)</span> rapidly fluctuate <span class="math inline">\(\sim 10^{-12}s \rightarrow\)</span> due to <strong>collisions</strong> from many solvent motions <span class="math inline">\(\rightarrow\)</span> usually <strong>uncorrelated</strong>.</li>
+</ul>
+<p>If there is no correlation between <span class="math inline">\(\vec{f}(t)\)</span> and <span class="math inline">\(\vec{f}(t&#39;)\)</span> except at the time equals to <span class="math inline">\(t&#39;\)</span>:</p>
+<ul>
+<li><span class="math inline">\(\langle f(t) \cdot f(t + t&#39;) \rangle \propto \delta (t&#39;)\)</span></li>
+</ul>
+<p>If I’m interested in an average, then:</p>
+<ul>
+<li><span class="math inline">\(\vec{f}(t) \rightarrow 0\)</span></li>
+<li><span class="math inline">\(m\frac{d\vec{v}}{dt} = -b\vec{v}\)</span></li>
+<li><strong>Solution</strong>: <span class="math inline">\(v(t) = v(0) \cdot e^{-\frac{t}{\tau}}\)</span>
+<ul>
+<li>Where <span class="math inline">\(v(0)\)</span> is related to the <strong>boundary/initial condition</strong></li>
+</ul></li>
+<li><span class="math inline">\(\tau \equiv \frac{m}{b} \equiv ViscousRelaxationTimescale\)</span></li>
+</ul>
+<p>The only thing we need to worry about is that <strong>if there is a correlation in the motion</strong>… if there is no correlation in the motion, those fluctuations are going to cancel each other out.</p>
+</div>
+<div id="motions-that-are-temporarily-correlated" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Motions that are Temporarily Correlated<a href="particle-motion.html#motions-that-are-temporarily-correlated" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can now rewrite the <strong>Langevin Equation</strong>:</p>
+<p><span class="math inline">\(\frac{d\vec{v}(t&#39;)}{dt&#39;} = -\frac{\vec{v}(t&#39;)}{\tau} + \frac{\vec{f}(t&#39;)}{m}\)</span></p>
+<p>How can I find the velocity for this kind of equation (<strong>solve the differential equation</strong>)?</p>
+<ul>
+<li>Multiply both sides by <span class="math inline">\(e^{\frac{t&#39;}{\tau}}\)</span></li>
+<li>Integrate <span class="math inline">\(\int_{0}^t dt&#39;\)</span></li>
+<li>Integrate by parts: <span class="math inline">\(\int GdF = GF - \int FdG\)</span></li>
+</ul>
+<p>If we consider the <strong>average velocity</strong> due to <strong>Fluctuation</strong>:</p>
+<p><span class="math inline">\(\langle \vec{v}(t) \rangle = \langle \vec{v}(0) \rangle e^{-\frac{t}{\tau}} + 0\)</span></p>
+<p>(<span class="math inline">\(0\)</span> because <span class="math inline">\(\vec{f}\)</span> is random)</p>
+<p><strong>Here is the exercise for the homework:</strong></p>
+<p>When we measure the fluctuations we only measure the motions that are correlated, otherwise they would cancel each other out and be zero.</p>
+<p>So, when we are measuring the correlation, we are measuring the <strong>Thermal Energy</strong>:</p>
+<p><span class="math inline">\(\int_{-\infty}^\infty \langle \vec{v}(t) \cdot \vec{v}(0) \rangle dt = \frac{6k_BT}{b}\)</span></p>
+<ul>
+<li><span class="math inline">\(\frac{6k_BT}{b} \equiv\)</span> <strong>Damping or Dissipation</strong></li>
+<li><span class="math inline">\(6 \equiv\)</span> <strong>3 Dimension</strong></li>
+<li><span class="math inline">\(b \equiv\)</span> <strong>Drag</strong></li>
+</ul>
+<p>A similar situation is a <strong>current through resistor</strong>:</p>
+<p><span class="math inline">\(\int_{-\infty}^\infty \langle I(t) \cdot I(0) \rangle dt = \frac{6k_BT}{R}\)</span></p>
+<p>Diffusion come in for understanding how a given structure evolves as a function of time.</p>
+</div>
+<div id="classes-of-problem-we-are-interested-in" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> Classes of problem we are interested in<a href="particle-motion.html#classes-of-problem-we-are-interested-in" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Continuous Matrix: how does the thing evolves as a function of time?</p>
+<p>The obstacles interfere with the velocity of the diffusion:</p>
+<ul>
+<li>Friction</li>
+<li>Viscosity</li>
+</ul>
+<p>That’s what Langevin equation says:</p>
+<p>A particle forgets its velocity over a time of <span class="math inline">\(\tau\)</span>.</p>
+</div>
+<div id="msd" class="section level2 hasAnchor" number="1.7">
+<h2><span class="header-section-number">1.7</span> MSD<a href="particle-motion.html#msd" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>What is the <strong>Mean Square Displacement</strong> due to solvent molecule fluctuation?</p>
+<p>We start with the <strong>Langevin Equation</strong>:</p>
+<p><span class="math inline">\(m\frac{d\vec{v}}{dt} = -b\vec{v} + \vec{f}(t)\)</span></p>
+<p>From there we can show that the <strong>MSD</strong> is (here he is giving us what it should look like, and he asks us to derive it in the homework):</p>
+<p><span class="math inline">\(\langle \, r^2(t) - r^2(0) \, \rangle = 6k_BT \frac{\tau}{m}[t - \tau(1 - e^{\frac{-t}{\tau}})]\)</span></p>
+<p>Why do we mean by evolving?
+Phase separation, things are changing…
+How the properties are changing along this change…</p>
+<p><strong>Again</strong>, he is giving the answer and we will have to derive it:</p>
+<p>The particle has two types of motion:</p>
+<ul>
+<li><p><strong>Balistic Motion</strong>: <span class="math inline">\(\langle r^2(t) - r^2(0) \rangle = \langle v^2 \rangle t^2 \\\)</span>
+We want to do at a time scale that we do not worry about the Balistic Motion</p></li>
+<li><p><strong>Diffusive Motion</strong>: <span class="math inline">\(\langle r^2(t) - r^2(0) \rangle = \frac{6\,k_{B}T}{b}t \\\)</span></p></li>
+</ul>
+<p>This is what we are really interested in. It evolves linearly with time.</p>
+<p>If I’m interested at the <strong>Mean Square Displacement</strong> and I assume that the initial position is at the origin (zero), then we can simplify this equation to:</p>
+<p><span class="math inline">\(\langle r^2(t) \rangle = \frac{6\,k_{B}T}{b}t \\\)</span></p>
+<p>OR</p>
+<p><span class="math inline">\(\langle r^2(t) \rangle = 6Dt\)</span> , where <span class="math inline">\(D = \frac{k_{B}T}{b}\)</span></p>
+<ul>
+<li><strong>Fluctuation</strong>: <span class="math inline">\(\langle r^2(t) \rangle\)</span></li>
+<li>Friction/Dissipation Factor: <span class="math inline">\(D = \frac{k_{B}T}{b}\)</span></li>
+</ul>
+<p>We are using the symbol <strong>r</strong> to denote we are doing everything in 3 dimensions — 3D.</p>
+<p>We can also write the same thing in a different way: <span class="math inline">\(\langle \Delta r^2(t) \rangle = 2dDt \\\)</span></p>
+<p>Where <strong>d</strong> is the dimensionality of the situation:</p>
+<ul>
+<li>1 D: d = 1</li>
+<li>2 D: d = 2</li>
+<li>3 D: d = 3</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>If we have an impurity which is diffusing along a thin film… that should be a <strong>2D problem</strong>.</li>
+<li>If we have an impurity diffusion within a grain boundary… although it is a 3D situation, normally a grain boundary is a 1D movement, so it is a <strong>1D problem</strong>.</li>
+</ul>
+<p>This assignment of dimensionality is a tricky task, and we have to figure out the <strong>correct equation to evaluate the motion</strong>.</p>
+<p>So, here we have the three ways to write the same thing:</p>
+<p><span class="math inline">\(\langle r^2(t) - r^2(0) \rangle = \frac{6\,k_{B}T}{b}t \\\)</span></p>
+<p><span class="math inline">\(\langle r^2(t) \rangle = \frac{6\,k_{B}T}{b}t \\\)</span></p>
+<p><span class="math inline">\(\langle \Delta r^2(t) \rangle = \frac{6\,k_{B}T}{b}t \\\)</span></p>
+<p>There is a classical expression that come about, which is the <strong>Diffusivity of a Sphere</strong>:</p>
+<p><span class="math inline">\(D = \frac{k_{B}T}{6 \pi \eta R} \\\)</span></p>
+<p>Which is the <strong>Stokes-Einstein Equation</strong>.</p>
+<p>This calculation is being done everywhere we have a kind of coating.</p>
+<p>Measuring Diffusion using Video Microscopy (<strong>paper is on canvas, for homework</strong>):</p>
+<p><span class="math inline">\(R \sim 0.498 \mu m \\\)</span></p>
+<p>The diameter is about a micron. The plot is <strong>MSD</strong> vs <strong>different time when you are measuring</strong>.</p>
+<p>The answer is gonna be:</p>
+<p><span class="math inline">\(\langle \Delta r^2(\tau) \rangle = 2dD\tau \\\)</span>
+So that the slope is gonna be <span class="math inline">\(\sim 4D\)</span>, from where we can get the diffusion constant:
+<span class="math inline">\(D = 0.46 \pm 0.01 \mu \frac{m^2}{s} \\\)</span></p>
+<p>Dissipation is not a good thing, but without dissipation we cannot have fluctuation.</p>
+<p>It is the causality relation.</p>
+<p><strong>If we take out dissipation, the fluctuation will die away.</strong></p>
+<p>Dissipation is the origin of Fluctuation, however if we have larger dissipation we will have smaller fluctuation. But temperature will always keep things fluctuating.</p>
+<p><span class="math inline">\(\frac{6k_{B}T}{b} = \int_{-\infty}^\infty \vec{v}(0) \cdot \vec{v}(t) dt \\\)</span></p>
 
-</div>
 </div>
 </div>
             </section>
@@ -315,8 +458,8 @@ Here is where most of the students start their Diffusion classes.</p>
           </div>
         </div>
       </div>
-
-<a href="particle-motion.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="random-walk.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -347,7 +490,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-particle-motion.Rmd",
 "text": "Edit"
 },
 "history": {
